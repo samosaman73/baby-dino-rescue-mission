@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.8.22/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"2.0.0","target":"arcade","targetVersion":"1.8.22","repo":"samosaman73/baby-dino-rescue-mission"}
-// total=1625636 new=6.73% cached=88.04% other=5.23%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.8.22/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"2.1.0","target":"arcade","targetVersion":"1.8.22","repo":"samosaman73/baby-dino-rescue-mission"}
+// total=1637610 new=6.69% cached=88.11% other=5.20%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -324,6 +324,7 @@ pxtrt.mapKeyNames = [
  "pickRandom",
  "play",
  "playCore",
+ "playUntilDone",
  "playerIndex",
  "playerStates",
  "position",
@@ -495,7 +496,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P38598(s) {
+function _main___P39350(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -867,26 +868,26 @@ switch (step) {
   case 33:
     r0 = s.retval;
     s.tmp_0 = info_onCountdownEnd__P19596_mk(s);
-    s.tmp_0.arg0 = inline__P38601;
+    s.tmp_0.arg0 = inline__P39080;
     s.callLocIdx = 55; s.pc = 34; return s.tmp_0;
   case 34:
     r0 = s.retval;
     s.tmp_0 = sprites_onOverlap__P19483_mk(s);
     s.tmp_0.arg0 = globals.Player___19505;
     s.tmp_0.arg1 = globals.Enemy___19508;
-    s.tmp_0.arg2 = inline__P38607;
+    s.tmp_0.arg2 = inline__P39086;
     s.callLocIdx = 58; s.pc = 35; return s.tmp_0;
   case 35:
     r0 = s.retval;
     s.tmp_0 = sprites_onOverlap__P19483_mk(s);
     s.tmp_0.arg0 = globals.Player___19505;
     s.tmp_0.arg1 = 1;
-    s.tmp_0.arg2 = inline__P38622;
+    s.tmp_0.arg2 = inline__P39101;
     s.callLocIdx = 61; s.pc = 36; return s.tmp_0;
   case 36:
     r0 = s.retval;
-    globals.projectile___38629 = (null);
-    globals.projectile2___38614 = (null);
+    globals.projectile___39108 = (null);
+    globals.projectile2___39093 = (null);
     s.tmp_0 = scene_setBackgroundImage__P19858_mk(s);
     s.tmp_1 = helpers_getImageByName__P20261_mk(s);
     s.tmp_1.arg0 = "Freeway";
@@ -908,16 +909,16 @@ switch (step) {
     s.callLocIdx = 65; s.pc = 39; return s.tmp_0;
   case 39:
     r0 = s.retval;
-    globals.mySprite___38636 = (r0);
+    globals.mySprite___39115 = (r0);
     s.tmp_0 = controller_moveSprite__P19203_mk(s);
-    s.tmp_0.arg0 = globals.mySprite___38636;
+    s.tmp_0.arg0 = globals.mySprite___39115;
     s.tmp_0.arg1 = 0;
     s.tmp_0.arg2 = 100;
     s.callLocIdx = 66; s.pc = 41; return s.tmp_0;
   case 41:
     r0 = s.retval;
     s.tmp_0 = Sprite_setStayInScreen__P19450_mk(s);
-    s.tmp_0.arg0 = globals.mySprite___38636;
+    s.tmp_0.arg0 = globals.mySprite___39115;
     s.tmp_0.arg1 = true;
     s.callLocIdx = 67; s.pc = 42; return s.tmp_0;
   case 42:
@@ -934,7 +935,7 @@ switch (step) {
   case 44:
     r0 = s.retval;
     s.tmp_0 = animation_runImageAnimation__P20311_mk(s);
-    s.tmp_0.arg0 = globals.mySprite___38636;
+    s.tmp_0.arg0 = globals.mySprite___39115;
     s.tmp_1 = helpers_getAnimationByName__P20262_mk(s);
     s.tmp_1.arg0 = "Mama Moving";
     s.callLocIdx = 70; s.pc = 46; return s.tmp_1;
@@ -947,26 +948,26 @@ switch (step) {
   case 45:
     r0 = s.retval;
     s.tmp_0 = forever__P19123_mk(s);
-    s.tmp_0.arg0 = inline__P38654;
-    s.callLocIdx = 78; s.pc = 47; return s.tmp_0;
+    s.tmp_0.arg0 = inline__P39133;
+    s.callLocIdx = 79; s.pc = 47; return s.tmp_0;
   case 47:
     r0 = s.retval;
     s.tmp_0 = forever__P19123_mk(s);
-    s.tmp_0.arg0 = inline__P38671;
-    s.callLocIdx = 86; s.pc = 48; return s.tmp_0;
+    s.tmp_0.arg0 = inline__P39151;
+    s.callLocIdx = 87; s.pc = 48; return s.tmp_0;
   case 48:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-_main___P38598.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-background-scroll/main.ts","functionName":"<main>","argumentNames":[]}
-_main___P38598.continuations = [  ]
+_main___P39350.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-background-scroll/main.ts","functionName":"<main>","argumentNames":[]}
+_main___P39350.continuations = [  ]
 
-function _main___P38598_mk(s) {
+function _main___P39350_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P38598, depth: s.depth + 1,
+        parent: s, fn: _main___P39350, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1497,7 +1498,7 @@ const _hex23697 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000c
 
 
 
-function inline__P38601(s) {
+function inline__P39080(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1517,12 +1518,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P38601.info = {"start":20,"length":35,"line":0,"column":20,"endLine":2,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P39080.info = {"start":20,"length":35,"line":0,"column":20,"endLine":2,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P38601_mk(s) {
+function inline__P39080_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P38601, depth: s.depth + 1,
+        parent: s, fn: inline__P39080, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -1531,7 +1532,7 @@ function inline__P38601_mk(s) {
 
 
 
-function inline__P38607(s) {
+function inline__P39086(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1547,7 +1548,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     s.tmp_0 = Sprite_destroy__P19461_mk(s);
-    s.tmp_0.arg0 = globals.projectile2___38614;
+    s.tmp_0.arg0 = globals.projectile2___39093;
     s.tmp_0.arg1 = undefined;
     s.tmp_0.arg2 = undefined;
     s.callLocIdx = 56; s.pc = 1; return s.tmp_0;
@@ -1562,12 +1563,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P38607.info = {"start":112,"length":88,"line":3,"column":55,"endLine":6,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite2","otherSprite2"]}
+inline__P39086.info = {"start":112,"length":88,"line":3,"column":55,"endLine":6,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite2","otherSprite2"]}
 
-function inline__P38607_mk(s) {
+function inline__P39086_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P38607, depth: s.depth + 1,
+        parent: s, fn: inline__P39086, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -1578,7 +1579,7 @@ function inline__P38607_mk(s) {
 
 
 
-function inline__P38622(s) {
+function inline__P39101(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1594,7 +1595,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     s.tmp_0 = Sprite_destroy__P19461_mk(s);
-    s.tmp_0.arg0 = globals.projectile___38629;
+    s.tmp_0.arg0 = globals.projectile___39108;
     s.tmp_0.arg1 = undefined;
     s.tmp_0.arg2 = undefined;
     s.callLocIdx = 59; s.pc = 1; return s.tmp_0;
@@ -1609,12 +1610,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P38622.info = {"start":262,"length":85,"line":7,"column":60,"endLine":10,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+inline__P39101.info = {"start":262,"length":85,"line":7,"column":60,"endLine":10,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
 
-function inline__P38622_mk(s) {
+function inline__P39101_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P38622, depth: s.depth + 1,
+        parent: s, fn: inline__P39101, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -1625,7 +1626,7 @@ function inline__P38622_mk(s) {
 
 
 
-function inline__P38654(s) {
+function inline__P39133(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1635,54 +1636,60 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
+    s.tmp_0 = music_playMelody__P18855_mk(s);
+    s.tmp_0.arg0 = "C5 G B A F A C5 B ";
+    s.tmp_0.arg1 = 120;
+    s.callLocIdx = 72; s.pc = 1; return s.tmp_0;
+  case 1:
+    r0 = s.retval;
     s.tmp_0 = sprites_createProjectileFromSide__P19314_mk(s);
     s.tmp_1 = helpers_getImageByName__P20261_mk(s);
     s.tmp_1.arg0 = "Baby";
-    s.callLocIdx = 72; s.pc = 2; return s.tmp_1;
-  case 2:
+    s.callLocIdx = 73; s.pc = 3; return s.tmp_1;
+  case 3:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = -90;
     s.tmp_0.arg2 = 0;
-    s.callLocIdx = 73; s.pc = 1; return s.tmp_0;
-  case 1:
+    s.callLocIdx = 74; s.pc = 2; return s.tmp_0;
+  case 2:
     r0 = s.retval;
-    globals.projectile___38629 = (r0);
+    globals.projectile___39108 = (r0);
     s.tmp_0 = Sprite_y__P19390_mk(s);
-    s.tmp_0.arg0 = globals.projectile___38629;
+    s.tmp_0.arg0 = globals.projectile___39108;
     r0 = pxsim.Math_.randomRange(15, 100);
     s.tmp_0.arg1 = r0;
-    s.callLocIdx = 74; s.pc = 3; return s.tmp_0;
-  case 3:
+    s.callLocIdx = 75; s.pc = 4; return s.tmp_0;
+  case 4:
     r0 = s.retval;
     s.tmp_0 = animation_runImageAnimation__P20311_mk(s);
-    s.tmp_0.arg0 = globals.projectile___38629;
+    s.tmp_0.arg0 = globals.projectile___39108;
     s.tmp_1 = helpers_getAnimationByName__P20262_mk(s);
     s.tmp_1.arg0 = "Animated Baby";
-    s.callLocIdx = 75; s.pc = 5; return s.tmp_1;
-  case 5:
+    s.callLocIdx = 76; s.pc = 6; return s.tmp_1;
+  case 6:
     r0 = s.retval;
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = 100;
     s.tmp_0.arg3 = true;
-    s.callLocIdx = 76; s.pc = 4; return s.tmp_0;
-  case 4:
+    s.callLocIdx = 77; s.pc = 5; return s.tmp_0;
+  case 5:
     r0 = s.retval;
     s.tmp_0 = pause__P17659_mk(s);
     s.tmp_0.arg0 = 1000;
-    s.callLocIdx = 77; s.pc = 6; return s.tmp_0;
-  case 6:
+    s.callLocIdx = 78; s.pc = 7; return s.tmp_0;
+  case 7:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P38654.info = {"start":755,"length":255,"line":25,"column":8,"endLine":35,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P39133.info = {"start":755,"length":303,"line":25,"column":8,"endLine":36,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P38654_mk(s) {
+function inline__P39133_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P38654, depth: s.depth + 1,
+        parent: s, fn: inline__P39133, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1692,7 +1699,7 @@ function inline__P38654_mk(s) {
 
 
 
-function inline__P38671(s) {
+function inline__P39151(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1705,57 +1712,57 @@ switch (step) {
     s.tmp_0 = sprites_createProjectileFromSide__P19314_mk(s);
     s.tmp_1 = helpers_getImageByName__P20261_mk(s);
     s.tmp_1.arg0 = "Tourist";
-    s.callLocIdx = 79; s.pc = 2; return s.tmp_1;
+    s.callLocIdx = 80; s.pc = 2; return s.tmp_1;
   case 2:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = -90;
     s.tmp_0.arg2 = 0;
-    s.callLocIdx = 80; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 81; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    globals.projectile2___38614 = (r0);
+    globals.projectile2___39093 = (r0);
     s.tmp_0 = Sprite_y__P19390_mk(s);
-    s.tmp_0.arg0 = globals.projectile2___38614;
+    s.tmp_0.arg0 = globals.projectile2___39093;
     r0 = pxsim.Math_.randomRange(15, 115);
     s.tmp_0.arg1 = r0;
-    s.callLocIdx = 81; s.pc = 3; return s.tmp_0;
+    s.callLocIdx = 82; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
     s.tmp_0 = Sprite_setKind__P19441_mk(s);
-    s.tmp_0.arg0 = globals.projectile2___38614;
+    s.tmp_0.arg0 = globals.projectile2___39093;
     s.tmp_0.arg1 = globals.Enemy___19508;
-    s.callLocIdx = 82; s.pc = 4; return s.tmp_0;
+    s.callLocIdx = 83; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
     s.tmp_0 = animation_runImageAnimation__P20311_mk(s);
-    s.tmp_0.arg0 = globals.projectile2___38614;
+    s.tmp_0.arg0 = globals.projectile2___39093;
     s.tmp_1 = helpers_getAnimationByName__P20262_mk(s);
     s.tmp_1.arg0 = "Animated Tourist";
-    s.callLocIdx = 83; s.pc = 6; return s.tmp_1;
+    s.callLocIdx = 84; s.pc = 6; return s.tmp_1;
   case 6:
     r0 = s.retval;
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = 100;
     s.tmp_0.arg3 = true;
-    s.callLocIdx = 84; s.pc = 5; return s.tmp_0;
+    s.callLocIdx = 85; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
     s.tmp_0 = pause__P17659_mk(s);
     s.tmp_0.arg0 = 2100;
-    s.callLocIdx = 85; s.pc = 7; return s.tmp_0;
+    s.callLocIdx = 86; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P38671.info = {"start":1020,"length":306,"line":36,"column":8,"endLine":47,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P39151.info = {"start":1068,"length":306,"line":37,"column":8,"endLine":48,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P38671_mk(s) {
+function inline__P39151_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P38671, depth: s.depth + 1,
+        parent: s, fn: inline__P39151, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3316,6 +3323,3138 @@ function Sprite_x__P19387_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   arg0: undefined,
+} }
+
+
+
+
+
+function music_playMelody__P18855(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    s.notes___38943 = undefined;
+    s.formattedMelody___38953 = undefined;
+    s.newOctave___38954 = undefined;
+    s.i___38955 = undefined;
+    s.song___39019 = undefined;
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    s.tmp_0 = helpers_arrayFilter__P17356_mk(s);
+    s.tmp_1 = helpers_stringSplit__P17368_mk(s);
+    s.tmp_1.arg0 = s.arg0;
+    s.tmp_1.arg1 = " ";
+    s.tmp_1.arg2 = undefined;
+    s.callLocIdx = 0; s.pc = 12; return s.tmp_1;
+  case 12:
+    r0 = s.retval;
+    s.tmp_0.arg0 = r0;
+    s.tmp_0.arg1 = notes_inline__P38948;
+    s.callLocIdx = 1; s.pc = 11; return s.tmp_0;
+  case 11:
+    r0 = s.retval;
+    s.notes___38943 = (r0);
+    r0 = pxsim_String_.mkEmpty();
+    s.formattedMelody___38953 = (r0);
+    s.newOctave___38954 = (false);
+    s.i___38955 = (0);
+  case 1:
+    s.tmp_1 = r0 = s.i___38955;
+    r0 = pxsim_Array__length(s.notes___38943);
+    s.tmp_2 = r0;
+    r0 = (s.tmp_1 < s.tmp_2);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 10; continue; }
+    r0 = pxsim_Array__getAt(s.notes___38943, s.i___38955);
+    s.tmp_4 = r0;
+    r0 = (s.tmp_4 === "-");
+    s.tmp_3 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_3);
+    if (!r0) { step = 2; continue; }
+    r0 = pxsim_Array_.setAt(s.notes___38943, s.i___38955, "R");
+    { step = 7; continue; }
+  case 2:
+    r0 = pxsim_Array__getAt(s.notes___38943, s.i___38955);
+    s.tmp_1 = r0;
+    r0 = (s.tmp_1 === "C5");
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 3; continue; }
+    s.newOctave___38954 = (true);
+    { step = 6; continue; }
+  case 3:
+    r0 = pxsim_numops_toBoolDecr(s.newOctave___38954);
+    if (!r0) { step = 4; continue; }
+    s.tmp_0 = r0 = s.notes___38943;
+    s.tmp_1 = r0 = s.i___38955;
+    r0 = pxsim_Array__getAt(s.tmp_0, s.i___38955);
+    s.tmp_4 = r0;
+    if ((s.tmp_4) && (s.tmp_4).vtable) {
+    setupResume(s, 13);
+    pxsim_String__stringConv(s.tmp_4);
+    checkResumeConsumed();
+    return;
+    } else { s.retval = (s.tmp_4) + ""; }
+  case 13:
+    r0 = s.retval;
+    s.tmp_3 = r0;
+    r0 = pxsim_String__concat(s.tmp_3, "4");
+    s.tmp_2 = r0;
+    r0 = pxsim_Array_.setAt(s.tmp_0, s.tmp_1, s.tmp_2);
+    s.newOctave___38954 = (false);
+  case 4:
+  case 5:
+  case 6:
+  case 7:
+    r0 = (s.i___38955 == 0);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 8; continue; }
+    if ((s.formattedMelody___38953) && (s.formattedMelody___38953).vtable) {
+    setupResume(s, 14);
+    pxsim_String__stringConv(s.formattedMelody___38953);
+    checkResumeConsumed();
+    return;
+    } else { s.retval = (s.formattedMelody___38953) + ""; }
+  case 14:
+    r0 = s.retval;
+    s.tmp_1 = r0;
+    r0 = pxsim_Array__getAt(s.notes___38943, s.i___38955);
+    s.tmp_9 = r0;
+    if ((s.tmp_9) && (s.tmp_9).vtable) {
+    setupResume(s, 15);
+    pxsim_String__stringConv(s.tmp_9);
+    checkResumeConsumed();
+    return;
+    } else { s.retval = (s.tmp_9) + ""; }
+  case 15:
+    r0 = s.retval;
+    s.tmp_8 = r0;
+    r0 = pxsim_String__concat(s.tmp_8, "-");
+    s.tmp_7 = r0;
+    if ((s.tmp_7) && (s.tmp_7).vtable) {
+    setupResume(s, 16);
+    pxsim_String__stringConv(s.tmp_7);
+    checkResumeConsumed();
+    return;
+    } else { s.retval = (s.tmp_7) + ""; }
+  case 16:
+    r0 = s.retval;
+    s.tmp_6 = r0;
+    if ((s.arg1) && (s.arg1).vtable) {
+    setupResume(s, 17);
+    pxsim_String__stringConv(s.arg1);
+    checkResumeConsumed();
+    return;
+    } else { s.retval = (s.arg1) + ""; }
+  case 17:
+    r0 = s.retval;
+    s.tmp_10 = r0;
+    r0 = pxsim_String__concat(s.tmp_6, s.tmp_10);
+    s.tmp_5 = r0;
+    if ((s.tmp_5) && (s.tmp_5).vtable) {
+    setupResume(s, 18);
+    pxsim_String__stringConv(s.tmp_5);
+    checkResumeConsumed();
+    return;
+    } else { s.retval = (s.tmp_5) + ""; }
+  case 18:
+    r0 = s.retval;
+    s.tmp_4 = r0;
+    r0 = pxsim_String__concat(s.tmp_4, " ");
+    s.tmp_3 = r0;
+    if ((s.tmp_3) && (s.tmp_3).vtable) {
+    setupResume(s, 19);
+    pxsim_String__stringConv(s.tmp_3);
+    checkResumeConsumed();
+    return;
+    } else { s.retval = (s.tmp_3) + ""; }
+  case 19:
+    r0 = s.retval;
+    s.tmp_2 = r0;
+    r0 = pxsim_String__concat(s.tmp_1, s.tmp_2);
+    s.formattedMelody___38953 = (r0);
+    { step = 9; continue; }
+  case 8:
+    if ((s.formattedMelody___38953) && (s.formattedMelody___38953).vtable) {
+    setupResume(s, 20);
+    pxsim_String__stringConv(s.formattedMelody___38953);
+    checkResumeConsumed();
+    return;
+    } else { s.retval = (s.formattedMelody___38953) + ""; }
+  case 20:
+    r0 = s.retval;
+    s.tmp_0 = r0;
+    r0 = pxsim_Array__getAt(s.notes___38943, s.i___38955);
+    s.tmp_4 = r0;
+    if ((s.tmp_4) && (s.tmp_4).vtable) {
+    setupResume(s, 21);
+    pxsim_String__stringConv(s.tmp_4);
+    checkResumeConsumed();
+    return;
+    } else { s.retval = (s.tmp_4) + ""; }
+  case 21:
+    r0 = s.retval;
+    s.tmp_3 = r0;
+    r0 = pxsim_String__concat(s.tmp_3, " ");
+    s.tmp_2 = r0;
+    if ((s.tmp_2) && (s.tmp_2).vtable) {
+    setupResume(s, 22);
+    pxsim_String__stringConv(s.tmp_2);
+    checkResumeConsumed();
+    return;
+    } else { s.retval = (s.tmp_2) + ""; }
+  case 22:
+    r0 = s.retval;
+    s.tmp_1 = r0;
+    r0 = pxsim_String__concat(s.tmp_0, s.tmp_1);
+    s.formattedMelody___38953 = (r0);
+  case 9:
+    r0 = (s.i___38955 + 1);
+    s.i___38955 = (r0);
+    { step = 1; continue; }
+  case 10:
+    r0 = pxsim_pxtcore_mkClassInstance(music_Melody__C18858_VT);
+    s.tmp_0 = r0;
+    s.tmp_1 = music_Melody_constructor__P18861_mk(s);
+    s.tmp_1.arg0 = s.tmp_0;
+    s.tmp_1.arg1 = s.formattedMelody___38953;
+    s.callLocIdx = 2; s.pc = 23; return s.tmp_1;
+  case 23:
+    r0 = s.retval;
+    s.song___39019 = (s.tmp_0);
+    s.tmp_0 = music_Melody_playUntilDone__P18866_mk(s);
+    s.tmp_0.arg0 = s.song___39019;
+    s.tmp_0.arg1 = 255;
+    s.callLocIdx = 3; s.pc = 24; return s.tmp_0;
+  case 24:
+    r0 = s.retval;
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+music_playMelody__P18855.info = {"start":4061,"length":976,"line":125,"column":4,"endLine":151,"endColumn":5,"fileName":"pxt_modules/mixer/melody.ts","functionName":"playMelody","argumentNames":["melody","tempo"]}
+
+function music_playMelody__P18855_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: music_playMelody__P18855, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  tmp_4: undefined,
+  tmp_5: undefined,
+  tmp_6: undefined,
+  tmp_7: undefined,
+  tmp_8: undefined,
+  tmp_9: undefined,
+  tmp_10: undefined,
+  notes___38943: undefined,
+  formattedMelody___38953: undefined,
+  newOctave___38954: undefined,
+  i___38955: undefined,
+  song___39019: undefined,
+  arg0: undefined,
+  arg1: undefined,
+} }
+
+
+
+
+
+function notes_inline__P38948(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.lambdaArgs = null;
+    }
+    r0 = pxsim_numops_toBoolDecr(s.arg0);
+    s.tmp_2 = r0;
+    r0 = pxsim_Boolean__bang(s.tmp_2);
+    s.tmp_1 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_1);
+    s.tmp_0 = r0;
+    r0 = pxsim_Boolean__bang(s.tmp_0);
+    return leave(s, r0)
+  default: oops()
+} } }
+notes_inline__P38948.info = {"start":4176,"length":8,"line":126,"column":55,"endLine":126,"endColumn":63,"fileName":"pxt_modules/mixer/melody.ts","functionName":"inline","argumentNames":["n"]}
+
+function notes_inline__P38948_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: notes_inline__P38948, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  arg0: undefined,
+} }
+
+
+
+
+
+function music_Melody_playUntilDone__P18866(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    s.p___39028 = undefined;
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, music_Melody__C18858_VT)) failedCast(r0);
+    s.tmp_0 = music_Melody_stop__P18863_mk(s);
+    s.tmp_0.arg0 = s.arg0;
+    s.callLocIdx = 4; s.pc = 1; return s.tmp_0;
+  case 1:
+    r0 = s.retval;
+    r0 = pxsim_pxtcore_mkClassInstance(music_MelodyPlayer__C18868_VT);
+    s.tmp_0 = r0;
+    s.tmp_1 = music_MelodyPlayer_constructor__P18871_mk(s);
+    s.tmp_1.arg0 = s.tmp_0;
+    s.tmp_1.arg1 = s.arg0;
+    s.callLocIdx = 5; s.pc = 2; return s.tmp_1;
+  case 2:
+    r0 = s.retval;
+    r0 = (s.arg0).fields["_player"] = (s.tmp_0);
+    s.p___39028 = (s.tmp_0);
+    r0 = pxsim_pxtcore_mkAction(2, music_Melody_playUntilDone_inline__P39037);
+    s.tmp_0 = r0;
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.p___39028);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.arg0);
+    r0 = s.arg0.fields["_player"];
+    s.tmp_1 = r0;
+    r0 = (s.tmp_1).fields["onPlayFinished"] = (s.tmp_0);
+    s.tmp_0 = music_Melody_registerMelody__P21306_mk(s);
+    s.tmp_0.arg0 = s.arg0;
+    s.callLocIdx = 7; s.pc = 3; return s.tmp_0;
+  case 3:
+    r0 = s.retval;
+    s.tmp_0 = music_MelodyPlayer_play__P18873_mk(s);
+    r0 = s.arg0.fields["_player"];
+    s.tmp_0.arg0 = r0;
+    s.tmp_0.arg1 = s.arg1;
+    s.callLocIdx = 8; s.pc = 4; return s.tmp_0;
+  case 4:
+    r0 = s.retval;
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+music_Melody_playUntilDone__P18866.info = {"start":9667,"length":344,"line":299,"column":8,"endLine":308,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"playUntilDone","argumentNames":["this","volume"]}
+
+function music_Melody_playUntilDone__P18866_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: music_Melody_playUntilDone__P18866, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  p___39028: undefined,
+  arg0: undefined,
+  arg1: undefined,
+} }
+
+
+
+
+
+function music_Melody_playUntilDone_inline__P39037(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    r0 = s.caps[1].fields["_player"];
+    s.tmp_1 = r0;
+    r0 = (s.caps[0] == s.tmp_1);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 1; continue; }
+    s.tmp_2 = music_Melody_unregisterMelody__P21307_mk(s);
+    s.tmp_2.arg0 = s.caps[1];
+    s.callLocIdx = 6; s.pc = 3; return s.tmp_2;
+  case 3:
+    r0 = s.retval;
+  case 1:
+  case 2:
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+music_Melody_playUntilDone_inline__P39037.info = {"start":9823,"length":105,"line":302,"column":42,"endLine":305,"endColumn":13,"fileName":"pxt_modules/mixer/melody.ts","functionName":"inline","argumentNames":[]}
+
+function music_Melody_playUntilDone_inline__P39037_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: music_Melody_playUntilDone_inline__P39037, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+} }
+
+
+
+
+
+function music_Melody_unregisterMelody__P21307(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, music_Melody__C18858_VT)) failedCast(r0);
+    r0 = pxsim_numops_toBoolDecr(globals.music_Melody_playingMelodies___21309);
+    if (!r0) { step = 1; continue; }
+    r0 = pxsim_Array_.removeElement(globals.music_Melody_playingMelodies___21309, s.arg0);
+  case 1:
+  case 2:
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+music_Melody_unregisterMelody__P21307.info = {"start":7471,"length":201,"line":235,"column":8,"endLine":240,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"unregisterMelody","argumentNames":["this"]}
+
+function music_Melody_unregisterMelody__P21307_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: music_Melody_unregisterMelody__P21307, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  arg0: undefined,
+} }
+
+
+
+
+
+function music_Melody_registerMelody__P21306(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, music_Melody__C18858_VT)) failedCast(r0);
+    r0 = pxsim_numops_toBoolDecr(globals.music_Melody_playingMelodies___21309);
+    s.tmp_1 = r0;
+    r0 = pxsim_Boolean__bang(s.tmp_1);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 1; continue; }
+    r0 = pxsim_Array__mk();
+    globals.music_Melody_playingMelodies___21309 = (r0);
+  case 1:
+  case 2:
+    r0 = pxsim_Array__length(globals.music_Melody_playingMelodies___21309);
+    s.tmp_1 = r0;
+    r0 = (s.tmp_1 > 4);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 3; continue; }
+    s.tmp_2 = music_Melody_stop__P18863_mk(s);
+    s.tmp_3 = r0 = globals.music_Melody_playingMelodies___21309;
+    r0 = pxsim_Array__length(globals.music_Melody_playingMelodies___21309);
+    s.tmp_5 = r0;
+    r0 = (s.tmp_5 - 1);
+    s.tmp_4 = r0;
+    r0 = pxsim_Array__getAt(s.tmp_3, s.tmp_4);
+    s.tmp_2.arg0 = r0;
+    s.callLocIdx = 4; s.pc = 5; return s.tmp_2;
+  case 5:
+    r0 = s.retval;
+  case 3:
+  case 4:
+    r0 = pxsim_Array_.removeElement(globals.music_Melody_playingMelodies___21309, s.arg0);
+    r0 = pxsim_Array__push(globals.music_Melody_playingMelodies___21309, s.arg0);
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+music_Melody_registerMelody__P21306.info = {"start":6889,"length":573,"line":223,"column":8,"endLine":234,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"registerMelody","argumentNames":["this"]}
+
+function music_Melody_registerMelody__P21306_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: music_Melody_registerMelody__P21306, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  tmp_4: undefined,
+  tmp_5: undefined,
+  arg0: undefined,
+} }
+
+
+
+
+
+function music_MelodyPlayer_play__P18873(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    s.notes___37258 = undefined;
+    s.pos___37262 = undefined;
+    s.duration___37263 = undefined;
+    s.octave___37264 = undefined;
+    s.tempo___37265 = undefined;
+    s.hz___37266 = undefined;
+    s.endHz___37267 = undefined;
+    s.ms___37270 = undefined;
+    s.timePos___37271 = undefined;
+    s.startTime___37272 = undefined;
+    s.now___37275 = undefined;
+    s.envA___37276 = undefined;
+    s.envD___37277 = undefined;
+    s.envS___37278 = undefined;
+    s.envR___37279 = undefined;
+    s.soundWave___37280 = undefined;
+    s.sndInstr___37281 = undefined;
+    s.sndInstrPtr___37287 = undefined;
+    s.addForm___37288 = undefined;
+    s.scanNextWord___37348 = undefined;
+    s.token___37405 = undefined;
+    s.tokenKind___37406 = undefined;
+    s.consumeToken___37409 = undefined;
+    s.currNote___37485 = undefined;
+    s.prevNote___37487 = undefined;
+    s.timeLeft___37490 = undefined;
+    s.note___37504 = undefined;
+    s.i___37508 = undefined;
+    s.noteChar___37514 = undefined;
+    s.keyNumber___37588 = undefined;
+    s.currMs___37605 = undefined;
+    s.beat___37609 = undefined;
+    s.timeLeft___37666 = undefined;
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, music_MelodyPlayer__C18868_VT)) failedCast(r0);
+    r0 = pxsim_pxtrt.mklocRef();
+    s.tmp_0 = r0;
+    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.arg1);
+    s.arg1 = (s.tmp_0);
+    r0 = s.arg0.fields["melody"];
+    s.tmp_3 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_3);
+    s.tmp_2 = r0;
+    r0 = pxsim_Boolean__bang(s.tmp_2);
+    s.tmp_1 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_1);
+    if (!r0) { step = 1; continue; }
+    { step = 59; continue; }
+  case 1:
+  case 2:
+    s.tmp_4 = r0 = s.arg1;
+    s.tmp_6 = Math_clamp__P17373_mk(s);
+    s.tmp_6.arg0 = 0;
+    s.tmp_6.arg1 = 255;
+    r0 = pxsim_pxtrt_ldlocRef(s.arg1);
+    s.tmp_8 = r0;
+    s.tmp_10 = music_volume__P18853_mk(s);
+    s.callLocIdx = 11; s.pc = 61; return s.tmp_10;
+  case 61:
+    r0 = s.retval;
+    s.tmp_9 = r0;
+    r0 = (s.tmp_8 * s.tmp_9);
+    s.tmp_7 = r0;
+    r0 = (s.tmp_7 >> 8);
+    s.tmp_6.arg2 = r0;
+    s.callLocIdx = 12; s.pc = 60; return s.tmp_6;
+  case 60:
+    r0 = s.retval;
+    s.tmp_5 = r0;
+    r0 = pxsim_pxtrt_stlocRef(s.tmp_4, s.tmp_5);
+    r0 = s.arg0.fields["melody"];
+    r0 = r0.fields["_text"];
+    s.notes___37258 = (r0);
+    r0 = pxsim_pxtrt.mklocRef();
+    s.pos___37262 = (r0);
+    r0 = pxsim_pxtrt_stlocRef(s.pos___37262, 0);
+    r0 = pxsim_pxtrt.mklocRef();
+    s.duration___37263 = (r0);
+    r0 = pxsim_pxtrt_stlocRef(s.duration___37263, 4);
+    r0 = pxsim_pxtrt.mklocRef();
+    s.octave___37264 = (r0);
+    r0 = pxsim_pxtrt_stlocRef(s.octave___37264, 4);
+    r0 = pxsim_pxtrt.mklocRef();
+    s.tempo___37265 = (r0);
+    r0 = pxsim_pxtrt_stlocRef(s.tempo___37265, 120);
+    r0 = pxsim_pxtrt.mklocRef();
+    s.hz___37266 = (r0);
+    r0 = pxsim_pxtrt_stlocRef(s.hz___37266, 0);
+    r0 = pxsim_pxtrt.mklocRef();
+    s.endHz___37267 = (r0);
+    r0 = pxsim_pxtrt_stlocRef(s.endHz___37267, -1);
+    r0 = pxsim_pxtrt.mklocRef();
+    s.ms___37270 = (r0);
+    r0 = pxsim_pxtrt_stlocRef(s.ms___37270, 0);
+    s.timePos___37271 = (0);
+    r0 = pxsim.control.millis();
+    s.startTime___37272 = (r0);
+    s.now___37275 = (0);
+    r0 = pxsim_pxtrt.mklocRef();
+    s.envA___37276 = (r0);
+    r0 = pxsim_pxtrt_stlocRef(s.envA___37276, 0);
+    r0 = pxsim_pxtrt.mklocRef();
+    s.envD___37277 = (r0);
+    r0 = pxsim_pxtrt_stlocRef(s.envD___37277, 0);
+    r0 = pxsim_pxtrt.mklocRef();
+    s.envS___37278 = (r0);
+    r0 = pxsim_pxtrt_stlocRef(s.envS___37278, 255);
+    r0 = pxsim_pxtrt.mklocRef();
+    s.envR___37279 = (r0);
+    r0 = pxsim_pxtrt_stlocRef(s.envR___37279, 0);
+    r0 = pxsim_pxtrt.mklocRef();
+    s.soundWave___37280 = (r0);
+    r0 = pxsim_pxtrt_stlocRef(s.soundWave___37280, 1);
+    r0 = pxsim.control.createBuffer(60);
+    s.sndInstr___37281 = (r0);
+    r0 = pxsim_pxtrt.mklocRef();
+    s.sndInstrPtr___37287 = (r0);
+    r0 = pxsim_pxtrt_stlocRef(s.sndInstrPtr___37287, 0);
+    r0 = pxsim_pxtcore_mkAction(10, addForm_inline__P37289);
+    s.tmp_0 = r0;
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.hz___37266);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.endHz___37267);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.ms___37270);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 3, s.duration___37263);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 4, s.tempo___37265);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 5, s.envR___37279);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 6, s.sndInstrPtr___37287);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 7, s.sndInstr___37281);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 8, s.soundWave___37280);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 9, s.arg1);
+    s.addForm___37288 = (s.tmp_0);
+    r0 = pxsim_pxtcore_mkAction(3, scanNextWord_inline__P37349);
+    s.tmp_0 = r0;
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.pos___37262);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.notes___37258);
+    s.scanNextWord___37348 = (s.tmp_0);
+    r0 = pxsim_pxtrt.mklocRef();
+    s.token___37405 = (r0);
+    s.tmp_0 = r0 = s.token___37405;
+    r0 = pxsim_String_.mkEmpty();
+    s.tmp_1 = r0;
+    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
+    r0 = pxsim_pxtrt.mklocRef();
+    s.tokenKind___37406 = (r0);
+    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 0);
+    r0 = pxsim_pxtcore_mkAction(13, consumeToken_inline__P37410);
+    s.tmp_0 = r0;
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.token___37405);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.tokenKind___37406);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.octave___37264);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 3, s.duration___37263);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 4, s.ms___37270);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 5, s.tempo___37265);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 6, s.hz___37266);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 7, s.soundWave___37280);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 8, s.envA___37276);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 9, s.envD___37277);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 10, s.envS___37278);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 11, s.envR___37279);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 12, s.endHz___37267);
+    s.consumeToken___37409 = (s.tmp_0);
+  case 3:
+    r0 = pxsim_numops_toBoolDecr(true);
+    if (!r0) { step = 58; continue; }
+    s.tmp_0 = lambda_1_mk(s);
+    s.tmp_0.argL = s.scanNextWord___37348;
+    setupLambda(s.tmp_0, s.tmp_0.argL);
+    s.callLocIdx = 20; s.pc = 62; return s.tmp_0;
+  case 62:
+    r0 = s.retval;
+    s.currNote___37485 = (r0);
+    s.prevNote___37487 = (false);
+    r0 = pxsim_numops_toBoolDecr(s.currNote___37485);
+    s.tmp_1 = r0;
+    r0 = pxsim_Boolean__bang(s.tmp_1);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 8; continue; }
+    r0 = (s.timePos___37271 - s.now___37275);
+    s.timeLeft___37490 = (r0);
+    r0 = (s.timeLeft___37490 > 0);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 4; continue; }
+    s.tmp_1 = pause__P17659_mk(s);
+    s.tmp_1.arg0 = s.timeLeft___37490;
+    s.callLocIdx = 21; s.pc = 63; return s.tmp_1;
+  case 63:
+    r0 = s.retval;
+  case 4:
+  case 5:
+    r0 = s.arg0.fields["onPlayFinished"];
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 6; continue; }
+    s.tmp_1 = if_onPlayFinished_1_mk(s);
+    s.tmp_1.arg0 = s.arg0;
+    if (!s.tmp_1.arg0.vtable.iface) {
+      setupLambda(s.tmp_1, pxsim_pxtrt.mapGetByString(s.tmp_1.arg0, "onPlayFinished"), 1);
+      s.callLocIdx = 22; s.pc = 64; return s.tmp_1;
+    } else {
+      s.tmp_1.fn = s.tmp_1.arg0.vtable.iface["onPlayFinished"];
+      if (s.tmp_1.fn == null) { setupLambda(s.tmp_1, s.tmp_1.arg0.fields["onPlayFinished"], 1); s.callLocIdx = 22; s.pc = 64; return s.tmp_1; }
+      else if (s.tmp_1.fn.isGetter) { s.tmp_1.stage2Call = true; s.callLocIdx = 22; s.pc = 64; return s.tmp_1;; }
+     else { s.callLocIdx = 22; s.pc = 64; return s.tmp_1; }
+    }
+  case 64:
+    r0 = s.retval;
+  case 6:
+  case 7:
+    { step = 59; continue; }
+  case 8:
+  case 9:
+    r0 = pxsim_pxtrt_stlocRef(s.hz___37266, -1);
+    s.note___37504 = (0);
+    s.tmp_0 = r0 = s.token___37405;
+    r0 = pxsim_String_.mkEmpty();
+    s.tmp_1 = r0;
+    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
+    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 0);
+    s.i___37508 = (0);
+  case 10:
+    s.tmp_1 = r0 = s.i___37508;
+    r0 = pxsim_String_.length(s.currNote___37485);
+    s.tmp_2 = r0;
+    r0 = (s.tmp_1 < s.tmp_2);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 41; continue; }
+    r0 = pxsim_String_.charAt(s.currNote___37485, s.i___37508);
+    s.noteChar___37514 = (r0);
+    s.tmp_0 = r0 = s.noteChar___37514;
+    r0 = pxsim_pxtcore.switch_eq("c", s.tmp_0);
+    if (r0) { step = 11; continue; }
+    r0 = pxsim_pxtcore.switch_eq("C", s.tmp_0);
+    if (r0) { step = 12; continue; }
+    r0 = pxsim_pxtcore.switch_eq("d", s.tmp_0);
+    if (r0) { step = 13; continue; }
+    r0 = pxsim_pxtcore.switch_eq("D", s.tmp_0);
+    if (r0) { step = 14; continue; }
+    r0 = pxsim_pxtcore.switch_eq("e", s.tmp_0);
+    if (r0) { step = 15; continue; }
+    r0 = pxsim_pxtcore.switch_eq("E", s.tmp_0);
+    if (r0) { step = 16; continue; }
+    r0 = pxsim_pxtcore.switch_eq("f", s.tmp_0);
+    if (r0) { step = 17; continue; }
+    r0 = pxsim_pxtcore.switch_eq("F", s.tmp_0);
+    if (r0) { step = 18; continue; }
+    r0 = pxsim_pxtcore.switch_eq("g", s.tmp_0);
+    if (r0) { step = 19; continue; }
+    r0 = pxsim_pxtcore.switch_eq("G", s.tmp_0);
+    if (r0) { step = 20; continue; }
+    r0 = pxsim_pxtcore.switch_eq("a", s.tmp_0);
+    if (r0) { step = 21; continue; }
+    r0 = pxsim_pxtcore.switch_eq("A", s.tmp_0);
+    if (r0) { step = 22; continue; }
+    r0 = pxsim_pxtcore.switch_eq("B", s.tmp_0);
+    if (r0) { step = 23; continue; }
+    r0 = pxsim_pxtcore.switch_eq("r", s.tmp_0);
+    if (r0) { step = 24; continue; }
+    r0 = pxsim_pxtcore.switch_eq("R", s.tmp_0);
+    if (r0) { step = 25; continue; }
+    r0 = pxsim_pxtcore.switch_eq("#", s.tmp_0);
+    if (r0) { step = 26; continue; }
+    r0 = pxsim_pxtcore.switch_eq("b", s.tmp_0);
+    if (r0) { step = 27; continue; }
+    r0 = pxsim_pxtcore.switch_eq(",", s.tmp_0);
+    if (r0) { step = 30; continue; }
+    r0 = pxsim_pxtcore.switch_eq("!", s.tmp_0);
+    if (r0) { step = 31; continue; }
+    r0 = pxsim_pxtcore.switch_eq("@", s.tmp_0);
+    if (r0) { step = 32; continue; }
+    r0 = pxsim_pxtcore.switch_eq("~", s.tmp_0);
+    if (r0) { step = 33; continue; }
+    r0 = pxsim_pxtcore.switch_eq(":", s.tmp_0);
+    if (r0) { step = 34; continue; }
+    r0 = pxsim_pxtcore.switch_eq("-", s.tmp_0);
+    if (r0) { step = 35; continue; }
+    r0 = pxsim_pxtcore.switch_eq("^", s.tmp_0);
+    if (r0) { step = 36; continue; }
+    r0 = s.tmp_0;
+    { step = 37; continue; }
+  case 11:
+  case 12:
+    s.note___37504 = (1);
+    s.prevNote___37487 = (true);
+    { step = 40; continue; }
+  case 13:
+  case 14:
+    s.note___37504 = (3);
+    s.prevNote___37487 = (true);
+    { step = 40; continue; }
+  case 15:
+  case 16:
+    s.note___37504 = (5);
+    s.prevNote___37487 = (true);
+    { step = 40; continue; }
+  case 17:
+  case 18:
+    s.note___37504 = (6);
+    s.prevNote___37487 = (true);
+    { step = 40; continue; }
+  case 19:
+  case 20:
+    s.note___37504 = (8);
+    s.prevNote___37487 = (true);
+    { step = 40; continue; }
+  case 21:
+  case 22:
+    s.note___37504 = (10);
+    s.prevNote___37487 = (true);
+    { step = 40; continue; }
+  case 23:
+    s.note___37504 = (12);
+    s.prevNote___37487 = (true);
+    { step = 40; continue; }
+  case 24:
+  case 25:
+    r0 = pxsim_pxtrt_stlocRef(s.hz___37266, 0);
+    s.prevNote___37487 = (false);
+    { step = 40; continue; }
+  case 26:
+    r0 = (s.note___37504 + 1);
+    s.note___37504 = (r0);
+    s.prevNote___37487 = (false);
+    { step = 40; continue; }
+  case 27:
+    r0 = pxsim_numops_toBoolDecr(s.prevNote___37487);
+    if (!r0) { step = 28; continue; }
+    r0 = (s.note___37504 - 1);
+    s.note___37504 = (r0);
+    { step = 29; continue; }
+  case 28:
+    s.note___37504 = (12);
+    s.prevNote___37487 = (true);
+  case 29:
+    { step = 40; continue; }
+  case 30:
+    s.tmp_0 = lambda_1_mk(s);
+    s.tmp_0.argL = s.consumeToken___37409;
+    setupLambda(s.tmp_0, s.tmp_0.argL);
+    s.callLocIdx = 23; s.pc = 65; return s.tmp_0;
+  case 65:
+    r0 = s.retval;
+    s.prevNote___37487 = (false);
+    { step = 40; continue; }
+  case 31:
+    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 4);
+    s.prevNote___37487 = (false);
+    { step = 40; continue; }
+  case 32:
+    s.tmp_0 = lambda_1_mk(s);
+    s.tmp_0.argL = s.consumeToken___37409;
+    setupLambda(s.tmp_0, s.tmp_0.argL);
+    s.callLocIdx = 24; s.pc = 66; return s.tmp_0;
+  case 66:
+    r0 = s.retval;
+    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 8);
+    s.prevNote___37487 = (false);
+    { step = 40; continue; }
+  case 33:
+    s.tmp_0 = lambda_1_mk(s);
+    s.tmp_0.argL = s.consumeToken___37409;
+    setupLambda(s.tmp_0, s.tmp_0.argL);
+    s.callLocIdx = 25; s.pc = 67; return s.tmp_0;
+  case 67:
+    r0 = s.retval;
+    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 7);
+    s.prevNote___37487 = (false);
+    { step = 40; continue; }
+  case 34:
+    s.tmp_0 = lambda_1_mk(s);
+    s.tmp_0.argL = s.consumeToken___37409;
+    setupLambda(s.tmp_0, s.tmp_0.argL);
+    s.callLocIdx = 26; s.pc = 68; return s.tmp_0;
+  case 68:
+    r0 = s.retval;
+    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 2);
+    s.prevNote___37487 = (false);
+    { step = 40; continue; }
+  case 35:
+    s.tmp_0 = lambda_1_mk(s);
+    s.tmp_0.argL = s.consumeToken___37409;
+    setupLambda(s.tmp_0, s.tmp_0.argL);
+    s.callLocIdx = 27; s.pc = 69; return s.tmp_0;
+  case 69:
+    r0 = s.retval;
+    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 3);
+    s.prevNote___37487 = (false);
+    { step = 40; continue; }
+  case 36:
+    s.tmp_0 = lambda_1_mk(s);
+    s.tmp_0.argL = s.consumeToken___37409;
+    setupLambda(s.tmp_0, s.tmp_0.argL);
+    s.callLocIdx = 28; s.pc = 70; return s.tmp_0;
+  case 70:
+    r0 = s.retval;
+    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 5);
+    { step = 40; continue; }
+  case 37:
+    r0 = pxsim_pxtrt_ldlocRef(s.tokenKind___37406);
+    s.tmp_1 = r0;
+    r0 = (s.tmp_1 == 0);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 38; continue; }
+    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 1);
+  case 38:
+  case 39:
+    s.tmp_0 = r0 = s.token___37405;
+    r0 = pxsim_pxtrt_ldlocRef(s.token___37405);
+    s.tmp_3 = r0;
+    if ((s.tmp_3) && (s.tmp_3).vtable) {
+    setupResume(s, 71);
+    pxsim_String__stringConv(s.tmp_3);
+    checkResumeConsumed();
+    return;
+    } else { s.retval = (s.tmp_3) + ""; }
+  case 71:
+    r0 = s.retval;
+    s.tmp_2 = r0;
+    if ((s.noteChar___37514) && (s.noteChar___37514).vtable) {
+    setupResume(s, 72);
+    pxsim_String__stringConv(s.noteChar___37514);
+    checkResumeConsumed();
+    return;
+    } else { s.retval = (s.noteChar___37514) + ""; }
+  case 72:
+    r0 = s.retval;
+    s.tmp_4 = r0;
+    r0 = pxsim_String__concat(s.tmp_2, s.tmp_4);
+    s.tmp_1 = r0;
+    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
+    s.prevNote___37487 = (false);
+  case 40:
+    r0 = (s.i___37508 + 1);
+    s.i___37508 = (r0);
+    { step = 10; continue; }
+  case 41:
+    s.tmp_0 = lambda_1_mk(s);
+    s.tmp_0.argL = s.consumeToken___37409;
+    setupLambda(s.tmp_0, s.tmp_0.argL);
+    s.callLocIdx = 29; s.pc = 73; return s.tmp_0;
+  case 73:
+    r0 = s.retval;
+    s.tmp_0 = r0 = s.note___37504;
+    r0 = pxsim_numops_toBool(s.tmp_0);
+    if (r0) { step = 42; continue; }
+    r0 = s.tmp_0;
+    { step = 43; continue; }
+  case 42:
+    r0 = pxsim_pxtrt_ldlocRef(s.hz___37266);
+    s.tmp_1 = r0;
+    r0 = (s.tmp_1 < 0);
+  case 43:
+    // jmp value (already in r0)
+    s.tmp_2 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_2);
+    if (!r0) { step = 46; continue; }
+    s.tmp_3 = r0 = s.note___37504;
+    r0 = pxsim_pxtrt_ldlocRef(s.octave___37264);
+    s.tmp_6 = r0;
+    r0 = (s.tmp_6 - 1);
+    s.tmp_5 = r0;
+    r0 = (12 * s.tmp_5);
+    s.tmp_4 = r0;
+    r0 = (s.tmp_3 + s.tmp_4);
+    s.keyNumber___37588 = (r0);
+    s.tmp_1 = r0 = globals.freqs___21294;
+    r0 = (s.keyNumber___37588 * 2);
+    s.tmp_2 = r0;
+    r0 = pxsim.BufferMethods.getNumber(s.tmp_1, 4, s.tmp_2);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_0);
+    if (!r0) { step = 44; continue; }
+    r0 = s.tmp_0;
+    { step = 45; continue; }
+  case 44:
+    r0 = 0;
+  case 45:
+    // jmp value (already in r0)
+    s.tmp_3 = r0;
+    r0 = pxsim_pxtrt_stlocRef(s.hz___37266, s.tmp_3);
+  case 46:
+  case 47:
+    r0 = pxsim_pxtrt_ldlocRef(s.ms___37270);
+    s.currMs___37605 = (r0);
+    r0 = (s.currMs___37605 <= 0);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 48; continue; }
+    r0 = pxsim_pxtrt_ldlocRef(s.tempo___37265);
+    s.tmp_1 = r0;
+    r0 = pxsim.Math_.idiv(15000, s.tmp_1);
+    s.beat___37609 = (r0);
+    r0 = pxsim_pxtrt_ldlocRef(s.duration___37263);
+    s.tmp_0 = r0;
+    r0 = (s.tmp_0 * s.beat___37609);
+    s.currMs___37605 = (r0);
+  case 48:
+  case 49:
+    r0 = pxsim_pxtrt_ldlocRef(s.hz___37266);
+    s.tmp_1 = r0;
+    r0 = (s.tmp_1 < 0);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 50; continue; }
+    { step = 55; continue; }
+  case 50:
+    r0 = pxsim_pxtrt_ldlocRef(s.hz___37266);
+    s.tmp_3 = r0;
+    r0 = (s.tmp_3 == 0);
+    s.tmp_2 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_2);
+    if (!r0) { step = 51; continue; }
+    r0 = (s.timePos___37271 + s.currMs___37605);
+    s.timePos___37271 = (r0);
+    { step = 54; continue; }
+  case 51:
+    r0 = pxsim_pxtrt_ldlocRef(s.endHz___37267);
+    s.tmp_1 = r0;
+    r0 = (s.tmp_1 < 0);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 52; continue; }
+    s.tmp_2 = r0 = s.endHz___37267;
+    r0 = pxsim_pxtrt_ldlocRef(s.hz___37266);
+    s.tmp_3 = r0;
+    r0 = pxsim_pxtrt_stlocRef(s.tmp_2, s.tmp_3);
+  case 52:
+  case 53:
+    r0 = pxsim_pxtrt_stlocRef(s.sndInstrPtr___37287, 0);
+    s.tmp_0 = lambda_5_mk(s);
+    s.tmp_0.argL = s.addForm___37288;
+    r0 = pxsim_pxtrt_ldlocRef(s.envA___37276);
+    s.tmp_0.arg0 = r0;
+    s.tmp_0.arg1 = 0;
+    s.tmp_0.arg2 = 255;
+    s.tmp_0.arg3 = 0;
+    setupLambda(s.tmp_0, s.tmp_0.argL);
+    s.callLocIdx = 30; s.pc = 74; return s.tmp_0;
+  case 74:
+    r0 = s.retval;
+    s.tmp_0 = lambda_5_mk(s);
+    s.tmp_0.argL = s.addForm___37288;
+    r0 = pxsim_pxtrt_ldlocRef(s.envD___37277);
+    s.tmp_0.arg0 = r0;
+    s.tmp_0.arg1 = 255;
+    r0 = pxsim_pxtrt_ldlocRef(s.envS___37278);
+    s.tmp_0.arg2 = r0;
+    r0 = pxsim_pxtrt_ldlocRef(s.envA___37276);
+    s.tmp_0.arg3 = r0;
+    setupLambda(s.tmp_0, s.tmp_0.argL);
+    s.callLocIdx = 31; s.pc = 75; return s.tmp_0;
+  case 75:
+    r0 = s.retval;
+    s.tmp_0 = lambda_5_mk(s);
+    s.tmp_0.argL = s.addForm___37288;
+    s.tmp_1 = r0 = s.currMs___37605;
+    r0 = pxsim_pxtrt_ldlocRef(s.envA___37276);
+    s.tmp_3 = r0;
+    r0 = pxsim_pxtrt_ldlocRef(s.envD___37277);
+    s.tmp_4 = r0;
+    r0 = (s.tmp_3 + s.tmp_4);
+    s.tmp_2 = r0;
+    r0 = (s.tmp_1 - s.tmp_2);
+    s.tmp_0.arg0 = r0;
+    r0 = pxsim_pxtrt_ldlocRef(s.envS___37278);
+    s.tmp_0.arg1 = r0;
+    r0 = pxsim_pxtrt_ldlocRef(s.envS___37278);
+    s.tmp_0.arg2 = r0;
+    r0 = pxsim_pxtrt_ldlocRef(s.envD___37277);
+    s.tmp_5 = r0;
+    r0 = pxsim_pxtrt_ldlocRef(s.envA___37276);
+    s.tmp_6 = r0;
+    r0 = (s.tmp_5 + s.tmp_6);
+    s.tmp_0.arg3 = r0;
+    setupLambda(s.tmp_0, s.tmp_0.argL);
+    s.callLocIdx = 32; s.pc = 76; return s.tmp_0;
+  case 76:
+    r0 = s.retval;
+    s.tmp_0 = lambda_5_mk(s);
+    s.tmp_0.argL = s.addForm___37288;
+    r0 = pxsim_pxtrt_ldlocRef(s.envR___37279);
+    s.tmp_0.arg0 = r0;
+    r0 = pxsim_pxtrt_ldlocRef(s.envS___37278);
+    s.tmp_0.arg1 = r0;
+    s.tmp_0.arg2 = 0;
+    s.tmp_0.arg3 = s.currMs___37605;
+    setupLambda(s.tmp_0, s.tmp_0.argL);
+    s.callLocIdx = 33; s.pc = 77; return s.tmp_0;
+  case 77:
+    r0 = s.retval;
+    s.tmp_0 = music_MelodyPlayer_queuePlayInstructions__P21311_mk(s);
+    s.tmp_0.arg0 = s.arg0;
+    r0 = (s.timePos___37271 - s.now___37275);
+    s.tmp_0.arg1 = r0;
+    s.tmp_1 = r0 = s.sndInstr___37281;
+    r0 = pxsim_pxtrt_ldlocRef(s.sndInstrPtr___37287);
+    s.tmp_2 = r0;
+    r0 = pxsim.BufferMethods.slice(s.tmp_1, 0, s.tmp_2);
+    s.tmp_0.arg2 = r0;
+    s.callLocIdx = 34; s.pc = 78; return s.tmp_0;
+  case 78:
+    r0 = s.retval;
+    r0 = pxsim_pxtrt_stlocRef(s.endHz___37267, -1);
+    r0 = (s.timePos___37271 + s.currMs___37605);
+    s.timePos___37271 = (r0);
+  case 54:
+  case 55:
+    r0 = (s.timePos___37271 - s.now___37275);
+    s.timeLeft___37666 = (r0);
+    r0 = (s.timeLeft___37666 > 200);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 56; continue; }
+    s.tmp_1 = pause__P17659_mk(s);
+    r0 = (s.timeLeft___37666 - 100);
+    s.tmp_1.arg0 = r0;
+    s.callLocIdx = 35; s.pc = 79; return s.tmp_1;
+  case 79:
+    r0 = s.retval;
+    r0 = pxsim.control.millis();
+    s.tmp_0 = r0;
+    r0 = (s.tmp_0 - s.startTime___37272);
+    s.now___37275 = (r0);
+  case 56:
+  case 57:
+    { step = 3; continue; }
+  case 58:
+  case 59:
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+music_MelodyPlayer_play__P18873.info = {"start":11361,"length":9259,"line":348,"column":8,"endLine":582,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"play","argumentNames":["this","volume"]}
+
+function music_MelodyPlayer_play__P18873_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: music_MelodyPlayer_play__P18873, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  tmp_4: undefined,
+  tmp_5: undefined,
+  tmp_6: undefined,
+  tmp_7: undefined,
+  tmp_8: undefined,
+  tmp_9: undefined,
+  tmp_10: undefined,
+  notes___37258: undefined,
+  pos___37262: undefined,
+  duration___37263: undefined,
+  octave___37264: undefined,
+  tempo___37265: undefined,
+  hz___37266: undefined,
+  endHz___37267: undefined,
+  ms___37270: undefined,
+  timePos___37271: undefined,
+  startTime___37272: undefined,
+  now___37275: undefined,
+  envA___37276: undefined,
+  envD___37277: undefined,
+  envS___37278: undefined,
+  envR___37279: undefined,
+  soundWave___37280: undefined,
+  sndInstr___37281: undefined,
+  sndInstrPtr___37287: undefined,
+  addForm___37288: undefined,
+  scanNextWord___37348: undefined,
+  token___37405: undefined,
+  tokenKind___37406: undefined,
+  consumeToken___37409: undefined,
+  currNote___37485: undefined,
+  prevNote___37487: undefined,
+  timeLeft___37490: undefined,
+  note___37504: undefined,
+  i___37508: undefined,
+  noteChar___37514: undefined,
+  keyNumber___37588: undefined,
+  currMs___37605: undefined,
+  beat___37609: undefined,
+  timeLeft___37666: undefined,
+  arg0: undefined,
+  arg1: undefined,
+} }
+
+
+
+
+
+function addForm_inline__P37289(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    s.freqStart___37294 = undefined;
+    s.freqEnd___37296 = undefined;
+    s.envelopeWidth___37298 = undefined;
+    s.slope___37316 = undefined;
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.arg2 = (s.lambdaArgs[2]);
+      s.arg3 = (s.lambdaArgs[3]);
+      s.lambdaArgs = null;
+    }
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[0]);
+    s.freqStart___37294 = (r0);
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
+    s.freqEnd___37296 = (r0);
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[2]);
+    s.tmp_1 = r0;
+    r0 = (s.tmp_1 > 0);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 1; continue; }
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[2]);
+    { step = 2; continue; }
+  case 1:
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[3]);
+    s.tmp_3 = r0;
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[4]);
+    s.tmp_5 = r0;
+    r0 = pxsim.Math_.idiv(15000, s.tmp_5);
+    s.tmp_4 = r0;
+    r0 = (s.tmp_3 * s.tmp_4);
+    s.tmp_2 = r0;
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[5]);
+    s.tmp_6 = r0;
+    r0 = (s.tmp_2 + s.tmp_6);
+  case 2:
+    // jmp value (already in r0)
+    s.tmp_7 = r0;
+    s.envelopeWidth___37298 = (s.tmp_7);
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
+    s.tmp_1 = r0;
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[0]);
+    s.tmp_2 = r0;
+    r0 = (s.tmp_1 != s.tmp_2);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_0);
+    if (r0) { step = 3; continue; }
+    r0 = s.tmp_0;
+    { step = 4; continue; }
+  case 3:
+    r0 = (s.envelopeWidth___37298 != 0);
+  case 4:
+    // jmp value (already in r0)
+    s.tmp_3 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_3);
+    if (!r0) { step = 5; continue; }
+    r0 = (s.freqEnd___37296 - s.freqStart___37294);
+    s.tmp_4 = r0;
+    r0 = (s.tmp_4 / s.envelopeWidth___37298);
+    s.slope___37316 = (r0);
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[0]);
+    s.tmp_0 = r0;
+    r0 = (s.slope___37316 * s.arg3);
+    s.tmp_1 = r0;
+    r0 = (s.tmp_0 + s.tmp_1);
+    s.freqStart___37294 = (r0);
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[0]);
+    s.tmp_0 = r0;
+    s.tmp_2 = r0 = s.slope___37316;
+    r0 = (s.arg3 + s.arg0);
+    s.tmp_3 = r0;
+    r0 = (s.tmp_2 * s.tmp_3);
+    s.tmp_1 = r0;
+    r0 = (s.tmp_0 + s.tmp_1);
+    s.freqEnd___37296 = (r0);
+  case 5:
+  case 6:
+    s.tmp_0 = r0 = s.caps[6];
+    s.tmp_2 = music_addNote__P21310_mk(s);
+    s.tmp_2.arg0 = s.caps[7];
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[6]);
+    s.tmp_2.arg1 = r0;
+    s.tmp_2.arg2 = s.arg0;
+    s.tmp_2.arg3 = s.arg1;
+    s.tmp_2.arg4 = s.arg2;
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[8]);
+    s.tmp_2.arg5 = r0;
+    s.tmp_2.arg6 = s.freqStart___37294;
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[9]);
+    s.tmp_2.arg7 = r0;
+    s.tmp_2.arg8 = s.freqEnd___37296;
+    s.callLocIdx = 13; s.pc = 7; return s.tmp_2;
+  case 7:
+    r0 = s.retval;
+    s.tmp_1 = r0;
+    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+addForm_inline__P37289.info = {"start":12169,"length":643,"line":374,"column":28,"endLine":385,"endColumn":13,"fileName":"pxt_modules/mixer/melody.ts","functionName":"inline","argumentNames":["formDuration","beg","end","msOff"]}
+
+function addForm_inline__P37289_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: addForm_inline__P37289, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  tmp_4: undefined,
+  tmp_5: undefined,
+  tmp_6: undefined,
+  tmp_7: undefined,
+  freqStart___37294: undefined,
+  freqEnd___37296: undefined,
+  envelopeWidth___37298: undefined,
+  slope___37316: undefined,
+  arg0: undefined,
+  arg1: undefined,
+  arg2: undefined,
+  arg3: undefined,
+} }
+
+
+
+
+
+function scanNextWord_inline__P37349(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    s.c___37358 = undefined;
+    s.note___37375 = undefined;
+    s.c___37381 = undefined;
+    r0 = s.caps[0].fields["melody"];
+    s.tmp_2 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_2);
+    s.tmp_1 = r0;
+    r0 = pxsim_Boolean__bang(s.tmp_1);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 1; continue; }
+    r0 = pxsim_String_.mkEmpty();
+    { step = 23; continue; }
+  case 1:
+  case 2:
+  case 3:
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
+    s.tmp_4 = r0;
+    r0 = pxsim_String_.length(s.caps[2]);
+    s.tmp_5 = r0;
+    r0 = (s.tmp_4 < s.tmp_5);
+    s.tmp_3 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_3);
+    if (!r0) { step = 12; continue; }
+    s.tmp_6 = r0 = s.caps[2];
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
+    s.tmp_7 = r0;
+    r0 = pxsim_String_.charAt(s.tmp_6, s.tmp_7);
+    s.c___37358 = (r0);
+    r0 = (s.c___37358 != " ");
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_0);
+    if (r0) { step = 4; continue; }
+    r0 = s.tmp_0;
+    { step = 5; continue; }
+  case 4:
+    r0 = (s.c___37358 != "\r");
+  case 5:
+    // jmp value (already in r0)
+    s.tmp_1 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_1);
+    if (r0) { step = 6; continue; }
+    r0 = s.tmp_1;
+    { step = 7; continue; }
+  case 6:
+    r0 = (s.c___37358 != "\n");
+  case 7:
+    // jmp value (already in r0)
+    s.tmp_2 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_2);
+    if (r0) { step = 8; continue; }
+    r0 = s.tmp_2;
+    { step = 9; continue; }
+  case 8:
+    r0 = (s.c___37358 != "\t");
+  case 9:
+    // jmp value (already in r0)
+    s.tmp_3 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_3);
+    if (!r0) { step = 10; continue; }
+    { step = 12; continue; }
+  case 10:
+  case 11:
+    s.tmp_4 = r0 = s.caps[1];
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
+    s.tmp_6 = r0;
+    r0 = (s.tmp_6 + 1);
+    s.tmp_5 = r0;
+    r0 = pxsim_pxtrt_stlocRef(s.tmp_4, s.tmp_5);
+    { step = 3; continue; }
+  case 12:
+    r0 = pxsim_String_.mkEmpty();
+    s.note___37375 = (r0);
+  case 13:
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
+    s.tmp_1 = r0;
+    r0 = pxsim_String_.length(s.caps[2]);
+    s.tmp_2 = r0;
+    r0 = (s.tmp_1 < s.tmp_2);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 22; continue; }
+    s.tmp_3 = r0 = s.caps[2];
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
+    s.tmp_4 = r0;
+    r0 = pxsim_String_.charAt(s.tmp_3, s.tmp_4);
+    s.c___37381 = (r0);
+    r0 = (s.c___37381 == " ");
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_0);
+    if (!r0) { step = 14; continue; }
+    r0 = s.tmp_0;
+    { step = 15; continue; }
+  case 14:
+    r0 = (s.c___37381 == "\r");
+  case 15:
+    // jmp value (already in r0)
+    s.tmp_1 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_1);
+    if (!r0) { step = 16; continue; }
+    r0 = s.tmp_1;
+    { step = 17; continue; }
+  case 16:
+    r0 = (s.c___37381 == "\n");
+  case 17:
+    // jmp value (already in r0)
+    s.tmp_2 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_2);
+    if (!r0) { step = 18; continue; }
+    r0 = s.tmp_2;
+    { step = 19; continue; }
+  case 18:
+    r0 = (s.c___37381 == "\t");
+  case 19:
+    // jmp value (already in r0)
+    s.tmp_3 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_3);
+    if (!r0) { step = 20; continue; }
+    { step = 22; continue; }
+  case 20:
+  case 21:
+    if ((s.note___37375) && (s.note___37375).vtable) {
+    setupResume(s, 24);
+    pxsim_String__stringConv(s.note___37375);
+    checkResumeConsumed();
+    return;
+    } else { s.retval = (s.note___37375) + ""; }
+  case 24:
+    r0 = s.retval;
+    s.tmp_4 = r0;
+    if ((s.c___37381) && (s.c___37381).vtable) {
+    setupResume(s, 25);
+    pxsim_String__stringConv(s.c___37381);
+    checkResumeConsumed();
+    return;
+    } else { s.retval = (s.c___37381) + ""; }
+  case 25:
+    r0 = s.retval;
+    s.tmp_5 = r0;
+    r0 = pxsim_String__concat(s.tmp_4, s.tmp_5);
+    s.note___37375 = (r0);
+    s.tmp_0 = r0 = s.caps[1];
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
+    s.tmp_2 = r0;
+    r0 = (s.tmp_2 + 1);
+    s.tmp_1 = r0;
+    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
+    { step = 13; continue; }
+  case 22:
+    r0 = s.note___37375;
+  case 23:
+    return leave(s, r0)
+  default: oops()
+} } }
+scanNextWord_inline__P37349.info = {"start":12847,"length":708,"line":387,"column":33,"endLine":409,"endColumn":13,"fileName":"pxt_modules/mixer/melody.ts","functionName":"inline","argumentNames":[]}
+
+function scanNextWord_inline__P37349_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: scanNextWord_inline__P37349, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  tmp_4: undefined,
+  tmp_5: undefined,
+  tmp_6: undefined,
+  tmp_7: undefined,
+  c___37358: undefined,
+  note___37375: undefined,
+  c___37381: undefined,
+} }
+
+
+
+
+
+function consumeToken_inline__P37410(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    s.d___37416 = undefined;
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[0]);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_0);
+    if (r0) { step = 1; continue; }
+    r0 = s.tmp_0;
+    { step = 2; continue; }
+  case 1:
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
+    s.tmp_1 = r0;
+    r0 = (s.tmp_1 != 0);
+  case 2:
+    // jmp value (already in r0)
+    s.tmp_2 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_2);
+    if (!r0) { step = 15; continue; }
+    s.tmp_3 = parseInt__P17343_mk(s);
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[0]);
+    s.tmp_3.arg0 = r0;
+    s.tmp_3.arg1 = undefined;
+    s.callLocIdx = 14; s.pc = 17; return s.tmp_3;
+  case 17:
+    r0 = s.retval;
+    s.d___37416 = (r0);
+    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
+    s.tmp_0 = r0;
+    r0 = pxsim_pxtcore.switch_eq(1, s.tmp_0);
+    if (r0) { step = 3; continue; }
+    r0 = pxsim_pxtcore.switch_eq(2, s.tmp_0);
+    if (r0) { step = 4; continue; }
+    r0 = pxsim_pxtcore.switch_eq(3, s.tmp_0);
+    if (r0) { step = 5; continue; }
+    r0 = pxsim_pxtcore.switch_eq(4, s.tmp_0);
+    if (r0) { step = 6; continue; }
+    r0 = pxsim_pxtcore.switch_eq(6, s.tmp_0);
+    if (r0) { step = 7; continue; }
+    r0 = pxsim_pxtcore.switch_eq(7, s.tmp_0);
+    if (r0) { step = 8; continue; }
+    r0 = pxsim_pxtcore.switch_eq(8, s.tmp_0);
+    if (r0) { step = 9; continue; }
+    r0 = pxsim_pxtcore.switch_eq(9, s.tmp_0);
+    if (r0) { step = 10; continue; }
+    r0 = pxsim_pxtcore.switch_eq(10, s.tmp_0);
+    if (r0) { step = 11; continue; }
+    r0 = pxsim_pxtcore.switch_eq(11, s.tmp_0);
+    if (r0) { step = 12; continue; }
+    r0 = pxsim_pxtcore.switch_eq(5, s.tmp_0);
+    if (r0) { step = 13; continue; }
+    r0 = s.tmp_0;
+    { step = 14; continue; }
+  case 3:
+    r0 = pxsim_pxtrt_stlocRef(s.caps[2], s.d___37416);
+    { step = 14; continue; }
+  case 4:
+    s.tmp_0 = r0 = s.caps[3];
+    s.tmp_2 = Math_max__P17376_mk(s);
+    s.tmp_2.arg0 = 1;
+    s.tmp_3 = Math_min__P17377_mk(s);
+    s.tmp_3.arg0 = 16;
+    s.tmp_3.arg1 = s.d___37416;
+    s.callLocIdx = 15; s.pc = 19; return s.tmp_3;
+  case 19:
+    r0 = s.retval;
+    s.tmp_2.arg1 = r0;
+    s.callLocIdx = 16; s.pc = 18; return s.tmp_2;
+  case 18:
+    r0 = s.retval;
+    s.tmp_1 = r0;
+    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
+    r0 = pxsim_pxtrt_stlocRef(s.caps[4], -1);
+    { step = 14; continue; }
+  case 5:
+    s.tmp_0 = r0 = s.caps[5];
+    s.tmp_2 = Math_max__P17376_mk(s);
+    s.tmp_2.arg0 = 1;
+    s.tmp_2.arg1 = s.d___37416;
+    s.callLocIdx = 17; s.pc = 20; return s.tmp_2;
+  case 20:
+    r0 = s.retval;
+    s.tmp_1 = r0;
+    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
+    { step = 14; continue; }
+  case 6:
+    r0 = pxsim_pxtrt_stlocRef(s.caps[6], s.d___37416);
+    r0 = pxsim_pxtrt_stlocRef(s.caps[1], 6);
+    { step = 14; continue; }
+  case 7:
+    r0 = pxsim_pxtrt_stlocRef(s.caps[4], s.d___37416);
+    { step = 14; continue; }
+  case 8:
+    s.tmp_0 = r0 = s.caps[7];
+    s.tmp_2 = Math_clamp__P17373_mk(s);
+    s.tmp_2.arg0 = 1;
+    s.tmp_2.arg1 = 18;
+    s.tmp_2.arg2 = s.d___37416;
+    s.callLocIdx = 18; s.pc = 21; return s.tmp_2;
+  case 21:
+    r0 = s.retval;
+    s.tmp_1 = r0;
+    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
+    { step = 14; continue; }
+  case 9:
+    r0 = pxsim_pxtrt_stlocRef(s.caps[8], s.d___37416);
+    r0 = pxsim_pxtrt_stlocRef(s.caps[1], 9);
+    { step = 14; continue; }
+  case 10:
+    r0 = pxsim_pxtrt_stlocRef(s.caps[9], s.d___37416);
+    r0 = pxsim_pxtrt_stlocRef(s.caps[1], 10);
+    { step = 14; continue; }
+  case 11:
+    s.tmp_0 = r0 = s.caps[10];
+    s.tmp_2 = Math_clamp__P17373_mk(s);
+    s.tmp_2.arg0 = 0;
+    s.tmp_2.arg1 = 255;
+    s.tmp_2.arg2 = s.d___37416;
+    s.callLocIdx = 19; s.pc = 22; return s.tmp_2;
+  case 22:
+    r0 = s.retval;
+    s.tmp_1 = r0;
+    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
+    r0 = pxsim_pxtrt_stlocRef(s.caps[1], 11);
+    { step = 14; continue; }
+  case 12:
+    r0 = pxsim_pxtrt_stlocRef(s.caps[11], s.d___37416);
+    { step = 14; continue; }
+  case 13:
+    r0 = pxsim_pxtrt_stlocRef(s.caps[12], s.d___37416);
+  case 14:
+    s.tmp_0 = r0 = s.caps[0];
+    r0 = pxsim_String_.mkEmpty();
+    s.tmp_1 = r0;
+    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
+  case 15:
+  case 16:
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+consumeToken_inline__P37410.info = {"start":14841,"length":1189,"line":448,"column":33,"endLine":469,"endColumn":13,"fileName":"pxt_modules/mixer/melody.ts","functionName":"inline","argumentNames":[]}
+
+function consumeToken_inline__P37410_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: consumeToken_inline__P37410, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  d___37416: undefined,
+} }
+
+
+
+
+
+function music_MelodyPlayer_queuePlayInstructions__P21311(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.arg2 = (s.lambdaArgs[2]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, music_MelodyPlayer__C18868_VT)) failedCast(r0);
+    r0 = pxsim.music.queuePlayInstructions(s.arg1, s.arg2);
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+music_MelodyPlayer_queuePlayInstructions__P21311.info = {"start":11226,"length":125,"line":344,"column":8,"endLine":346,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"queuePlayInstructions","argumentNames":["this","timeDelta","buf"]}
+
+function music_MelodyPlayer_queuePlayInstructions__P21311_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: music_MelodyPlayer_queuePlayInstructions__P21311, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  arg0: undefined,
+  arg1: undefined,
+  arg2: undefined,
+} }
+
+
+
+
+
+function music_addNote__P21310(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.arg2 = (s.lambdaArgs[2]);
+      s.arg3 = (s.lambdaArgs[3]);
+      s.arg4 = (s.lambdaArgs[4]);
+      s.arg5 = (s.lambdaArgs[5]);
+      s.arg6 = (s.lambdaArgs[6]);
+      s.arg7 = (s.lambdaArgs[7]);
+      s.arg8 = (s.lambdaArgs[8]);
+      s.lambdaArgs = null;
+    }
+    r0 = (s.arg2 > 0);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 1; continue; }
+    r0 = pxsim.BufferMethods.setNumber(s.arg0, 2, s.arg1, s.arg5);
+    s.tmp_0 = r0 = s.arg0;
+    r0 = (s.arg1 + 1);
+    s.tmp_1 = r0;
+    r0 = pxsim.BufferMethods.setNumber(s.tmp_0, 2, s.tmp_1, 0);
+    s.tmp_0 = r0 = s.arg0;
+    r0 = (s.arg1 + 2);
+    s.tmp_1 = r0;
+    r0 = pxsim.BufferMethods.setNumber(s.tmp_0, 4, s.tmp_1, s.arg6);
+    s.tmp_0 = r0 = s.arg0;
+    r0 = (s.arg1 + 4);
+    s.tmp_1 = r0;
+    r0 = pxsim.BufferMethods.setNumber(s.tmp_0, 4, s.tmp_1, s.arg2);
+    s.tmp_0 = r0 = s.arg0;
+    r0 = (s.arg1 + 6);
+    s.tmp_1 = r0;
+    r0 = (s.arg3 * s.arg7);
+    s.tmp_3 = r0;
+    r0 = (s.tmp_3 >> 6);
+    s.tmp_2 = r0;
+    r0 = pxsim.BufferMethods.setNumber(s.tmp_0, 4, s.tmp_1, s.tmp_2);
+    s.tmp_0 = r0 = s.arg0;
+    r0 = (s.arg1 + 8);
+    s.tmp_1 = r0;
+    r0 = (s.arg4 * s.arg7);
+    s.tmp_3 = r0;
+    r0 = (s.tmp_3 >> 6);
+    s.tmp_2 = r0;
+    r0 = pxsim.BufferMethods.setNumber(s.tmp_0, 4, s.tmp_1, s.tmp_2);
+    s.tmp_0 = r0 = s.arg0;
+    r0 = (s.arg1 + 10);
+    s.tmp_1 = r0;
+    r0 = pxsim.BufferMethods.setNumber(s.tmp_0, 4, s.tmp_1, s.arg8);
+    r0 = (s.arg1 + 12);
+    s.arg1 = (r0);
+  case 1:
+  case 2:
+    r0 = pxsim.BufferMethods.setNumber(s.arg0, 2, s.arg1, 0);
+    r0 = s.arg1;
+    return leave(s, r0)
+  default: oops()
+} } }
+music_addNote__P21310.info = {"start":10086,"length":904,"line":315,"column":4,"endLine":328,"endColumn":5,"fileName":"pxt_modules/mixer/melody.ts","functionName":"addNote","argumentNames":["sndInstr","sndInstrPtr","ms","beg","end","soundWave","hz","volume","endHz"]}
+
+function music_addNote__P21310_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: music_addNote__P21310, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  arg0: undefined,
+  arg1: undefined,
+  arg2: undefined,
+  arg3: undefined,
+  arg4: undefined,
+  arg5: undefined,
+  arg6: undefined,
+  arg7: undefined,
+  arg8: undefined,
+} }
+
+
+
+
+
+function music_volume__P18853(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    s.tmp_0 = music_initVolume__P21302_mk(s);
+    s.callLocIdx = 65; s.pc = 1; return s.tmp_0;
+  case 1:
+    r0 = s.retval;
+    r0 = globals.globalVolume___21298;
+    return leave(s, r0)
+  default: oops()
+} } }
+music_volume__P18853.info = {"start":1781,"length":90,"line":61,"column":4,"endLine":64,"endColumn":5,"fileName":"pxt_modules/mixer/melody.ts","functionName":"volume","argumentNames":[]}
+
+function music_volume__P18853_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: music_volume__P18853, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+} }
+
+
+
+
+
+function music_initVolume__P21302(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    r0 = (globals.globalVolume___21298 === null);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 1; continue; }
+    globals.globalVolume___21298 = (0);
+    s.tmp_0 = music_setVolume__P18852_mk(s);
+    r0 = pxsim_pxtcore.getConfig(59, 128);
+    s.tmp_0.arg0 = r0;
+    s.callLocIdx = 62; s.pc = 3; return s.tmp_0;
+  case 3:
+    r0 = s.retval;
+  case 1:
+  case 2:
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+music_initVolume__P21302.info = {"start":1014,"length":180,"line":33,"column":4,"endLine":38,"endColumn":5,"fileName":"pxt_modules/mixer/melody.ts","functionName":"initVolume","argumentNames":[]}
+
+function music_initVolume__P21302_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: music_initVolume__P21302, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+} }
+
+
+
+
+
+function music_setVolume__P18852(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.lambdaArgs = null;
+    }
+    s.tmp_0 = Math_clamp__P17373_mk(s);
+    s.tmp_0.arg0 = 0;
+    s.tmp_0.arg1 = 255;
+    r0 = (s.arg0 | 0);
+    s.tmp_0.arg2 = r0;
+    s.callLocIdx = 63; s.pc = 3; return s.tmp_0;
+  case 3:
+    r0 = s.retval;
+    globals.globalVolume___21298 = (r0);
+    r0 = (globals.globalVolume___21298 > 0);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 1; continue; }
+    r0 = 1;
+    { step = 2; continue; }
+  case 1:
+    r0 = 0;
+  case 2:
+    // jmp value (already in r0)
+    s.tmp_1 = r0;
+    r0 = undefined;
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+music_setVolume__P18852.info = {"start":1533,"length":153,"line":51,"column":4,"endLine":54,"endColumn":5,"fileName":"pxt_modules/mixer/melody.ts","functionName":"setVolume","argumentNames":["volume"]}
+
+function music_setVolume__P18852_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: music_setVolume__P18852, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  arg0: undefined,
+} }
+
+
+
+
+
+function music_enableAmp__P21301(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.lambdaArgs = null;
+    }
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+music_enableAmp__P21301.info = {"start":944,"length":64,"line":29,"column":4,"endLine":31,"endColumn":5,"fileName":"pxt_modules/mixer/melody.ts","functionName":"enableAmp","argumentNames":["en"]}
+
+function music_enableAmp__P21301_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: music_enableAmp__P21301, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  arg0: undefined,
+} }
+
+
+
+
+
+function Math_min__P17377(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = (s.arg0 <= s.arg1);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 1; continue; }
+    r0 = s.arg0;
+    { step = 3; continue; }
+  case 1:
+  case 2:
+    r0 = s.arg1;
+  case 3:
+    return leave(s, r0)
+  default: oops()
+} } }
+Math_min__P17377.info = {"start":16779,"length":105,"line":565,"column":4,"endLine":568,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"min","argumentNames":["a","b"]}
+
+function Math_min__P17377_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: Math_min__P17377, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  arg0: undefined,
+  arg1: undefined,
+} }
+
+
+
+
+
+function Math_max__P17376(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = (s.arg0 >= s.arg1);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 1; continue; }
+    r0 = s.arg0;
+    { step = 3; continue; }
+  case 1:
+  case 2:
+    r0 = s.arg1;
+  case 3:
+    return leave(s, r0)
+  default: oops()
+} } }
+Math_max__P17376.info = {"start":16564,"length":105,"line":556,"column":4,"endLine":559,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"max","argumentNames":["a","b"]}
+
+function Math_max__P17376_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: Math_max__P17376, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  arg0: undefined,
+  arg1: undefined,
+} }
+
+
+
+
+
+function Math_clamp__P17373(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.arg2 = (s.lambdaArgs[2]);
+      s.lambdaArgs = null;
+    }
+    s.tmp_0 = Math_min__P17377_mk(s);
+    s.tmp_0.arg0 = s.arg1;
+    s.tmp_1 = Math_max__P17376_mk(s);
+    s.tmp_1.arg0 = s.arg0;
+    s.tmp_1.arg1 = s.arg2;
+    s.callLocIdx = 17; s.pc = 2; return s.tmp_1;
+  case 2:
+    r0 = s.retval;
+    s.tmp_0.arg1 = r0;
+    s.callLocIdx = 18; s.pc = 1; return s.tmp_0;
+  case 1:
+    r0 = s.retval;
+    return leave(s, r0)
+  default: oops()
+} } }
+Math_clamp__P17373.info = {"start":15643,"length":130,"line":528,"column":4,"endLine":530,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"clamp","argumentNames":["min","max","value"]}
+
+function Math_clamp__P17373_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: Math_clamp__P17373, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  arg0: undefined,
+  arg1: undefined,
+  arg2: undefined,
+} }
+
+
+
+
+
+function parseInt__P17343(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    s.start___37703 = undefined;
+    s.sign___37733 = undefined;
+    s.output___37778 = undefined;
+    s.hasDigit___37779 = undefined;
+    s.i___37780 = undefined;
+    s.code___37787 = undefined;
+    s.val___37794 = undefined;
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = pxsim_numops_toBoolDecr(s.arg0);
+    s.tmp_1 = r0;
+    r0 = pxsim_Boolean__bang(s.tmp_1);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_0);
+    if (!r0) { step = 1; continue; }
+    r0 = s.tmp_0;
+    { step = 6; continue; }
+  case 1:
+    r0 = (s.arg1 != null);
+    s.tmp_2 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_2);
+    if (r0) { step = 2; continue; }
+    r0 = s.tmp_2;
+    { step = 5; continue; }
+  case 2:
+    r0 = (s.arg1 < 2);
+    s.tmp_3 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_3);
+    if (!r0) { step = 3; continue; }
+    r0 = s.tmp_3;
+    { step = 4; continue; }
+  case 3:
+    r0 = (s.arg1 > 36);
+  case 4:
+    // jmp value (already in r0)
+    s.tmp_4 = r0;
+    r0 = s.tmp_4;
+  case 5:
+    // jmp value (already in r0)
+    s.tmp_5 = r0;
+    r0 = s.tmp_5;
+  case 6:
+    // jmp value (already in r0)
+    s.tmp_6 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_6);
+    if (!r0) { step = 7; continue; }
+    r0 = NaN;
+    { step = 46; continue; }
+  case 7:
+  case 8:
+    s.start___37703 = (0);
+  case 9:
+    s.tmp_1 = r0 = s.start___37703;
+    r0 = pxsim_String_.length(s.arg0);
+    s.tmp_2 = r0;
+    r0 = (s.tmp_1 < s.tmp_2);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_0);
+    if (r0) { step = 10; continue; }
+    r0 = s.tmp_0;
+    { step = 11; continue; }
+  case 10:
+    s.tmp_3 = helpers_isWhitespace__P17370_mk(s);
+    r0 = pxsim_String_.charCodeAt(s.arg0, s.start___37703);
+    s.tmp_3.arg0 = r0;
+    s.callLocIdx = 0; s.pc = 47; return s.tmp_3;
+  case 47:
+    r0 = s.retval;
+  case 11:
+    // jmp value (already in r0)
+    s.tmp_4 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_4);
+    if (!r0) { step = 12; continue; }
+    r0 = (s.start___37703 + 1);
+    s.start___37703 = (r0);
+    { step = 9; continue; }
+  case 12:
+    s.tmp_1 = r0 = s.start___37703;
+    r0 = pxsim_String_.length(s.arg0);
+    s.tmp_2 = r0;
+    r0 = (s.tmp_1 === s.tmp_2);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 13; continue; }
+    r0 = NaN;
+    { step = 46; continue; }
+  case 13:
+  case 14:
+    s.sign___37733 = (1);
+    r0 = pxsim_String_.charAt(s.arg0, s.start___37703);
+    s.tmp_0 = r0;
+    r0 = pxsim_pxtcore.switch_eq("-", s.tmp_0);
+    if (r0) { step = 15; continue; }
+    r0 = pxsim_pxtcore.switch_eq("+", s.tmp_0);
+    if (r0) { step = 16; continue; }
+    r0 = s.tmp_0;
+    { step = 17; continue; }
+  case 15:
+    s.sign___37733 = (-1);
+  case 16:
+    r0 = (s.start___37703 + 1);
+    s.start___37703 = (r0);
+  case 17:
+    r0 = pxsim_numops_toBoolDecr(s.arg1);
+    s.tmp_1 = r0;
+    r0 = pxsim_Boolean__bang(s.tmp_1);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_0);
+    if (!r0) { step = 18; continue; }
+    r0 = s.tmp_0;
+    { step = 19; continue; }
+  case 18:
+    r0 = (s.arg1 == 16);
+  case 19:
+    // jmp value (already in r0)
+    s.tmp_2 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_2);
+    if (r0) { step = 20; continue; }
+    r0 = s.tmp_2;
+    { step = 21; continue; }
+  case 20:
+    r0 = pxsim_String_.charAt(s.arg0, s.start___37703);
+    s.tmp_3 = r0;
+    r0 = ("0" === s.tmp_3);
+  case 21:
+    // jmp value (already in r0)
+    s.tmp_4 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_4);
+    if (r0) { step = 22; continue; }
+    r0 = s.tmp_4;
+    { step = 25; continue; }
+  case 22:
+    s.tmp_7 = r0 = s.arg0;
+    r0 = (s.start___37703 + 1);
+    s.tmp_8 = r0;
+    r0 = pxsim_String_.charAt(s.tmp_7, s.tmp_8);
+    s.tmp_6 = r0;
+    r0 = ("x" === s.tmp_6);
+    s.tmp_5 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_5);
+    if (!r0) { step = 23; continue; }
+    r0 = s.tmp_5;
+    { step = 24; continue; }
+  case 23:
+    s.tmp_10 = r0 = s.arg0;
+    r0 = (s.start___37703 + 1);
+    s.tmp_11 = r0;
+    r0 = pxsim_String_.charAt(s.tmp_10, s.tmp_11);
+    s.tmp_9 = r0;
+    r0 = ("X" === s.tmp_9);
+  case 24:
+    // jmp value (already in r0)
+    s.tmp_12 = r0;
+    r0 = s.tmp_12;
+  case 25:
+    // jmp value (already in r0)
+    s.tmp_13 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_13);
+    if (!r0) { step = 26; continue; }
+    s.arg1 = (16);
+    r0 = (s.start___37703 + 2);
+    s.start___37703 = (r0);
+    { step = 29; continue; }
+  case 26:
+    r0 = pxsim_numops_toBoolDecr(s.arg1);
+    s.tmp_1 = r0;
+    r0 = pxsim_Boolean__bang(s.tmp_1);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 27; continue; }
+    s.arg1 = (10);
+  case 27:
+  case 28:
+  case 29:
+    s.output___37778 = (0);
+    s.hasDigit___37779 = (false);
+    s.i___37780 = (s.start___37703);
+  case 30:
+    s.tmp_1 = r0 = s.i___37780;
+    r0 = pxsim_String_.length(s.arg0);
+    s.tmp_2 = r0;
+    r0 = (s.tmp_1 < s.tmp_2);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 45; continue; }
+    r0 = pxsim_String_.charCodeAt(s.arg0, s.i___37780);
+    s.tmp_3 = r0;
+    r0 = (s.tmp_3 | 32);
+    s.code___37787 = (r0);
+    s.val___37794 = (undefined);
+    r0 = (s.code___37787 >= 48);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_0);
+    if (r0) { step = 31; continue; }
+    r0 = s.tmp_0;
+    { step = 32; continue; }
+  case 31:
+    r0 = (s.code___37787 < 58);
+  case 32:
+    // jmp value (already in r0)
+    s.tmp_1 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_1);
+    if (!r0) { step = 33; continue; }
+    r0 = (s.code___37787 - 48);
+    s.val___37794 = (r0);
+    { step = 38; continue; }
+  case 33:
+    r0 = (s.code___37787 >= 97);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_0);
+    if (r0) { step = 34; continue; }
+    r0 = s.tmp_0;
+    { step = 35; continue; }
+  case 34:
+    r0 = (s.code___37787 < 123);
+  case 35:
+    // jmp value (already in r0)
+    s.tmp_1 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_1);
+    if (!r0) { step = 36; continue; }
+    r0 = (10 + s.code___37787);
+    s.tmp_2 = r0;
+    r0 = (s.tmp_2 - 97);
+    s.val___37794 = (r0);
+  case 36:
+  case 37:
+  case 38:
+    r0 = (s.val___37794 == undefined);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBool(s.tmp_0);
+    if (!r0) { step = 39; continue; }
+    r0 = s.tmp_0;
+    { step = 40; continue; }
+  case 39:
+    r0 = (s.val___37794 >= s.arg1);
+  case 40:
+    // jmp value (already in r0)
+    s.tmp_1 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_1);
+    if (!r0) { step = 43; continue; }
+    r0 = pxsim_numops_toBoolDecr(s.hasDigit___37779);
+    s.tmp_3 = r0;
+    r0 = pxsim_Boolean__bang(s.tmp_3);
+    s.tmp_2 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_2);
+    if (!r0) { step = 41; continue; }
+    r0 = NaN;
+    { step = 46; continue; }
+  case 41:
+  case 42:
+    { step = 45; continue; }
+  case 43:
+  case 44:
+    s.hasDigit___37779 = (true);
+    r0 = (s.output___37778 * s.arg1);
+    s.tmp_0 = r0;
+    r0 = (s.tmp_0 + s.val___37794);
+    s.output___37778 = (r0);
+    r0 = (s.i___37780 + 1);
+    s.i___37780 = (r0);
+    { step = 30; continue; }
+  case 45:
+    r0 = (s.sign___37733 * s.output___37778);
+  case 46:
+    return leave(s, r0)
+  default: oops()
+} } }
+parseInt__P17343.info = {"start":1064,"length":1690,"line":44,"column":0,"endLine":103,"endColumn":1,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"parseInt","argumentNames":["text","radix"]}
+
+function parseInt__P17343_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: parseInt__P17343, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  tmp_4: undefined,
+  tmp_5: undefined,
+  tmp_6: undefined,
+  tmp_7: undefined,
+  tmp_8: undefined,
+  tmp_9: undefined,
+  tmp_10: undefined,
+  tmp_11: undefined,
+  tmp_12: undefined,
+  tmp_13: undefined,
+  start___37703: undefined,
+  sign___37733: undefined,
+  output___37778: undefined,
+  hasDigit___37779: undefined,
+  i___37780: undefined,
+  code___37787: undefined,
+  val___37794: undefined,
+  arg0: undefined,
+  arg1: undefined,
+} }
+
+
+
+
+
+function helpers_isWhitespace__P17370(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.lambdaArgs = null;
+    }
+    s.tmp_0 = r0 = s.arg0;
+    r0 = pxsim_pxtcore.switch_eq(9, s.tmp_0);
+    if (r0) { step = 1; continue; }
+    r0 = pxsim_pxtcore.switch_eq(11, s.tmp_0);
+    if (r0) { step = 2; continue; }
+    r0 = pxsim_pxtcore.switch_eq(12, s.tmp_0);
+    if (r0) { step = 3; continue; }
+    r0 = pxsim_pxtcore.switch_eq(32, s.tmp_0);
+    if (r0) { step = 4; continue; }
+    r0 = pxsim_pxtcore.switch_eq(160, s.tmp_0);
+    if (r0) { step = 5; continue; }
+    r0 = pxsim_pxtcore.switch_eq(65279, s.tmp_0);
+    if (r0) { step = 6; continue; }
+    r0 = pxsim_pxtcore.switch_eq(10, s.tmp_0);
+    if (r0) { step = 7; continue; }
+    r0 = pxsim_pxtcore.switch_eq(13, s.tmp_0);
+    if (r0) { step = 8; continue; }
+    r0 = pxsim_pxtcore.switch_eq(8232, s.tmp_0);
+    if (r0) { step = 9; continue; }
+    r0 = pxsim_pxtcore.switch_eq(8233, s.tmp_0);
+    if (r0) { step = 10; continue; }
+    r0 = s.tmp_0;
+    { step = 11; continue; }
+  case 1:
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+  case 6:
+  case 7:
+  case 8:
+  case 9:
+  case 10:
+    r0 = true;
+    { step = 12; continue; }
+  case 11:
+    r0 = false;
+    { step = 12; continue; }
+    r0 = undefined;
+  case 12:
+    return leave(s, r0)
+  default: oops()
+} } }
+helpers_isWhitespace__P17370.info = {"start":14864,"length":674,"line":503,"column":4,"endLine":520,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"isWhitespace","argumentNames":["c"]}
+
+function helpers_isWhitespace__P17370_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: helpers_isWhitespace__P17370, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  arg0: undefined,
+} }
+
+
+
+
+
+function music_MelodyPlayer_constructor__P18871(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, music_MelodyPlayer__C18868_VT)) failedCast(r0);
+    r0 = (s.arg0).fields["melody"] = (s.arg1);
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+music_MelodyPlayer_constructor__P18871.info = {"start":11095,"length":62,"line":336,"column":8,"endLine":338,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"inline","argumentNames":["this","m"]}
+
+function music_MelodyPlayer_constructor__P18871_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: music_MelodyPlayer_constructor__P18871, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  arg0: undefined,
+  arg1: undefined,
+} }
+
+
+
+
+
+function music_Melody_stop__P18863(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, music_Melody__C18858_VT)) failedCast(r0);
+    r0 = s.arg0.fields["_player"];
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 1; continue; }
+    s.tmp_1 = music_MelodyPlayer_stop__P18872_mk(s);
+    r0 = s.arg0.fields["_player"];
+    s.tmp_1.arg0 = r0;
+    s.callLocIdx = 2; s.pc = 3; return s.tmp_1;
+  case 3:
+    r0 = s.retval;
+    r0 = (s.arg0).fields["_player"] = (null);
+  case 1:
+  case 2:
+    s.tmp_0 = music_Melody_unregisterMelody__P21307_mk(s);
+    s.tmp_0.arg0 = s.arg0;
+    s.callLocIdx = 3; s.pc = 4; return s.tmp_0;
+  case 4:
+    r0 = s.retval;
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+music_Melody_stop__P18863.info = {"start":6706,"length":173,"line":215,"column":8,"endLine":221,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"stop","argumentNames":["this"]}
+
+function music_Melody_stop__P18863_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: music_Melody_stop__P18863, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  arg0: undefined,
+} }
+
+
+
+
+
+function music_MelodyPlayer_stop__P18872(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, music_MelodyPlayer__C18868_VT)) failedCast(r0);
+    r0 = (s.arg0).fields["melody"] = (null);
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+music_MelodyPlayer_stop__P18872.info = {"start":11167,"length":49,"line":340,"column":8,"endLine":342,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"stop","argumentNames":["this"]}
+
+function music_MelodyPlayer_stop__P18872_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: music_MelodyPlayer_stop__P18872, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  arg0: undefined,
+} }
+
+
+
+
+
+function music_Melody_constructor__P18861(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, music_Melody__C18858_VT)) failedCast(r0);
+    r0 = (s.arg0).fields["_text"] = (s.arg1);
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+music_Melody_constructor__P18861.info = {"start":6328,"length":67,"line":199,"column":8,"endLine":201,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"inline","argumentNames":["this","text"]}
+
+function music_Melody_constructor__P18861_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: music_Melody_constructor__P18861, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  arg0: undefined,
+  arg1: undefined,
+} }
+
+
+
+
+
+function helpers_stringSplit__P17368(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    s.A___26020 = undefined;
+    s.lim___26022 = undefined;
+    s.s___26038 = undefined;
+    s.p___26041 = undefined;
+    s.R___26042 = undefined;
+    s.z___26056 = undefined;
+    s.T___26069 = undefined;
+    s.q___26070 = undefined;
+    s.e___26076 = undefined;
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.arg2 = (s.lambdaArgs[2]);
+      s.lambdaArgs = null;
+    }
+    r0 = pxsim_Array__mk();
+    s.A___26020 = (r0);
+    s.lim___26022 = (0);
+    r0 = (s.arg2 === undefined);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 1; continue; }
+    r0 = (536870912 - 1);
+    s.lim___26022 = (r0);
+    { step = 4; continue; }
+  case 1:
+    r0 = (s.arg2 < 0);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 2; continue; }
+    s.lim___26022 = (0);
+    { step = 3; continue; }
+  case 2:
+    r0 = (s.arg2 | 0);
+    s.lim___26022 = (r0);
+  case 3:
+  case 4:
+    r0 = pxsim_String_.length(s.arg0);
+    s.s___26038 = (r0);
+    s.p___26041 = (0);
+    s.R___26042 = (s.arg1);
+    r0 = (s.lim___26022 == 0);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 5; continue; }
+    r0 = s.A___26020;
+    { step = 21; continue; }
+  case 5:
+  case 6:
+    r0 = (s.arg1 === undefined);
+    s.tmp_1 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_1);
+    if (!r0) { step = 7; continue; }
+    r0 = pxsim_Array_.setAt(s.A___26020, 0, s.arg0);
+    r0 = s.A___26020;
+    { step = 21; continue; }
+  case 7:
+  case 8:
+    r0 = (s.s___26038 == 0);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 11; continue; }
+    s.tmp_1 = helpers_splitMatch__P21190_mk(s);
+    s.tmp_1.arg0 = s.arg0;
+    s.tmp_1.arg1 = 0;
+    s.tmp_1.arg2 = s.R___26042;
+    s.callLocIdx = 10; s.pc = 22; return s.tmp_1;
+  case 22:
+    r0 = s.retval;
+    s.z___26056 = (r0);
+    r0 = (s.z___26056 > -1);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 9; continue; }
+    r0 = s.A___26020;
+    { step = 21; continue; }
+  case 9:
+  case 10:
+    r0 = pxsim_Array_.setAt(s.A___26020, 0, s.arg0);
+    r0 = s.A___26020;
+    { step = 21; continue; }
+  case 11:
+  case 12:
+    s.q___26070 = (s.p___26041);
+  case 13:
+    r0 = (s.q___26070 != s.s___26038);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 20; continue; }
+    s.tmp_1 = helpers_splitMatch__P21190_mk(s);
+    s.tmp_1.arg0 = s.arg0;
+    s.tmp_1.arg1 = s.q___26070;
+    s.tmp_1.arg2 = s.R___26042;
+    s.callLocIdx = 11; s.pc = 23; return s.tmp_1;
+  case 23:
+    r0 = s.retval;
+    s.e___26076 = (r0);
+    r0 = (s.e___26076 < 0);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 14; continue; }
+    r0 = (s.q___26070 + 1);
+    s.q___26070 = (r0);
+    { step = 19; continue; }
+  case 14:
+    r0 = (s.e___26076 == s.p___26041);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 15; continue; }
+    r0 = (s.q___26070 + 1);
+    s.q___26070 = (r0);
+    { step = 18; continue; }
+  case 15:
+    s.tmp_0 = helpers_stringSlice__P17365_mk(s);
+    s.tmp_0.arg0 = s.arg0;
+    s.tmp_0.arg1 = s.p___26041;
+    s.tmp_0.arg2 = s.q___26070;
+    s.callLocIdx = 12; s.pc = 24; return s.tmp_0;
+  case 24:
+    r0 = s.retval;
+    s.T___26069 = (r0);
+    r0 = pxsim_Array__push(s.A___26020, s.T___26069);
+    r0 = pxsim_Array__length(s.A___26020);
+    s.tmp_1 = r0;
+    r0 = (s.tmp_1 == s.lim___26022);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 16; continue; }
+    r0 = s.A___26020;
+    { step = 21; continue; }
+  case 16:
+  case 17:
+    s.p___26041 = (s.e___26076);
+    s.q___26070 = (s.p___26041);
+  case 18:
+  case 19:
+    { step = 13; continue; }
+  case 20:
+    s.tmp_0 = helpers_stringSlice__P17365_mk(s);
+    s.tmp_0.arg0 = s.arg0;
+    s.tmp_0.arg1 = s.p___26041;
+    s.tmp_0.arg2 = s.q___26070;
+    s.callLocIdx = 13; s.pc = 25; return s.tmp_0;
+  case 25:
+    r0 = s.retval;
+    s.T___26069 = (r0);
+    r0 = pxsim_Array__push(s.A___26020, s.T___26069);
+    r0 = s.A___26020;
+  case 21:
+    return leave(s, r0)
+  default: oops()
+} } }
+helpers_stringSplit__P17368.info = {"start":12919,"length":1319,"line":434,"column":4,"endLine":478,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"stringSplit","argumentNames":["S","separator","limit"]}
+
+function helpers_stringSplit__P17368_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: helpers_stringSplit__P17368, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  A___26020: undefined,
+  lim___26022: undefined,
+  s___26038: undefined,
+  p___26041: undefined,
+  R___26042: undefined,
+  z___26056: undefined,
+  T___26069: undefined,
+  q___26070: undefined,
+  e___26076: undefined,
+  arg0: undefined,
+  arg1: undefined,
+  arg2: undefined,
+} }
+
+
+
+
+
+function helpers_splitMatch__P21190(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    s.r___26121 = undefined;
+    s.s___26124 = undefined;
+    s.i___26134 = undefined;
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.arg2 = (s.lambdaArgs[2]);
+      s.lambdaArgs = null;
+    }
+    r0 = pxsim_String_.length(s.arg2);
+    s.r___26121 = (r0);
+    r0 = pxsim_String_.length(s.arg0);
+    s.s___26124 = (r0);
+    r0 = (s.arg1 + s.r___26121);
+    s.tmp_1 = r0;
+    r0 = (s.tmp_1 > s.s___26124);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 1; continue; }
+    r0 = -1;
+    { step = 7; continue; }
+  case 1:
+  case 2:
+    s.i___26134 = (0);
+  case 3:
+    r0 = (s.i___26134 < s.r___26121);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 6; continue; }
+    s.tmp_3 = r0 = s.arg0;
+    r0 = (s.arg1 + s.i___26134);
+    s.tmp_4 = r0;
+    r0 = pxsim_String_.charAt(s.tmp_3, s.tmp_4);
+    s.tmp_2 = r0;
+    r0 = pxsim_String_.charAt(s.arg2, s.i___26134);
+    s.tmp_5 = r0;
+    r0 = (s.tmp_2 != s.tmp_5);
+    s.tmp_1 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_1);
+    if (!r0) { step = 4; continue; }
+    r0 = -1;
+    { step = 7; continue; }
+  case 4:
+  case 5:
+    r0 = (s.i___26134 + 1);
+    s.i___26134 = (r0);
+    { step = 3; continue; }
+  case 6:
+    r0 = (s.arg1 + s.r___26121);
+  case 7:
+    return leave(s, r0)
+  default: oops()
+} } }
+helpers_splitMatch__P21190.info = {"start":14244,"length":289,"line":480,"column":4,"endLine":489,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"splitMatch","argumentNames":["S","q","R"]}
+
+function helpers_splitMatch__P21190_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: helpers_splitMatch__P21190, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  tmp_4: undefined,
+  tmp_5: undefined,
+  r___26121: undefined,
+  s___26124: undefined,
+  i___26134: undefined,
+  arg0: undefined,
+  arg1: undefined,
+  arg2: undefined,
+} }
+
+
+
+
+
+function helpers_stringSlice__P17365(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    s.len___23740 = undefined;
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.arg2 = (s.lambdaArgs[2]);
+      s.lambdaArgs = null;
+    }
+    r0 = pxsim_String_.length(s.arg0);
+    s.len___23740 = (r0);
+    r0 = (s.arg1 < 0);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 1; continue; }
+    s.tmp_1 = Math_max__P17376_mk(s);
+    r0 = (s.len___23740 + s.arg1);
+    s.tmp_1.arg0 = r0;
+    s.tmp_1.arg1 = 0;
+    s.callLocIdx = 9; s.pc = 9; return s.tmp_1;
+  case 9:
+    r0 = s.retval;
+    s.arg1 = (r0);
+  case 1:
+  case 2:
+    r0 = (s.arg2 === undefined);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 3; continue; }
+    s.arg2 = (s.len___23740);
+    { step = 6; continue; }
+  case 3:
+    r0 = (s.arg2 === null);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 4; continue; }
+    s.arg2 = (0);
+  case 4:
+  case 5:
+  case 6:
+    r0 = (s.arg2 < 0);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 7; continue; }
+    r0 = (s.len___23740 + s.arg2);
+    s.arg2 = (r0);
+  case 7:
+  case 8:
+    s.tmp_0 = r0 = s.arg0;
+    s.tmp_1 = r0 = s.arg1;
+    r0 = (s.arg2 - s.arg1);
+    s.tmp_2 = r0;
+    r0 = pxsim_String_.substr(s.tmp_0, s.tmp_1, s.tmp_2);
+    return leave(s, r0)
+  default: oops()
+} } }
+helpers_stringSlice__P17365.info = {"start":11496,"length":440,"line":384,"column":4,"endLine":402,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"stringSlice","argumentNames":["s","start","end"]}
+
+function helpers_stringSlice__P17365_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: helpers_stringSlice__P17365, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  len___23740: undefined,
+  arg0: undefined,
+  arg1: undefined,
+  arg2: undefined,
+} }
+
+
+
+
+
+function helpers_arrayFilter__P17356(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    s.res___26830 = undefined;
+    s.len___26832 = undefined;
+    s.i___26835 = undefined;
+    s.v___26840 = undefined;
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = pxsim_Array__mk();
+    s.res___26830 = (r0);
+    r0 = pxsim_Array__length(s.arg0);
+    s.len___26832 = (r0);
+    s.i___26835 = (0);
+  case 1:
+    r0 = (s.i___26835 < s.len___26832);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 4; continue; }
+    r0 = pxsim_Array__getAt(s.arg0, s.i___26835);
+    s.v___26840 = (r0);
+    s.tmp_1 = lambda_3_mk(s);
+    s.tmp_1.argL = s.arg1;
+    s.tmp_1.arg0 = s.v___26840;
+    s.tmp_1.arg1 = s.i___26835;
+    setupLambda(s.tmp_1, s.tmp_1.argL);
+    s.callLocIdx = 6; s.pc = 5; return s.tmp_1;
+  case 5:
+    r0 = s.retval;
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 2; continue; }
+    r0 = pxsim_Array__push(s.res___26830, s.v___26840);
+  case 2:
+  case 3:
+    r0 = (s.i___26835 + 1);
+    s.i___26835 = (r0);
+    { step = 1; continue; }
+  case 4:
+    r0 = s.res___26830;
+    return leave(s, r0)
+  default: oops()
+} } }
+helpers_arrayFilter__P17356.info = {"start":7695,"length":317,"line":261,"column":4,"endLine":269,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"arrayFilter","argumentNames":["arr","callbackfn"]}
+
+function helpers_arrayFilter__P17356_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: helpers_arrayFilter__P17356, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  res___26830: undefined,
+  len___26832: undefined,
+  i___26835: undefined,
+  v___26840: undefined,
+  arg0: undefined,
+  arg1: undefined,
 } }
 
 
@@ -5058,50 +8197,6 @@ function control__ramSize__P21230_mk(s) {
 
 
 
-function Math_max__P17376(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.lambdaArgs = null;
-    }
-    r0 = (s.arg0 >= s.arg1);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    r0 = s.arg0;
-    { step = 3; continue; }
-  case 1:
-  case 2:
-    r0 = s.arg1;
-  case 3:
-    return leave(s, r0)
-  default: oops()
-} } }
-Math_max__P17376.info = {"start":16564,"length":105,"line":556,"column":4,"endLine":559,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"max","argumentNames":["a","b"]}
-
-function Math_max__P17376_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: Math_max__P17376, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  arg0: undefined,
-  arg1: undefined,
-} }
-
-
-
-
-
 function pauseUntil__P17613(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
@@ -5839,80 +8934,6 @@ function control_EventHandler_register_inline__P24896_mk(s) {
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-} }
-
-
-
-
-
-function helpers_arrayFilter__P17356(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    s.res___26830 = undefined;
-    s.len___26832 = undefined;
-    s.i___26835 = undefined;
-    s.v___26840 = undefined;
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.lambdaArgs = null;
-    }
-    r0 = pxsim_Array__mk();
-    s.res___26830 = (r0);
-    r0 = pxsim_Array__length(s.arg0);
-    s.len___26832 = (r0);
-    s.i___26835 = (0);
-  case 1:
-    r0 = (s.i___26835 < s.len___26832);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.arg0, s.i___26835);
-    s.v___26840 = (r0);
-    s.tmp_1 = lambda_3_mk(s);
-    s.tmp_1.argL = s.arg1;
-    s.tmp_1.arg0 = s.v___26840;
-    s.tmp_1.arg1 = s.i___26835;
-    setupLambda(s.tmp_1, s.tmp_1.argL);
-    s.callLocIdx = 6; s.pc = 5; return s.tmp_1;
-  case 5:
-    r0 = s.retval;
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 2; continue; }
-    r0 = pxsim_Array__push(s.res___26830, s.v___26840);
-  case 2:
-  case 3:
-    r0 = (s.i___26835 + 1);
-    s.i___26835 = (r0);
-    { step = 1; continue; }
-  case 4:
-    r0 = s.res___26830;
-    return leave(s, r0)
-  default: oops()
-} } }
-helpers_arrayFilter__P17356.info = {"start":7695,"length":317,"line":261,"column":4,"endLine":269,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"arrayFilter","argumentNames":["arr","callbackfn"]}
-
-function helpers_arrayFilter__P17356_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: helpers_arrayFilter__P17356, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  res___26830: undefined,
-  len___26832: undefined,
-  i___26835: undefined,
-  v___26840: undefined,
-  arg0: undefined,
-  arg1: undefined,
 } }
 
 
@@ -7486,99 +10507,6 @@ function helpers_pack__P21346_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   tmp_5: undefined,
-  arg0: undefined,
-  arg1: undefined,
-} }
-
-
-
-
-
-function Math_clamp__P17373(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.arg2 = (s.lambdaArgs[2]);
-      s.lambdaArgs = null;
-    }
-    s.tmp_0 = Math_min__P17377_mk(s);
-    s.tmp_0.arg0 = s.arg1;
-    s.tmp_1 = Math_max__P17376_mk(s);
-    s.tmp_1.arg0 = s.arg0;
-    s.tmp_1.arg1 = s.arg2;
-    s.callLocIdx = 17; s.pc = 2; return s.tmp_1;
-  case 2:
-    r0 = s.retval;
-    s.tmp_0.arg1 = r0;
-    s.callLocIdx = 18; s.pc = 1; return s.tmp_0;
-  case 1:
-    r0 = s.retval;
-    return leave(s, r0)
-  default: oops()
-} } }
-Math_clamp__P17373.info = {"start":15643,"length":130,"line":528,"column":4,"endLine":530,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"clamp","argumentNames":["min","max","value"]}
-
-function Math_clamp__P17373_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: Math_clamp__P17373, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  arg0: undefined,
-  arg1: undefined,
-  arg2: undefined,
-} }
-
-
-
-
-
-function Math_min__P17377(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.lambdaArgs = null;
-    }
-    r0 = (s.arg0 <= s.arg1);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    r0 = s.arg0;
-    { step = 3; continue; }
-  case 1:
-  case 2:
-    r0 = s.arg1;
-  case 3:
-    return leave(s, r0)
-  default: oops()
-} } }
-Math_min__P17377.info = {"start":16779,"length":105,"line":565,"column":4,"endLine":568,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"min","argumentNames":["a","b"]}
-
-function Math_min__P17377_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: Math_min__P17377, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -20237,367 +23165,6 @@ function scene_systemMenu_isVisible__P20035_mk(s) {
 
 
 
-function helpers_stringSplit__P17368(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    s.A___26020 = undefined;
-    s.lim___26022 = undefined;
-    s.s___26038 = undefined;
-    s.p___26041 = undefined;
-    s.R___26042 = undefined;
-    s.z___26056 = undefined;
-    s.T___26069 = undefined;
-    s.q___26070 = undefined;
-    s.e___26076 = undefined;
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.arg2 = (s.lambdaArgs[2]);
-      s.lambdaArgs = null;
-    }
-    r0 = pxsim_Array__mk();
-    s.A___26020 = (r0);
-    s.lim___26022 = (0);
-    r0 = (s.arg2 === undefined);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    r0 = (536870912 - 1);
-    s.lim___26022 = (r0);
-    { step = 4; continue; }
-  case 1:
-    r0 = (s.arg2 < 0);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 2; continue; }
-    s.lim___26022 = (0);
-    { step = 3; continue; }
-  case 2:
-    r0 = (s.arg2 | 0);
-    s.lim___26022 = (r0);
-  case 3:
-  case 4:
-    r0 = pxsim_String_.length(s.arg0);
-    s.s___26038 = (r0);
-    s.p___26041 = (0);
-    s.R___26042 = (s.arg1);
-    r0 = (s.lim___26022 == 0);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 5; continue; }
-    r0 = s.A___26020;
-    { step = 21; continue; }
-  case 5:
-  case 6:
-    r0 = (s.arg1 === undefined);
-    s.tmp_1 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_1);
-    if (!r0) { step = 7; continue; }
-    r0 = pxsim_Array_.setAt(s.A___26020, 0, s.arg0);
-    r0 = s.A___26020;
-    { step = 21; continue; }
-  case 7:
-  case 8:
-    r0 = (s.s___26038 == 0);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 11; continue; }
-    s.tmp_1 = helpers_splitMatch__P21190_mk(s);
-    s.tmp_1.arg0 = s.arg0;
-    s.tmp_1.arg1 = 0;
-    s.tmp_1.arg2 = s.R___26042;
-    s.callLocIdx = 10; s.pc = 22; return s.tmp_1;
-  case 22:
-    r0 = s.retval;
-    s.z___26056 = (r0);
-    r0 = (s.z___26056 > -1);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 9; continue; }
-    r0 = s.A___26020;
-    { step = 21; continue; }
-  case 9:
-  case 10:
-    r0 = pxsim_Array_.setAt(s.A___26020, 0, s.arg0);
-    r0 = s.A___26020;
-    { step = 21; continue; }
-  case 11:
-  case 12:
-    s.q___26070 = (s.p___26041);
-  case 13:
-    r0 = (s.q___26070 != s.s___26038);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 20; continue; }
-    s.tmp_1 = helpers_splitMatch__P21190_mk(s);
-    s.tmp_1.arg0 = s.arg0;
-    s.tmp_1.arg1 = s.q___26070;
-    s.tmp_1.arg2 = s.R___26042;
-    s.callLocIdx = 11; s.pc = 23; return s.tmp_1;
-  case 23:
-    r0 = s.retval;
-    s.e___26076 = (r0);
-    r0 = (s.e___26076 < 0);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 14; continue; }
-    r0 = (s.q___26070 + 1);
-    s.q___26070 = (r0);
-    { step = 19; continue; }
-  case 14:
-    r0 = (s.e___26076 == s.p___26041);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 15; continue; }
-    r0 = (s.q___26070 + 1);
-    s.q___26070 = (r0);
-    { step = 18; continue; }
-  case 15:
-    s.tmp_0 = helpers_stringSlice__P17365_mk(s);
-    s.tmp_0.arg0 = s.arg0;
-    s.tmp_0.arg1 = s.p___26041;
-    s.tmp_0.arg2 = s.q___26070;
-    s.callLocIdx = 12; s.pc = 24; return s.tmp_0;
-  case 24:
-    r0 = s.retval;
-    s.T___26069 = (r0);
-    r0 = pxsim_Array__push(s.A___26020, s.T___26069);
-    r0 = pxsim_Array__length(s.A___26020);
-    s.tmp_1 = r0;
-    r0 = (s.tmp_1 == s.lim___26022);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 16; continue; }
-    r0 = s.A___26020;
-    { step = 21; continue; }
-  case 16:
-  case 17:
-    s.p___26041 = (s.e___26076);
-    s.q___26070 = (s.p___26041);
-  case 18:
-  case 19:
-    { step = 13; continue; }
-  case 20:
-    s.tmp_0 = helpers_stringSlice__P17365_mk(s);
-    s.tmp_0.arg0 = s.arg0;
-    s.tmp_0.arg1 = s.p___26041;
-    s.tmp_0.arg2 = s.q___26070;
-    s.callLocIdx = 13; s.pc = 25; return s.tmp_0;
-  case 25:
-    r0 = s.retval;
-    s.T___26069 = (r0);
-    r0 = pxsim_Array__push(s.A___26020, s.T___26069);
-    r0 = s.A___26020;
-  case 21:
-    return leave(s, r0)
-  default: oops()
-} } }
-helpers_stringSplit__P17368.info = {"start":12919,"length":1319,"line":434,"column":4,"endLine":478,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"stringSplit","argumentNames":["S","separator","limit"]}
-
-function helpers_stringSplit__P17368_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: helpers_stringSplit__P17368, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  A___26020: undefined,
-  lim___26022: undefined,
-  s___26038: undefined,
-  p___26041: undefined,
-  R___26042: undefined,
-  z___26056: undefined,
-  T___26069: undefined,
-  q___26070: undefined,
-  e___26076: undefined,
-  arg0: undefined,
-  arg1: undefined,
-  arg2: undefined,
-} }
-
-
-
-
-
-function helpers_splitMatch__P21190(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    s.r___26121 = undefined;
-    s.s___26124 = undefined;
-    s.i___26134 = undefined;
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.arg2 = (s.lambdaArgs[2]);
-      s.lambdaArgs = null;
-    }
-    r0 = pxsim_String_.length(s.arg2);
-    s.r___26121 = (r0);
-    r0 = pxsim_String_.length(s.arg0);
-    s.s___26124 = (r0);
-    r0 = (s.arg1 + s.r___26121);
-    s.tmp_1 = r0;
-    r0 = (s.tmp_1 > s.s___26124);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    r0 = -1;
-    { step = 7; continue; }
-  case 1:
-  case 2:
-    s.i___26134 = (0);
-  case 3:
-    r0 = (s.i___26134 < s.r___26121);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 6; continue; }
-    s.tmp_3 = r0 = s.arg0;
-    r0 = (s.arg1 + s.i___26134);
-    s.tmp_4 = r0;
-    r0 = pxsim_String_.charAt(s.tmp_3, s.tmp_4);
-    s.tmp_2 = r0;
-    r0 = pxsim_String_.charAt(s.arg2, s.i___26134);
-    s.tmp_5 = r0;
-    r0 = (s.tmp_2 != s.tmp_5);
-    s.tmp_1 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_1);
-    if (!r0) { step = 4; continue; }
-    r0 = -1;
-    { step = 7; continue; }
-  case 4:
-  case 5:
-    r0 = (s.i___26134 + 1);
-    s.i___26134 = (r0);
-    { step = 3; continue; }
-  case 6:
-    r0 = (s.arg1 + s.r___26121);
-  case 7:
-    return leave(s, r0)
-  default: oops()
-} } }
-helpers_splitMatch__P21190.info = {"start":14244,"length":289,"line":480,"column":4,"endLine":489,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"splitMatch","argumentNames":["S","q","R"]}
-
-function helpers_splitMatch__P21190_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: helpers_splitMatch__P21190, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  tmp_5: undefined,
-  r___26121: undefined,
-  s___26124: undefined,
-  i___26134: undefined,
-  arg0: undefined,
-  arg1: undefined,
-  arg2: undefined,
-} }
-
-
-
-
-
-function helpers_stringSlice__P17365(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    s.len___23740 = undefined;
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.arg2 = (s.lambdaArgs[2]);
-      s.lambdaArgs = null;
-    }
-    r0 = pxsim_String_.length(s.arg0);
-    s.len___23740 = (r0);
-    r0 = (s.arg1 < 0);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    s.tmp_1 = Math_max__P17376_mk(s);
-    r0 = (s.len___23740 + s.arg1);
-    s.tmp_1.arg0 = r0;
-    s.tmp_1.arg1 = 0;
-    s.callLocIdx = 9; s.pc = 9; return s.tmp_1;
-  case 9:
-    r0 = s.retval;
-    s.arg1 = (r0);
-  case 1:
-  case 2:
-    r0 = (s.arg2 === undefined);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 3; continue; }
-    s.arg2 = (s.len___23740);
-    { step = 6; continue; }
-  case 3:
-    r0 = (s.arg2 === null);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 4; continue; }
-    s.arg2 = (0);
-  case 4:
-  case 5:
-  case 6:
-    r0 = (s.arg2 < 0);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 7; continue; }
-    r0 = (s.len___23740 + s.arg2);
-    s.arg2 = (r0);
-  case 7:
-  case 8:
-    s.tmp_0 = r0 = s.arg0;
-    s.tmp_1 = r0 = s.arg1;
-    r0 = (s.arg2 - s.arg1);
-    s.tmp_2 = r0;
-    r0 = pxsim_String_.substr(s.tmp_0, s.tmp_1, s.tmp_2);
-    return leave(s, r0)
-  default: oops()
-} } }
-helpers_stringSlice__P17365.info = {"start":11496,"length":440,"line":384,"column":4,"endLine":402,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"stringSlice","argumentNames":["s","start","end"]}
-
-function helpers_stringSlice__P17365_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: helpers_stringSlice__P17365, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  len___23740: undefined,
-  arg0: undefined,
-  arg1: undefined,
-  arg2: undefined,
-} }
-
-
-
-
-
 function scene_Scene_render__P19845(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
@@ -24362,43 +26929,6 @@ function sprites_SpriteMap_constructor__P19472_mk(s) {
   tmp_0: undefined,
   tmp_1: undefined,
   arg0: undefined,
-} }
-
-
-
-
-
-function music_Melody_constructor__P18861(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.lambdaArgs = null;
-    }
-    r0 = s.arg0;
-    if (!checkSubtype(r0, music_Melody__C18858_VT)) failedCast(r0);
-    r0 = (s.arg0).fields["_text"] = (s.arg1);
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-music_Melody_constructor__P18861.info = {"start":6328,"length":67,"line":199,"column":8,"endLine":201,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"inline","argumentNames":["this","text"]}
-
-function music_Melody_constructor__P18861_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: music_Melody_constructor__P18861, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  arg0: undefined,
-  arg1: undefined,
 } }
 
 
@@ -28242,2126 +30772,6 @@ function music_Melody_playCore_inline__P37225_mk(s) {
   tmp_2: undefined,
   tmp_3: undefined,
   tmp_4: undefined,
-} }
-
-
-
-
-
-function music_Melody_unregisterMelody__P21307(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.lambdaArgs = null;
-    }
-    r0 = s.arg0;
-    if (!checkSubtype(r0, music_Melody__C18858_VT)) failedCast(r0);
-    r0 = pxsim_numops_toBoolDecr(globals.music_Melody_playingMelodies___21309);
-    if (!r0) { step = 1; continue; }
-    r0 = pxsim_Array_.removeElement(globals.music_Melody_playingMelodies___21309, s.arg0);
-  case 1:
-  case 2:
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-music_Melody_unregisterMelody__P21307.info = {"start":7471,"length":201,"line":235,"column":8,"endLine":240,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"unregisterMelody","argumentNames":["this"]}
-
-function music_Melody_unregisterMelody__P21307_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: music_Melody_unregisterMelody__P21307, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  arg0: undefined,
-} }
-
-
-
-
-
-function music_Melody_registerMelody__P21306(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.lambdaArgs = null;
-    }
-    r0 = s.arg0;
-    if (!checkSubtype(r0, music_Melody__C18858_VT)) failedCast(r0);
-    r0 = pxsim_numops_toBoolDecr(globals.music_Melody_playingMelodies___21309);
-    s.tmp_1 = r0;
-    r0 = pxsim_Boolean__bang(s.tmp_1);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    r0 = pxsim_Array__mk();
-    globals.music_Melody_playingMelodies___21309 = (r0);
-  case 1:
-  case 2:
-    r0 = pxsim_Array__length(globals.music_Melody_playingMelodies___21309);
-    s.tmp_1 = r0;
-    r0 = (s.tmp_1 > 4);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 3; continue; }
-    s.tmp_2 = music_Melody_stop__P18863_mk(s);
-    s.tmp_3 = r0 = globals.music_Melody_playingMelodies___21309;
-    r0 = pxsim_Array__length(globals.music_Melody_playingMelodies___21309);
-    s.tmp_5 = r0;
-    r0 = (s.tmp_5 - 1);
-    s.tmp_4 = r0;
-    r0 = pxsim_Array__getAt(s.tmp_3, s.tmp_4);
-    s.tmp_2.arg0 = r0;
-    s.callLocIdx = 4; s.pc = 5; return s.tmp_2;
-  case 5:
-    r0 = s.retval;
-  case 3:
-  case 4:
-    r0 = pxsim_Array_.removeElement(globals.music_Melody_playingMelodies___21309, s.arg0);
-    r0 = pxsim_Array__push(globals.music_Melody_playingMelodies___21309, s.arg0);
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-music_Melody_registerMelody__P21306.info = {"start":6889,"length":573,"line":223,"column":8,"endLine":234,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"registerMelody","argumentNames":["this"]}
-
-function music_Melody_registerMelody__P21306_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: music_Melody_registerMelody__P21306, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  tmp_5: undefined,
-  arg0: undefined,
-} }
-
-
-
-
-
-function music_MelodyPlayer_play__P18873(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    s.notes___37258 = undefined;
-    s.pos___37262 = undefined;
-    s.duration___37263 = undefined;
-    s.octave___37264 = undefined;
-    s.tempo___37265 = undefined;
-    s.hz___37266 = undefined;
-    s.endHz___37267 = undefined;
-    s.ms___37270 = undefined;
-    s.timePos___37271 = undefined;
-    s.startTime___37272 = undefined;
-    s.now___37275 = undefined;
-    s.envA___37276 = undefined;
-    s.envD___37277 = undefined;
-    s.envS___37278 = undefined;
-    s.envR___37279 = undefined;
-    s.soundWave___37280 = undefined;
-    s.sndInstr___37281 = undefined;
-    s.sndInstrPtr___37287 = undefined;
-    s.addForm___37288 = undefined;
-    s.scanNextWord___37348 = undefined;
-    s.token___37405 = undefined;
-    s.tokenKind___37406 = undefined;
-    s.consumeToken___37409 = undefined;
-    s.currNote___37485 = undefined;
-    s.prevNote___37487 = undefined;
-    s.timeLeft___37490 = undefined;
-    s.note___37504 = undefined;
-    s.i___37508 = undefined;
-    s.noteChar___37514 = undefined;
-    s.keyNumber___37588 = undefined;
-    s.currMs___37605 = undefined;
-    s.beat___37609 = undefined;
-    s.timeLeft___37666 = undefined;
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.lambdaArgs = null;
-    }
-    r0 = s.arg0;
-    if (!checkSubtype(r0, music_MelodyPlayer__C18868_VT)) failedCast(r0);
-    r0 = pxsim_pxtrt.mklocRef();
-    s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.arg1);
-    s.arg1 = (s.tmp_0);
-    r0 = s.arg0.fields["melody"];
-    s.tmp_3 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_3);
-    s.tmp_2 = r0;
-    r0 = pxsim_Boolean__bang(s.tmp_2);
-    s.tmp_1 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_1);
-    if (!r0) { step = 1; continue; }
-    { step = 59; continue; }
-  case 1:
-  case 2:
-    s.tmp_4 = r0 = s.arg1;
-    s.tmp_6 = Math_clamp__P17373_mk(s);
-    s.tmp_6.arg0 = 0;
-    s.tmp_6.arg1 = 255;
-    r0 = pxsim_pxtrt_ldlocRef(s.arg1);
-    s.tmp_8 = r0;
-    s.tmp_10 = music_volume__P18853_mk(s);
-    s.callLocIdx = 11; s.pc = 61; return s.tmp_10;
-  case 61:
-    r0 = s.retval;
-    s.tmp_9 = r0;
-    r0 = (s.tmp_8 * s.tmp_9);
-    s.tmp_7 = r0;
-    r0 = (s.tmp_7 >> 8);
-    s.tmp_6.arg2 = r0;
-    s.callLocIdx = 12; s.pc = 60; return s.tmp_6;
-  case 60:
-    r0 = s.retval;
-    s.tmp_5 = r0;
-    r0 = pxsim_pxtrt_stlocRef(s.tmp_4, s.tmp_5);
-    r0 = s.arg0.fields["melody"];
-    r0 = r0.fields["_text"];
-    s.notes___37258 = (r0);
-    r0 = pxsim_pxtrt.mklocRef();
-    s.pos___37262 = (r0);
-    r0 = pxsim_pxtrt_stlocRef(s.pos___37262, 0);
-    r0 = pxsim_pxtrt.mklocRef();
-    s.duration___37263 = (r0);
-    r0 = pxsim_pxtrt_stlocRef(s.duration___37263, 4);
-    r0 = pxsim_pxtrt.mklocRef();
-    s.octave___37264 = (r0);
-    r0 = pxsim_pxtrt_stlocRef(s.octave___37264, 4);
-    r0 = pxsim_pxtrt.mklocRef();
-    s.tempo___37265 = (r0);
-    r0 = pxsim_pxtrt_stlocRef(s.tempo___37265, 120);
-    r0 = pxsim_pxtrt.mklocRef();
-    s.hz___37266 = (r0);
-    r0 = pxsim_pxtrt_stlocRef(s.hz___37266, 0);
-    r0 = pxsim_pxtrt.mklocRef();
-    s.endHz___37267 = (r0);
-    r0 = pxsim_pxtrt_stlocRef(s.endHz___37267, -1);
-    r0 = pxsim_pxtrt.mklocRef();
-    s.ms___37270 = (r0);
-    r0 = pxsim_pxtrt_stlocRef(s.ms___37270, 0);
-    s.timePos___37271 = (0);
-    r0 = pxsim.control.millis();
-    s.startTime___37272 = (r0);
-    s.now___37275 = (0);
-    r0 = pxsim_pxtrt.mklocRef();
-    s.envA___37276 = (r0);
-    r0 = pxsim_pxtrt_stlocRef(s.envA___37276, 0);
-    r0 = pxsim_pxtrt.mklocRef();
-    s.envD___37277 = (r0);
-    r0 = pxsim_pxtrt_stlocRef(s.envD___37277, 0);
-    r0 = pxsim_pxtrt.mklocRef();
-    s.envS___37278 = (r0);
-    r0 = pxsim_pxtrt_stlocRef(s.envS___37278, 255);
-    r0 = pxsim_pxtrt.mklocRef();
-    s.envR___37279 = (r0);
-    r0 = pxsim_pxtrt_stlocRef(s.envR___37279, 0);
-    r0 = pxsim_pxtrt.mklocRef();
-    s.soundWave___37280 = (r0);
-    r0 = pxsim_pxtrt_stlocRef(s.soundWave___37280, 1);
-    r0 = pxsim.control.createBuffer(60);
-    s.sndInstr___37281 = (r0);
-    r0 = pxsim_pxtrt.mklocRef();
-    s.sndInstrPtr___37287 = (r0);
-    r0 = pxsim_pxtrt_stlocRef(s.sndInstrPtr___37287, 0);
-    r0 = pxsim_pxtcore_mkAction(10, addForm_inline__P37289);
-    s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.hz___37266);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.endHz___37267);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.ms___37270);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 3, s.duration___37263);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 4, s.tempo___37265);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 5, s.envR___37279);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 6, s.sndInstrPtr___37287);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 7, s.sndInstr___37281);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 8, s.soundWave___37280);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 9, s.arg1);
-    s.addForm___37288 = (s.tmp_0);
-    r0 = pxsim_pxtcore_mkAction(3, scanNextWord_inline__P37349);
-    s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.pos___37262);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.notes___37258);
-    s.scanNextWord___37348 = (s.tmp_0);
-    r0 = pxsim_pxtrt.mklocRef();
-    s.token___37405 = (r0);
-    s.tmp_0 = r0 = s.token___37405;
-    r0 = pxsim_String_.mkEmpty();
-    s.tmp_1 = r0;
-    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
-    r0 = pxsim_pxtrt.mklocRef();
-    s.tokenKind___37406 = (r0);
-    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 0);
-    r0 = pxsim_pxtcore_mkAction(13, consumeToken_inline__P37410);
-    s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.token___37405);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.tokenKind___37406);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.octave___37264);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 3, s.duration___37263);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 4, s.ms___37270);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 5, s.tempo___37265);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 6, s.hz___37266);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 7, s.soundWave___37280);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 8, s.envA___37276);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 9, s.envD___37277);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 10, s.envS___37278);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 11, s.envR___37279);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 12, s.endHz___37267);
-    s.consumeToken___37409 = (s.tmp_0);
-  case 3:
-    r0 = pxsim_numops_toBoolDecr(true);
-    if (!r0) { step = 58; continue; }
-    s.tmp_0 = lambda_1_mk(s);
-    s.tmp_0.argL = s.scanNextWord___37348;
-    setupLambda(s.tmp_0, s.tmp_0.argL);
-    s.callLocIdx = 20; s.pc = 62; return s.tmp_0;
-  case 62:
-    r0 = s.retval;
-    s.currNote___37485 = (r0);
-    s.prevNote___37487 = (false);
-    r0 = pxsim_numops_toBoolDecr(s.currNote___37485);
-    s.tmp_1 = r0;
-    r0 = pxsim_Boolean__bang(s.tmp_1);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 8; continue; }
-    r0 = (s.timePos___37271 - s.now___37275);
-    s.timeLeft___37490 = (r0);
-    r0 = (s.timeLeft___37490 > 0);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 4; continue; }
-    s.tmp_1 = pause__P17659_mk(s);
-    s.tmp_1.arg0 = s.timeLeft___37490;
-    s.callLocIdx = 21; s.pc = 63; return s.tmp_1;
-  case 63:
-    r0 = s.retval;
-  case 4:
-  case 5:
-    r0 = s.arg0.fields["onPlayFinished"];
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 6; continue; }
-    s.tmp_1 = if_onPlayFinished_1_mk(s);
-    s.tmp_1.arg0 = s.arg0;
-    if (!s.tmp_1.arg0.vtable.iface) {
-      setupLambda(s.tmp_1, pxsim_pxtrt.mapGetByString(s.tmp_1.arg0, "onPlayFinished"), 1);
-      s.callLocIdx = 22; s.pc = 64; return s.tmp_1;
-    } else {
-      s.tmp_1.fn = s.tmp_1.arg0.vtable.iface["onPlayFinished"];
-      if (s.tmp_1.fn == null) { setupLambda(s.tmp_1, s.tmp_1.arg0.fields["onPlayFinished"], 1); s.callLocIdx = 22; s.pc = 64; return s.tmp_1; }
-      else if (s.tmp_1.fn.isGetter) { s.tmp_1.stage2Call = true; s.callLocIdx = 22; s.pc = 64; return s.tmp_1;; }
-     else { s.callLocIdx = 22; s.pc = 64; return s.tmp_1; }
-    }
-  case 64:
-    r0 = s.retval;
-  case 6:
-  case 7:
-    { step = 59; continue; }
-  case 8:
-  case 9:
-    r0 = pxsim_pxtrt_stlocRef(s.hz___37266, -1);
-    s.note___37504 = (0);
-    s.tmp_0 = r0 = s.token___37405;
-    r0 = pxsim_String_.mkEmpty();
-    s.tmp_1 = r0;
-    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
-    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 0);
-    s.i___37508 = (0);
-  case 10:
-    s.tmp_1 = r0 = s.i___37508;
-    r0 = pxsim_String_.length(s.currNote___37485);
-    s.tmp_2 = r0;
-    r0 = (s.tmp_1 < s.tmp_2);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 41; continue; }
-    r0 = pxsim_String_.charAt(s.currNote___37485, s.i___37508);
-    s.noteChar___37514 = (r0);
-    s.tmp_0 = r0 = s.noteChar___37514;
-    r0 = pxsim_pxtcore.switch_eq("c", s.tmp_0);
-    if (r0) { step = 11; continue; }
-    r0 = pxsim_pxtcore.switch_eq("C", s.tmp_0);
-    if (r0) { step = 12; continue; }
-    r0 = pxsim_pxtcore.switch_eq("d", s.tmp_0);
-    if (r0) { step = 13; continue; }
-    r0 = pxsim_pxtcore.switch_eq("D", s.tmp_0);
-    if (r0) { step = 14; continue; }
-    r0 = pxsim_pxtcore.switch_eq("e", s.tmp_0);
-    if (r0) { step = 15; continue; }
-    r0 = pxsim_pxtcore.switch_eq("E", s.tmp_0);
-    if (r0) { step = 16; continue; }
-    r0 = pxsim_pxtcore.switch_eq("f", s.tmp_0);
-    if (r0) { step = 17; continue; }
-    r0 = pxsim_pxtcore.switch_eq("F", s.tmp_0);
-    if (r0) { step = 18; continue; }
-    r0 = pxsim_pxtcore.switch_eq("g", s.tmp_0);
-    if (r0) { step = 19; continue; }
-    r0 = pxsim_pxtcore.switch_eq("G", s.tmp_0);
-    if (r0) { step = 20; continue; }
-    r0 = pxsim_pxtcore.switch_eq("a", s.tmp_0);
-    if (r0) { step = 21; continue; }
-    r0 = pxsim_pxtcore.switch_eq("A", s.tmp_0);
-    if (r0) { step = 22; continue; }
-    r0 = pxsim_pxtcore.switch_eq("B", s.tmp_0);
-    if (r0) { step = 23; continue; }
-    r0 = pxsim_pxtcore.switch_eq("r", s.tmp_0);
-    if (r0) { step = 24; continue; }
-    r0 = pxsim_pxtcore.switch_eq("R", s.tmp_0);
-    if (r0) { step = 25; continue; }
-    r0 = pxsim_pxtcore.switch_eq("#", s.tmp_0);
-    if (r0) { step = 26; continue; }
-    r0 = pxsim_pxtcore.switch_eq("b", s.tmp_0);
-    if (r0) { step = 27; continue; }
-    r0 = pxsim_pxtcore.switch_eq(",", s.tmp_0);
-    if (r0) { step = 30; continue; }
-    r0 = pxsim_pxtcore.switch_eq("!", s.tmp_0);
-    if (r0) { step = 31; continue; }
-    r0 = pxsim_pxtcore.switch_eq("@", s.tmp_0);
-    if (r0) { step = 32; continue; }
-    r0 = pxsim_pxtcore.switch_eq("~", s.tmp_0);
-    if (r0) { step = 33; continue; }
-    r0 = pxsim_pxtcore.switch_eq(":", s.tmp_0);
-    if (r0) { step = 34; continue; }
-    r0 = pxsim_pxtcore.switch_eq("-", s.tmp_0);
-    if (r0) { step = 35; continue; }
-    r0 = pxsim_pxtcore.switch_eq("^", s.tmp_0);
-    if (r0) { step = 36; continue; }
-    r0 = s.tmp_0;
-    { step = 37; continue; }
-  case 11:
-  case 12:
-    s.note___37504 = (1);
-    s.prevNote___37487 = (true);
-    { step = 40; continue; }
-  case 13:
-  case 14:
-    s.note___37504 = (3);
-    s.prevNote___37487 = (true);
-    { step = 40; continue; }
-  case 15:
-  case 16:
-    s.note___37504 = (5);
-    s.prevNote___37487 = (true);
-    { step = 40; continue; }
-  case 17:
-  case 18:
-    s.note___37504 = (6);
-    s.prevNote___37487 = (true);
-    { step = 40; continue; }
-  case 19:
-  case 20:
-    s.note___37504 = (8);
-    s.prevNote___37487 = (true);
-    { step = 40; continue; }
-  case 21:
-  case 22:
-    s.note___37504 = (10);
-    s.prevNote___37487 = (true);
-    { step = 40; continue; }
-  case 23:
-    s.note___37504 = (12);
-    s.prevNote___37487 = (true);
-    { step = 40; continue; }
-  case 24:
-  case 25:
-    r0 = pxsim_pxtrt_stlocRef(s.hz___37266, 0);
-    s.prevNote___37487 = (false);
-    { step = 40; continue; }
-  case 26:
-    r0 = (s.note___37504 + 1);
-    s.note___37504 = (r0);
-    s.prevNote___37487 = (false);
-    { step = 40; continue; }
-  case 27:
-    r0 = pxsim_numops_toBoolDecr(s.prevNote___37487);
-    if (!r0) { step = 28; continue; }
-    r0 = (s.note___37504 - 1);
-    s.note___37504 = (r0);
-    { step = 29; continue; }
-  case 28:
-    s.note___37504 = (12);
-    s.prevNote___37487 = (true);
-  case 29:
-    { step = 40; continue; }
-  case 30:
-    s.tmp_0 = lambda_1_mk(s);
-    s.tmp_0.argL = s.consumeToken___37409;
-    setupLambda(s.tmp_0, s.tmp_0.argL);
-    s.callLocIdx = 23; s.pc = 65; return s.tmp_0;
-  case 65:
-    r0 = s.retval;
-    s.prevNote___37487 = (false);
-    { step = 40; continue; }
-  case 31:
-    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 4);
-    s.prevNote___37487 = (false);
-    { step = 40; continue; }
-  case 32:
-    s.tmp_0 = lambda_1_mk(s);
-    s.tmp_0.argL = s.consumeToken___37409;
-    setupLambda(s.tmp_0, s.tmp_0.argL);
-    s.callLocIdx = 24; s.pc = 66; return s.tmp_0;
-  case 66:
-    r0 = s.retval;
-    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 8);
-    s.prevNote___37487 = (false);
-    { step = 40; continue; }
-  case 33:
-    s.tmp_0 = lambda_1_mk(s);
-    s.tmp_0.argL = s.consumeToken___37409;
-    setupLambda(s.tmp_0, s.tmp_0.argL);
-    s.callLocIdx = 25; s.pc = 67; return s.tmp_0;
-  case 67:
-    r0 = s.retval;
-    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 7);
-    s.prevNote___37487 = (false);
-    { step = 40; continue; }
-  case 34:
-    s.tmp_0 = lambda_1_mk(s);
-    s.tmp_0.argL = s.consumeToken___37409;
-    setupLambda(s.tmp_0, s.tmp_0.argL);
-    s.callLocIdx = 26; s.pc = 68; return s.tmp_0;
-  case 68:
-    r0 = s.retval;
-    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 2);
-    s.prevNote___37487 = (false);
-    { step = 40; continue; }
-  case 35:
-    s.tmp_0 = lambda_1_mk(s);
-    s.tmp_0.argL = s.consumeToken___37409;
-    setupLambda(s.tmp_0, s.tmp_0.argL);
-    s.callLocIdx = 27; s.pc = 69; return s.tmp_0;
-  case 69:
-    r0 = s.retval;
-    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 3);
-    s.prevNote___37487 = (false);
-    { step = 40; continue; }
-  case 36:
-    s.tmp_0 = lambda_1_mk(s);
-    s.tmp_0.argL = s.consumeToken___37409;
-    setupLambda(s.tmp_0, s.tmp_0.argL);
-    s.callLocIdx = 28; s.pc = 70; return s.tmp_0;
-  case 70:
-    r0 = s.retval;
-    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 5);
-    { step = 40; continue; }
-  case 37:
-    r0 = pxsim_pxtrt_ldlocRef(s.tokenKind___37406);
-    s.tmp_1 = r0;
-    r0 = (s.tmp_1 == 0);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 38; continue; }
-    r0 = pxsim_pxtrt_stlocRef(s.tokenKind___37406, 1);
-  case 38:
-  case 39:
-    s.tmp_0 = r0 = s.token___37405;
-    r0 = pxsim_pxtrt_ldlocRef(s.token___37405);
-    s.tmp_3 = r0;
-    if ((s.tmp_3) && (s.tmp_3).vtable) {
-    setupResume(s, 71);
-    pxsim_String__stringConv(s.tmp_3);
-    checkResumeConsumed();
-    return;
-    } else { s.retval = (s.tmp_3) + ""; }
-  case 71:
-    r0 = s.retval;
-    s.tmp_2 = r0;
-    if ((s.noteChar___37514) && (s.noteChar___37514).vtable) {
-    setupResume(s, 72);
-    pxsim_String__stringConv(s.noteChar___37514);
-    checkResumeConsumed();
-    return;
-    } else { s.retval = (s.noteChar___37514) + ""; }
-  case 72:
-    r0 = s.retval;
-    s.tmp_4 = r0;
-    r0 = pxsim_String__concat(s.tmp_2, s.tmp_4);
-    s.tmp_1 = r0;
-    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
-    s.prevNote___37487 = (false);
-  case 40:
-    r0 = (s.i___37508 + 1);
-    s.i___37508 = (r0);
-    { step = 10; continue; }
-  case 41:
-    s.tmp_0 = lambda_1_mk(s);
-    s.tmp_0.argL = s.consumeToken___37409;
-    setupLambda(s.tmp_0, s.tmp_0.argL);
-    s.callLocIdx = 29; s.pc = 73; return s.tmp_0;
-  case 73:
-    r0 = s.retval;
-    s.tmp_0 = r0 = s.note___37504;
-    r0 = pxsim_numops_toBool(s.tmp_0);
-    if (r0) { step = 42; continue; }
-    r0 = s.tmp_0;
-    { step = 43; continue; }
-  case 42:
-    r0 = pxsim_pxtrt_ldlocRef(s.hz___37266);
-    s.tmp_1 = r0;
-    r0 = (s.tmp_1 < 0);
-  case 43:
-    // jmp value (already in r0)
-    s.tmp_2 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_2);
-    if (!r0) { step = 46; continue; }
-    s.tmp_3 = r0 = s.note___37504;
-    r0 = pxsim_pxtrt_ldlocRef(s.octave___37264);
-    s.tmp_6 = r0;
-    r0 = (s.tmp_6 - 1);
-    s.tmp_5 = r0;
-    r0 = (12 * s.tmp_5);
-    s.tmp_4 = r0;
-    r0 = (s.tmp_3 + s.tmp_4);
-    s.keyNumber___37588 = (r0);
-    s.tmp_1 = r0 = globals.freqs___21294;
-    r0 = (s.keyNumber___37588 * 2);
-    s.tmp_2 = r0;
-    r0 = pxsim.BufferMethods.getNumber(s.tmp_1, 4, s.tmp_2);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_0);
-    if (!r0) { step = 44; continue; }
-    r0 = s.tmp_0;
-    { step = 45; continue; }
-  case 44:
-    r0 = 0;
-  case 45:
-    // jmp value (already in r0)
-    s.tmp_3 = r0;
-    r0 = pxsim_pxtrt_stlocRef(s.hz___37266, s.tmp_3);
-  case 46:
-  case 47:
-    r0 = pxsim_pxtrt_ldlocRef(s.ms___37270);
-    s.currMs___37605 = (r0);
-    r0 = (s.currMs___37605 <= 0);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 48; continue; }
-    r0 = pxsim_pxtrt_ldlocRef(s.tempo___37265);
-    s.tmp_1 = r0;
-    r0 = pxsim.Math_.idiv(15000, s.tmp_1);
-    s.beat___37609 = (r0);
-    r0 = pxsim_pxtrt_ldlocRef(s.duration___37263);
-    s.tmp_0 = r0;
-    r0 = (s.tmp_0 * s.beat___37609);
-    s.currMs___37605 = (r0);
-  case 48:
-  case 49:
-    r0 = pxsim_pxtrt_ldlocRef(s.hz___37266);
-    s.tmp_1 = r0;
-    r0 = (s.tmp_1 < 0);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 50; continue; }
-    { step = 55; continue; }
-  case 50:
-    r0 = pxsim_pxtrt_ldlocRef(s.hz___37266);
-    s.tmp_3 = r0;
-    r0 = (s.tmp_3 == 0);
-    s.tmp_2 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_2);
-    if (!r0) { step = 51; continue; }
-    r0 = (s.timePos___37271 + s.currMs___37605);
-    s.timePos___37271 = (r0);
-    { step = 54; continue; }
-  case 51:
-    r0 = pxsim_pxtrt_ldlocRef(s.endHz___37267);
-    s.tmp_1 = r0;
-    r0 = (s.tmp_1 < 0);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 52; continue; }
-    s.tmp_2 = r0 = s.endHz___37267;
-    r0 = pxsim_pxtrt_ldlocRef(s.hz___37266);
-    s.tmp_3 = r0;
-    r0 = pxsim_pxtrt_stlocRef(s.tmp_2, s.tmp_3);
-  case 52:
-  case 53:
-    r0 = pxsim_pxtrt_stlocRef(s.sndInstrPtr___37287, 0);
-    s.tmp_0 = lambda_5_mk(s);
-    s.tmp_0.argL = s.addForm___37288;
-    r0 = pxsim_pxtrt_ldlocRef(s.envA___37276);
-    s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = 0;
-    s.tmp_0.arg2 = 255;
-    s.tmp_0.arg3 = 0;
-    setupLambda(s.tmp_0, s.tmp_0.argL);
-    s.callLocIdx = 30; s.pc = 74; return s.tmp_0;
-  case 74:
-    r0 = s.retval;
-    s.tmp_0 = lambda_5_mk(s);
-    s.tmp_0.argL = s.addForm___37288;
-    r0 = pxsim_pxtrt_ldlocRef(s.envD___37277);
-    s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = 255;
-    r0 = pxsim_pxtrt_ldlocRef(s.envS___37278);
-    s.tmp_0.arg2 = r0;
-    r0 = pxsim_pxtrt_ldlocRef(s.envA___37276);
-    s.tmp_0.arg3 = r0;
-    setupLambda(s.tmp_0, s.tmp_0.argL);
-    s.callLocIdx = 31; s.pc = 75; return s.tmp_0;
-  case 75:
-    r0 = s.retval;
-    s.tmp_0 = lambda_5_mk(s);
-    s.tmp_0.argL = s.addForm___37288;
-    s.tmp_1 = r0 = s.currMs___37605;
-    r0 = pxsim_pxtrt_ldlocRef(s.envA___37276);
-    s.tmp_3 = r0;
-    r0 = pxsim_pxtrt_ldlocRef(s.envD___37277);
-    s.tmp_4 = r0;
-    r0 = (s.tmp_3 + s.tmp_4);
-    s.tmp_2 = r0;
-    r0 = (s.tmp_1 - s.tmp_2);
-    s.tmp_0.arg0 = r0;
-    r0 = pxsim_pxtrt_ldlocRef(s.envS___37278);
-    s.tmp_0.arg1 = r0;
-    r0 = pxsim_pxtrt_ldlocRef(s.envS___37278);
-    s.tmp_0.arg2 = r0;
-    r0 = pxsim_pxtrt_ldlocRef(s.envD___37277);
-    s.tmp_5 = r0;
-    r0 = pxsim_pxtrt_ldlocRef(s.envA___37276);
-    s.tmp_6 = r0;
-    r0 = (s.tmp_5 + s.tmp_6);
-    s.tmp_0.arg3 = r0;
-    setupLambda(s.tmp_0, s.tmp_0.argL);
-    s.callLocIdx = 32; s.pc = 76; return s.tmp_0;
-  case 76:
-    r0 = s.retval;
-    s.tmp_0 = lambda_5_mk(s);
-    s.tmp_0.argL = s.addForm___37288;
-    r0 = pxsim_pxtrt_ldlocRef(s.envR___37279);
-    s.tmp_0.arg0 = r0;
-    r0 = pxsim_pxtrt_ldlocRef(s.envS___37278);
-    s.tmp_0.arg1 = r0;
-    s.tmp_0.arg2 = 0;
-    s.tmp_0.arg3 = s.currMs___37605;
-    setupLambda(s.tmp_0, s.tmp_0.argL);
-    s.callLocIdx = 33; s.pc = 77; return s.tmp_0;
-  case 77:
-    r0 = s.retval;
-    s.tmp_0 = music_MelodyPlayer_queuePlayInstructions__P21311_mk(s);
-    s.tmp_0.arg0 = s.arg0;
-    r0 = (s.timePos___37271 - s.now___37275);
-    s.tmp_0.arg1 = r0;
-    s.tmp_1 = r0 = s.sndInstr___37281;
-    r0 = pxsim_pxtrt_ldlocRef(s.sndInstrPtr___37287);
-    s.tmp_2 = r0;
-    r0 = pxsim.BufferMethods.slice(s.tmp_1, 0, s.tmp_2);
-    s.tmp_0.arg2 = r0;
-    s.callLocIdx = 34; s.pc = 78; return s.tmp_0;
-  case 78:
-    r0 = s.retval;
-    r0 = pxsim_pxtrt_stlocRef(s.endHz___37267, -1);
-    r0 = (s.timePos___37271 + s.currMs___37605);
-    s.timePos___37271 = (r0);
-  case 54:
-  case 55:
-    r0 = (s.timePos___37271 - s.now___37275);
-    s.timeLeft___37666 = (r0);
-    r0 = (s.timeLeft___37666 > 200);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 56; continue; }
-    s.tmp_1 = pause__P17659_mk(s);
-    r0 = (s.timeLeft___37666 - 100);
-    s.tmp_1.arg0 = r0;
-    s.callLocIdx = 35; s.pc = 79; return s.tmp_1;
-  case 79:
-    r0 = s.retval;
-    r0 = pxsim.control.millis();
-    s.tmp_0 = r0;
-    r0 = (s.tmp_0 - s.startTime___37272);
-    s.now___37275 = (r0);
-  case 56:
-  case 57:
-    { step = 3; continue; }
-  case 58:
-  case 59:
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-music_MelodyPlayer_play__P18873.info = {"start":11361,"length":9259,"line":348,"column":8,"endLine":582,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"play","argumentNames":["this","volume"]}
-
-function music_MelodyPlayer_play__P18873_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: music_MelodyPlayer_play__P18873, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  tmp_5: undefined,
-  tmp_6: undefined,
-  tmp_7: undefined,
-  tmp_8: undefined,
-  tmp_9: undefined,
-  tmp_10: undefined,
-  notes___37258: undefined,
-  pos___37262: undefined,
-  duration___37263: undefined,
-  octave___37264: undefined,
-  tempo___37265: undefined,
-  hz___37266: undefined,
-  endHz___37267: undefined,
-  ms___37270: undefined,
-  timePos___37271: undefined,
-  startTime___37272: undefined,
-  now___37275: undefined,
-  envA___37276: undefined,
-  envD___37277: undefined,
-  envS___37278: undefined,
-  envR___37279: undefined,
-  soundWave___37280: undefined,
-  sndInstr___37281: undefined,
-  sndInstrPtr___37287: undefined,
-  addForm___37288: undefined,
-  scanNextWord___37348: undefined,
-  token___37405: undefined,
-  tokenKind___37406: undefined,
-  consumeToken___37409: undefined,
-  currNote___37485: undefined,
-  prevNote___37487: undefined,
-  timeLeft___37490: undefined,
-  note___37504: undefined,
-  i___37508: undefined,
-  noteChar___37514: undefined,
-  keyNumber___37588: undefined,
-  currMs___37605: undefined,
-  beat___37609: undefined,
-  timeLeft___37666: undefined,
-  arg0: undefined,
-  arg1: undefined,
-} }
-
-
-
-
-
-function addForm_inline__P37289(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    s.freqStart___37294 = undefined;
-    s.freqEnd___37296 = undefined;
-    s.envelopeWidth___37298 = undefined;
-    s.slope___37316 = undefined;
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.arg2 = (s.lambdaArgs[2]);
-      s.arg3 = (s.lambdaArgs[3]);
-      s.lambdaArgs = null;
-    }
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[0]);
-    s.freqStart___37294 = (r0);
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
-    s.freqEnd___37296 = (r0);
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[2]);
-    s.tmp_1 = r0;
-    r0 = (s.tmp_1 > 0);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[2]);
-    { step = 2; continue; }
-  case 1:
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[3]);
-    s.tmp_3 = r0;
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[4]);
-    s.tmp_5 = r0;
-    r0 = pxsim.Math_.idiv(15000, s.tmp_5);
-    s.tmp_4 = r0;
-    r0 = (s.tmp_3 * s.tmp_4);
-    s.tmp_2 = r0;
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[5]);
-    s.tmp_6 = r0;
-    r0 = (s.tmp_2 + s.tmp_6);
-  case 2:
-    // jmp value (already in r0)
-    s.tmp_7 = r0;
-    s.envelopeWidth___37298 = (s.tmp_7);
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
-    s.tmp_1 = r0;
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[0]);
-    s.tmp_2 = r0;
-    r0 = (s.tmp_1 != s.tmp_2);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_0);
-    if (r0) { step = 3; continue; }
-    r0 = s.tmp_0;
-    { step = 4; continue; }
-  case 3:
-    r0 = (s.envelopeWidth___37298 != 0);
-  case 4:
-    // jmp value (already in r0)
-    s.tmp_3 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_3);
-    if (!r0) { step = 5; continue; }
-    r0 = (s.freqEnd___37296 - s.freqStart___37294);
-    s.tmp_4 = r0;
-    r0 = (s.tmp_4 / s.envelopeWidth___37298);
-    s.slope___37316 = (r0);
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[0]);
-    s.tmp_0 = r0;
-    r0 = (s.slope___37316 * s.arg3);
-    s.tmp_1 = r0;
-    r0 = (s.tmp_0 + s.tmp_1);
-    s.freqStart___37294 = (r0);
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[0]);
-    s.tmp_0 = r0;
-    s.tmp_2 = r0 = s.slope___37316;
-    r0 = (s.arg3 + s.arg0);
-    s.tmp_3 = r0;
-    r0 = (s.tmp_2 * s.tmp_3);
-    s.tmp_1 = r0;
-    r0 = (s.tmp_0 + s.tmp_1);
-    s.freqEnd___37296 = (r0);
-  case 5:
-  case 6:
-    s.tmp_0 = r0 = s.caps[6];
-    s.tmp_2 = music_addNote__P21310_mk(s);
-    s.tmp_2.arg0 = s.caps[7];
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[6]);
-    s.tmp_2.arg1 = r0;
-    s.tmp_2.arg2 = s.arg0;
-    s.tmp_2.arg3 = s.arg1;
-    s.tmp_2.arg4 = s.arg2;
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[8]);
-    s.tmp_2.arg5 = r0;
-    s.tmp_2.arg6 = s.freqStart___37294;
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[9]);
-    s.tmp_2.arg7 = r0;
-    s.tmp_2.arg8 = s.freqEnd___37296;
-    s.callLocIdx = 13; s.pc = 7; return s.tmp_2;
-  case 7:
-    r0 = s.retval;
-    s.tmp_1 = r0;
-    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-addForm_inline__P37289.info = {"start":12169,"length":643,"line":374,"column":28,"endLine":385,"endColumn":13,"fileName":"pxt_modules/mixer/melody.ts","functionName":"inline","argumentNames":["formDuration","beg","end","msOff"]}
-
-function addForm_inline__P37289_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: addForm_inline__P37289, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  tmp_5: undefined,
-  tmp_6: undefined,
-  tmp_7: undefined,
-  freqStart___37294: undefined,
-  freqEnd___37296: undefined,
-  envelopeWidth___37298: undefined,
-  slope___37316: undefined,
-  arg0: undefined,
-  arg1: undefined,
-  arg2: undefined,
-  arg3: undefined,
-} }
-
-
-
-
-
-function scanNextWord_inline__P37349(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    s.c___37358 = undefined;
-    s.note___37375 = undefined;
-    s.c___37381 = undefined;
-    r0 = s.caps[0].fields["melody"];
-    s.tmp_2 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_2);
-    s.tmp_1 = r0;
-    r0 = pxsim_Boolean__bang(s.tmp_1);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    r0 = pxsim_String_.mkEmpty();
-    { step = 23; continue; }
-  case 1:
-  case 2:
-  case 3:
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
-    s.tmp_4 = r0;
-    r0 = pxsim_String_.length(s.caps[2]);
-    s.tmp_5 = r0;
-    r0 = (s.tmp_4 < s.tmp_5);
-    s.tmp_3 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_3);
-    if (!r0) { step = 12; continue; }
-    s.tmp_6 = r0 = s.caps[2];
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
-    s.tmp_7 = r0;
-    r0 = pxsim_String_.charAt(s.tmp_6, s.tmp_7);
-    s.c___37358 = (r0);
-    r0 = (s.c___37358 != " ");
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_0);
-    if (r0) { step = 4; continue; }
-    r0 = s.tmp_0;
-    { step = 5; continue; }
-  case 4:
-    r0 = (s.c___37358 != "\r");
-  case 5:
-    // jmp value (already in r0)
-    s.tmp_1 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_1);
-    if (r0) { step = 6; continue; }
-    r0 = s.tmp_1;
-    { step = 7; continue; }
-  case 6:
-    r0 = (s.c___37358 != "\n");
-  case 7:
-    // jmp value (already in r0)
-    s.tmp_2 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_2);
-    if (r0) { step = 8; continue; }
-    r0 = s.tmp_2;
-    { step = 9; continue; }
-  case 8:
-    r0 = (s.c___37358 != "\t");
-  case 9:
-    // jmp value (already in r0)
-    s.tmp_3 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_3);
-    if (!r0) { step = 10; continue; }
-    { step = 12; continue; }
-  case 10:
-  case 11:
-    s.tmp_4 = r0 = s.caps[1];
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
-    s.tmp_6 = r0;
-    r0 = (s.tmp_6 + 1);
-    s.tmp_5 = r0;
-    r0 = pxsim_pxtrt_stlocRef(s.tmp_4, s.tmp_5);
-    { step = 3; continue; }
-  case 12:
-    r0 = pxsim_String_.mkEmpty();
-    s.note___37375 = (r0);
-  case 13:
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
-    s.tmp_1 = r0;
-    r0 = pxsim_String_.length(s.caps[2]);
-    s.tmp_2 = r0;
-    r0 = (s.tmp_1 < s.tmp_2);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 22; continue; }
-    s.tmp_3 = r0 = s.caps[2];
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
-    s.tmp_4 = r0;
-    r0 = pxsim_String_.charAt(s.tmp_3, s.tmp_4);
-    s.c___37381 = (r0);
-    r0 = (s.c___37381 == " ");
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_0);
-    if (!r0) { step = 14; continue; }
-    r0 = s.tmp_0;
-    { step = 15; continue; }
-  case 14:
-    r0 = (s.c___37381 == "\r");
-  case 15:
-    // jmp value (already in r0)
-    s.tmp_1 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_1);
-    if (!r0) { step = 16; continue; }
-    r0 = s.tmp_1;
-    { step = 17; continue; }
-  case 16:
-    r0 = (s.c___37381 == "\n");
-  case 17:
-    // jmp value (already in r0)
-    s.tmp_2 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_2);
-    if (!r0) { step = 18; continue; }
-    r0 = s.tmp_2;
-    { step = 19; continue; }
-  case 18:
-    r0 = (s.c___37381 == "\t");
-  case 19:
-    // jmp value (already in r0)
-    s.tmp_3 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_3);
-    if (!r0) { step = 20; continue; }
-    { step = 22; continue; }
-  case 20:
-  case 21:
-    if ((s.note___37375) && (s.note___37375).vtable) {
-    setupResume(s, 24);
-    pxsim_String__stringConv(s.note___37375);
-    checkResumeConsumed();
-    return;
-    } else { s.retval = (s.note___37375) + ""; }
-  case 24:
-    r0 = s.retval;
-    s.tmp_4 = r0;
-    if ((s.c___37381) && (s.c___37381).vtable) {
-    setupResume(s, 25);
-    pxsim_String__stringConv(s.c___37381);
-    checkResumeConsumed();
-    return;
-    } else { s.retval = (s.c___37381) + ""; }
-  case 25:
-    r0 = s.retval;
-    s.tmp_5 = r0;
-    r0 = pxsim_String__concat(s.tmp_4, s.tmp_5);
-    s.note___37375 = (r0);
-    s.tmp_0 = r0 = s.caps[1];
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
-    s.tmp_2 = r0;
-    r0 = (s.tmp_2 + 1);
-    s.tmp_1 = r0;
-    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
-    { step = 13; continue; }
-  case 22:
-    r0 = s.note___37375;
-  case 23:
-    return leave(s, r0)
-  default: oops()
-} } }
-scanNextWord_inline__P37349.info = {"start":12847,"length":708,"line":387,"column":33,"endLine":409,"endColumn":13,"fileName":"pxt_modules/mixer/melody.ts","functionName":"inline","argumentNames":[]}
-
-function scanNextWord_inline__P37349_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: scanNextWord_inline__P37349, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  tmp_5: undefined,
-  tmp_6: undefined,
-  tmp_7: undefined,
-  c___37358: undefined,
-  note___37375: undefined,
-  c___37381: undefined,
-} }
-
-
-
-
-
-function consumeToken_inline__P37410(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    s.d___37416 = undefined;
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[0]);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_0);
-    if (r0) { step = 1; continue; }
-    r0 = s.tmp_0;
-    { step = 2; continue; }
-  case 1:
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
-    s.tmp_1 = r0;
-    r0 = (s.tmp_1 != 0);
-  case 2:
-    // jmp value (already in r0)
-    s.tmp_2 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_2);
-    if (!r0) { step = 15; continue; }
-    s.tmp_3 = parseInt__P17343_mk(s);
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[0]);
-    s.tmp_3.arg0 = r0;
-    s.tmp_3.arg1 = undefined;
-    s.callLocIdx = 14; s.pc = 17; return s.tmp_3;
-  case 17:
-    r0 = s.retval;
-    s.d___37416 = (r0);
-    r0 = pxsim_pxtrt_ldlocRef(s.caps[1]);
-    s.tmp_0 = r0;
-    r0 = pxsim_pxtcore.switch_eq(1, s.tmp_0);
-    if (r0) { step = 3; continue; }
-    r0 = pxsim_pxtcore.switch_eq(2, s.tmp_0);
-    if (r0) { step = 4; continue; }
-    r0 = pxsim_pxtcore.switch_eq(3, s.tmp_0);
-    if (r0) { step = 5; continue; }
-    r0 = pxsim_pxtcore.switch_eq(4, s.tmp_0);
-    if (r0) { step = 6; continue; }
-    r0 = pxsim_pxtcore.switch_eq(6, s.tmp_0);
-    if (r0) { step = 7; continue; }
-    r0 = pxsim_pxtcore.switch_eq(7, s.tmp_0);
-    if (r0) { step = 8; continue; }
-    r0 = pxsim_pxtcore.switch_eq(8, s.tmp_0);
-    if (r0) { step = 9; continue; }
-    r0 = pxsim_pxtcore.switch_eq(9, s.tmp_0);
-    if (r0) { step = 10; continue; }
-    r0 = pxsim_pxtcore.switch_eq(10, s.tmp_0);
-    if (r0) { step = 11; continue; }
-    r0 = pxsim_pxtcore.switch_eq(11, s.tmp_0);
-    if (r0) { step = 12; continue; }
-    r0 = pxsim_pxtcore.switch_eq(5, s.tmp_0);
-    if (r0) { step = 13; continue; }
-    r0 = s.tmp_0;
-    { step = 14; continue; }
-  case 3:
-    r0 = pxsim_pxtrt_stlocRef(s.caps[2], s.d___37416);
-    { step = 14; continue; }
-  case 4:
-    s.tmp_0 = r0 = s.caps[3];
-    s.tmp_2 = Math_max__P17376_mk(s);
-    s.tmp_2.arg0 = 1;
-    s.tmp_3 = Math_min__P17377_mk(s);
-    s.tmp_3.arg0 = 16;
-    s.tmp_3.arg1 = s.d___37416;
-    s.callLocIdx = 15; s.pc = 19; return s.tmp_3;
-  case 19:
-    r0 = s.retval;
-    s.tmp_2.arg1 = r0;
-    s.callLocIdx = 16; s.pc = 18; return s.tmp_2;
-  case 18:
-    r0 = s.retval;
-    s.tmp_1 = r0;
-    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
-    r0 = pxsim_pxtrt_stlocRef(s.caps[4], -1);
-    { step = 14; continue; }
-  case 5:
-    s.tmp_0 = r0 = s.caps[5];
-    s.tmp_2 = Math_max__P17376_mk(s);
-    s.tmp_2.arg0 = 1;
-    s.tmp_2.arg1 = s.d___37416;
-    s.callLocIdx = 17; s.pc = 20; return s.tmp_2;
-  case 20:
-    r0 = s.retval;
-    s.tmp_1 = r0;
-    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
-    { step = 14; continue; }
-  case 6:
-    r0 = pxsim_pxtrt_stlocRef(s.caps[6], s.d___37416);
-    r0 = pxsim_pxtrt_stlocRef(s.caps[1], 6);
-    { step = 14; continue; }
-  case 7:
-    r0 = pxsim_pxtrt_stlocRef(s.caps[4], s.d___37416);
-    { step = 14; continue; }
-  case 8:
-    s.tmp_0 = r0 = s.caps[7];
-    s.tmp_2 = Math_clamp__P17373_mk(s);
-    s.tmp_2.arg0 = 1;
-    s.tmp_2.arg1 = 18;
-    s.tmp_2.arg2 = s.d___37416;
-    s.callLocIdx = 18; s.pc = 21; return s.tmp_2;
-  case 21:
-    r0 = s.retval;
-    s.tmp_1 = r0;
-    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
-    { step = 14; continue; }
-  case 9:
-    r0 = pxsim_pxtrt_stlocRef(s.caps[8], s.d___37416);
-    r0 = pxsim_pxtrt_stlocRef(s.caps[1], 9);
-    { step = 14; continue; }
-  case 10:
-    r0 = pxsim_pxtrt_stlocRef(s.caps[9], s.d___37416);
-    r0 = pxsim_pxtrt_stlocRef(s.caps[1], 10);
-    { step = 14; continue; }
-  case 11:
-    s.tmp_0 = r0 = s.caps[10];
-    s.tmp_2 = Math_clamp__P17373_mk(s);
-    s.tmp_2.arg0 = 0;
-    s.tmp_2.arg1 = 255;
-    s.tmp_2.arg2 = s.d___37416;
-    s.callLocIdx = 19; s.pc = 22; return s.tmp_2;
-  case 22:
-    r0 = s.retval;
-    s.tmp_1 = r0;
-    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
-    r0 = pxsim_pxtrt_stlocRef(s.caps[1], 11);
-    { step = 14; continue; }
-  case 12:
-    r0 = pxsim_pxtrt_stlocRef(s.caps[11], s.d___37416);
-    { step = 14; continue; }
-  case 13:
-    r0 = pxsim_pxtrt_stlocRef(s.caps[12], s.d___37416);
-  case 14:
-    s.tmp_0 = r0 = s.caps[0];
-    r0 = pxsim_String_.mkEmpty();
-    s.tmp_1 = r0;
-    r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
-  case 15:
-  case 16:
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-consumeToken_inline__P37410.info = {"start":14841,"length":1189,"line":448,"column":33,"endLine":469,"endColumn":13,"fileName":"pxt_modules/mixer/melody.ts","functionName":"inline","argumentNames":[]}
-
-function consumeToken_inline__P37410_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: consumeToken_inline__P37410, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  d___37416: undefined,
-} }
-
-
-
-
-
-function music_MelodyPlayer_queuePlayInstructions__P21311(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.arg2 = (s.lambdaArgs[2]);
-      s.lambdaArgs = null;
-    }
-    r0 = s.arg0;
-    if (!checkSubtype(r0, music_MelodyPlayer__C18868_VT)) failedCast(r0);
-    r0 = pxsim.music.queuePlayInstructions(s.arg1, s.arg2);
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-music_MelodyPlayer_queuePlayInstructions__P21311.info = {"start":11226,"length":125,"line":344,"column":8,"endLine":346,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"queuePlayInstructions","argumentNames":["this","timeDelta","buf"]}
-
-function music_MelodyPlayer_queuePlayInstructions__P21311_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: music_MelodyPlayer_queuePlayInstructions__P21311, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  arg0: undefined,
-  arg1: undefined,
-  arg2: undefined,
-} }
-
-
-
-
-
-function music_addNote__P21310(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.arg2 = (s.lambdaArgs[2]);
-      s.arg3 = (s.lambdaArgs[3]);
-      s.arg4 = (s.lambdaArgs[4]);
-      s.arg5 = (s.lambdaArgs[5]);
-      s.arg6 = (s.lambdaArgs[6]);
-      s.arg7 = (s.lambdaArgs[7]);
-      s.arg8 = (s.lambdaArgs[8]);
-      s.lambdaArgs = null;
-    }
-    r0 = (s.arg2 > 0);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    r0 = pxsim.BufferMethods.setNumber(s.arg0, 2, s.arg1, s.arg5);
-    s.tmp_0 = r0 = s.arg0;
-    r0 = (s.arg1 + 1);
-    s.tmp_1 = r0;
-    r0 = pxsim.BufferMethods.setNumber(s.tmp_0, 2, s.tmp_1, 0);
-    s.tmp_0 = r0 = s.arg0;
-    r0 = (s.arg1 + 2);
-    s.tmp_1 = r0;
-    r0 = pxsim.BufferMethods.setNumber(s.tmp_0, 4, s.tmp_1, s.arg6);
-    s.tmp_0 = r0 = s.arg0;
-    r0 = (s.arg1 + 4);
-    s.tmp_1 = r0;
-    r0 = pxsim.BufferMethods.setNumber(s.tmp_0, 4, s.tmp_1, s.arg2);
-    s.tmp_0 = r0 = s.arg0;
-    r0 = (s.arg1 + 6);
-    s.tmp_1 = r0;
-    r0 = (s.arg3 * s.arg7);
-    s.tmp_3 = r0;
-    r0 = (s.tmp_3 >> 6);
-    s.tmp_2 = r0;
-    r0 = pxsim.BufferMethods.setNumber(s.tmp_0, 4, s.tmp_1, s.tmp_2);
-    s.tmp_0 = r0 = s.arg0;
-    r0 = (s.arg1 + 8);
-    s.tmp_1 = r0;
-    r0 = (s.arg4 * s.arg7);
-    s.tmp_3 = r0;
-    r0 = (s.tmp_3 >> 6);
-    s.tmp_2 = r0;
-    r0 = pxsim.BufferMethods.setNumber(s.tmp_0, 4, s.tmp_1, s.tmp_2);
-    s.tmp_0 = r0 = s.arg0;
-    r0 = (s.arg1 + 10);
-    s.tmp_1 = r0;
-    r0 = pxsim.BufferMethods.setNumber(s.tmp_0, 4, s.tmp_1, s.arg8);
-    r0 = (s.arg1 + 12);
-    s.arg1 = (r0);
-  case 1:
-  case 2:
-    r0 = pxsim.BufferMethods.setNumber(s.arg0, 2, s.arg1, 0);
-    r0 = s.arg1;
-    return leave(s, r0)
-  default: oops()
-} } }
-music_addNote__P21310.info = {"start":10086,"length":904,"line":315,"column":4,"endLine":328,"endColumn":5,"fileName":"pxt_modules/mixer/melody.ts","functionName":"addNote","argumentNames":["sndInstr","sndInstrPtr","ms","beg","end","soundWave","hz","volume","endHz"]}
-
-function music_addNote__P21310_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: music_addNote__P21310, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  arg0: undefined,
-  arg1: undefined,
-  arg2: undefined,
-  arg3: undefined,
-  arg4: undefined,
-  arg5: undefined,
-  arg6: undefined,
-  arg7: undefined,
-  arg8: undefined,
-} }
-
-
-
-
-
-function music_volume__P18853(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    s.tmp_0 = music_initVolume__P21302_mk(s);
-    s.callLocIdx = 65; s.pc = 1; return s.tmp_0;
-  case 1:
-    r0 = s.retval;
-    r0 = globals.globalVolume___21298;
-    return leave(s, r0)
-  default: oops()
-} } }
-music_volume__P18853.info = {"start":1781,"length":90,"line":61,"column":4,"endLine":64,"endColumn":5,"fileName":"pxt_modules/mixer/melody.ts","functionName":"volume","argumentNames":[]}
-
-function music_volume__P18853_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: music_volume__P18853, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-} }
-
-
-
-
-
-function music_initVolume__P21302(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    r0 = (globals.globalVolume___21298 === null);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    globals.globalVolume___21298 = (0);
-    s.tmp_0 = music_setVolume__P18852_mk(s);
-    r0 = pxsim_pxtcore.getConfig(59, 128);
-    s.tmp_0.arg0 = r0;
-    s.callLocIdx = 62; s.pc = 3; return s.tmp_0;
-  case 3:
-    r0 = s.retval;
-  case 1:
-  case 2:
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-music_initVolume__P21302.info = {"start":1014,"length":180,"line":33,"column":4,"endLine":38,"endColumn":5,"fileName":"pxt_modules/mixer/melody.ts","functionName":"initVolume","argumentNames":[]}
-
-function music_initVolume__P21302_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: music_initVolume__P21302, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-} }
-
-
-
-
-
-function music_setVolume__P18852(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.lambdaArgs = null;
-    }
-    s.tmp_0 = Math_clamp__P17373_mk(s);
-    s.tmp_0.arg0 = 0;
-    s.tmp_0.arg1 = 255;
-    r0 = (s.arg0 | 0);
-    s.tmp_0.arg2 = r0;
-    s.callLocIdx = 63; s.pc = 3; return s.tmp_0;
-  case 3:
-    r0 = s.retval;
-    globals.globalVolume___21298 = (r0);
-    r0 = (globals.globalVolume___21298 > 0);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    r0 = 1;
-    { step = 2; continue; }
-  case 1:
-    r0 = 0;
-  case 2:
-    // jmp value (already in r0)
-    s.tmp_1 = r0;
-    r0 = undefined;
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-music_setVolume__P18852.info = {"start":1533,"length":153,"line":51,"column":4,"endLine":54,"endColumn":5,"fileName":"pxt_modules/mixer/melody.ts","functionName":"setVolume","argumentNames":["volume"]}
-
-function music_setVolume__P18852_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: music_setVolume__P18852, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  arg0: undefined,
-} }
-
-
-
-
-
-function music_enableAmp__P21301(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.lambdaArgs = null;
-    }
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-music_enableAmp__P21301.info = {"start":944,"length":64,"line":29,"column":4,"endLine":31,"endColumn":5,"fileName":"pxt_modules/mixer/melody.ts","functionName":"enableAmp","argumentNames":["en"]}
-
-function music_enableAmp__P21301_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: music_enableAmp__P21301, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  arg0: undefined,
-} }
-
-
-
-
-
-function parseInt__P17343(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    s.start___37703 = undefined;
-    s.sign___37733 = undefined;
-    s.output___37778 = undefined;
-    s.hasDigit___37779 = undefined;
-    s.i___37780 = undefined;
-    s.code___37787 = undefined;
-    s.val___37794 = undefined;
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.lambdaArgs = null;
-    }
-    r0 = pxsim_numops_toBoolDecr(s.arg0);
-    s.tmp_1 = r0;
-    r0 = pxsim_Boolean__bang(s.tmp_1);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    r0 = s.tmp_0;
-    { step = 6; continue; }
-  case 1:
-    r0 = (s.arg1 != null);
-    s.tmp_2 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_2);
-    if (r0) { step = 2; continue; }
-    r0 = s.tmp_2;
-    { step = 5; continue; }
-  case 2:
-    r0 = (s.arg1 < 2);
-    s.tmp_3 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_3);
-    if (!r0) { step = 3; continue; }
-    r0 = s.tmp_3;
-    { step = 4; continue; }
-  case 3:
-    r0 = (s.arg1 > 36);
-  case 4:
-    // jmp value (already in r0)
-    s.tmp_4 = r0;
-    r0 = s.tmp_4;
-  case 5:
-    // jmp value (already in r0)
-    s.tmp_5 = r0;
-    r0 = s.tmp_5;
-  case 6:
-    // jmp value (already in r0)
-    s.tmp_6 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_6);
-    if (!r0) { step = 7; continue; }
-    r0 = NaN;
-    { step = 46; continue; }
-  case 7:
-  case 8:
-    s.start___37703 = (0);
-  case 9:
-    s.tmp_1 = r0 = s.start___37703;
-    r0 = pxsim_String_.length(s.arg0);
-    s.tmp_2 = r0;
-    r0 = (s.tmp_1 < s.tmp_2);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_0);
-    if (r0) { step = 10; continue; }
-    r0 = s.tmp_0;
-    { step = 11; continue; }
-  case 10:
-    s.tmp_3 = helpers_isWhitespace__P17370_mk(s);
-    r0 = pxsim_String_.charCodeAt(s.arg0, s.start___37703);
-    s.tmp_3.arg0 = r0;
-    s.callLocIdx = 0; s.pc = 47; return s.tmp_3;
-  case 47:
-    r0 = s.retval;
-  case 11:
-    // jmp value (already in r0)
-    s.tmp_4 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_4);
-    if (!r0) { step = 12; continue; }
-    r0 = (s.start___37703 + 1);
-    s.start___37703 = (r0);
-    { step = 9; continue; }
-  case 12:
-    s.tmp_1 = r0 = s.start___37703;
-    r0 = pxsim_String_.length(s.arg0);
-    s.tmp_2 = r0;
-    r0 = (s.tmp_1 === s.tmp_2);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 13; continue; }
-    r0 = NaN;
-    { step = 46; continue; }
-  case 13:
-  case 14:
-    s.sign___37733 = (1);
-    r0 = pxsim_String_.charAt(s.arg0, s.start___37703);
-    s.tmp_0 = r0;
-    r0 = pxsim_pxtcore.switch_eq("-", s.tmp_0);
-    if (r0) { step = 15; continue; }
-    r0 = pxsim_pxtcore.switch_eq("+", s.tmp_0);
-    if (r0) { step = 16; continue; }
-    r0 = s.tmp_0;
-    { step = 17; continue; }
-  case 15:
-    s.sign___37733 = (-1);
-  case 16:
-    r0 = (s.start___37703 + 1);
-    s.start___37703 = (r0);
-  case 17:
-    r0 = pxsim_numops_toBoolDecr(s.arg1);
-    s.tmp_1 = r0;
-    r0 = pxsim_Boolean__bang(s.tmp_1);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_0);
-    if (!r0) { step = 18; continue; }
-    r0 = s.tmp_0;
-    { step = 19; continue; }
-  case 18:
-    r0 = (s.arg1 == 16);
-  case 19:
-    // jmp value (already in r0)
-    s.tmp_2 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_2);
-    if (r0) { step = 20; continue; }
-    r0 = s.tmp_2;
-    { step = 21; continue; }
-  case 20:
-    r0 = pxsim_String_.charAt(s.arg0, s.start___37703);
-    s.tmp_3 = r0;
-    r0 = ("0" === s.tmp_3);
-  case 21:
-    // jmp value (already in r0)
-    s.tmp_4 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_4);
-    if (r0) { step = 22; continue; }
-    r0 = s.tmp_4;
-    { step = 25; continue; }
-  case 22:
-    s.tmp_7 = r0 = s.arg0;
-    r0 = (s.start___37703 + 1);
-    s.tmp_8 = r0;
-    r0 = pxsim_String_.charAt(s.tmp_7, s.tmp_8);
-    s.tmp_6 = r0;
-    r0 = ("x" === s.tmp_6);
-    s.tmp_5 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_5);
-    if (!r0) { step = 23; continue; }
-    r0 = s.tmp_5;
-    { step = 24; continue; }
-  case 23:
-    s.tmp_10 = r0 = s.arg0;
-    r0 = (s.start___37703 + 1);
-    s.tmp_11 = r0;
-    r0 = pxsim_String_.charAt(s.tmp_10, s.tmp_11);
-    s.tmp_9 = r0;
-    r0 = ("X" === s.tmp_9);
-  case 24:
-    // jmp value (already in r0)
-    s.tmp_12 = r0;
-    r0 = s.tmp_12;
-  case 25:
-    // jmp value (already in r0)
-    s.tmp_13 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_13);
-    if (!r0) { step = 26; continue; }
-    s.arg1 = (16);
-    r0 = (s.start___37703 + 2);
-    s.start___37703 = (r0);
-    { step = 29; continue; }
-  case 26:
-    r0 = pxsim_numops_toBoolDecr(s.arg1);
-    s.tmp_1 = r0;
-    r0 = pxsim_Boolean__bang(s.tmp_1);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 27; continue; }
-    s.arg1 = (10);
-  case 27:
-  case 28:
-  case 29:
-    s.output___37778 = (0);
-    s.hasDigit___37779 = (false);
-    s.i___37780 = (s.start___37703);
-  case 30:
-    s.tmp_1 = r0 = s.i___37780;
-    r0 = pxsim_String_.length(s.arg0);
-    s.tmp_2 = r0;
-    r0 = (s.tmp_1 < s.tmp_2);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 45; continue; }
-    r0 = pxsim_String_.charCodeAt(s.arg0, s.i___37780);
-    s.tmp_3 = r0;
-    r0 = (s.tmp_3 | 32);
-    s.code___37787 = (r0);
-    s.val___37794 = (undefined);
-    r0 = (s.code___37787 >= 48);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_0);
-    if (r0) { step = 31; continue; }
-    r0 = s.tmp_0;
-    { step = 32; continue; }
-  case 31:
-    r0 = (s.code___37787 < 58);
-  case 32:
-    // jmp value (already in r0)
-    s.tmp_1 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_1);
-    if (!r0) { step = 33; continue; }
-    r0 = (s.code___37787 - 48);
-    s.val___37794 = (r0);
-    { step = 38; continue; }
-  case 33:
-    r0 = (s.code___37787 >= 97);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_0);
-    if (r0) { step = 34; continue; }
-    r0 = s.tmp_0;
-    { step = 35; continue; }
-  case 34:
-    r0 = (s.code___37787 < 123);
-  case 35:
-    // jmp value (already in r0)
-    s.tmp_1 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_1);
-    if (!r0) { step = 36; continue; }
-    r0 = (10 + s.code___37787);
-    s.tmp_2 = r0;
-    r0 = (s.tmp_2 - 97);
-    s.val___37794 = (r0);
-  case 36:
-  case 37:
-  case 38:
-    r0 = (s.val___37794 == undefined);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBool(s.tmp_0);
-    if (!r0) { step = 39; continue; }
-    r0 = s.tmp_0;
-    { step = 40; continue; }
-  case 39:
-    r0 = (s.val___37794 >= s.arg1);
-  case 40:
-    // jmp value (already in r0)
-    s.tmp_1 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_1);
-    if (!r0) { step = 43; continue; }
-    r0 = pxsim_numops_toBoolDecr(s.hasDigit___37779);
-    s.tmp_3 = r0;
-    r0 = pxsim_Boolean__bang(s.tmp_3);
-    s.tmp_2 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_2);
-    if (!r0) { step = 41; continue; }
-    r0 = NaN;
-    { step = 46; continue; }
-  case 41:
-  case 42:
-    { step = 45; continue; }
-  case 43:
-  case 44:
-    s.hasDigit___37779 = (true);
-    r0 = (s.output___37778 * s.arg1);
-    s.tmp_0 = r0;
-    r0 = (s.tmp_0 + s.val___37794);
-    s.output___37778 = (r0);
-    r0 = (s.i___37780 + 1);
-    s.i___37780 = (r0);
-    { step = 30; continue; }
-  case 45:
-    r0 = (s.sign___37733 * s.output___37778);
-  case 46:
-    return leave(s, r0)
-  default: oops()
-} } }
-parseInt__P17343.info = {"start":1064,"length":1690,"line":44,"column":0,"endLine":103,"endColumn":1,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"parseInt","argumentNames":["text","radix"]}
-
-function parseInt__P17343_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: parseInt__P17343, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  tmp_5: undefined,
-  tmp_6: undefined,
-  tmp_7: undefined,
-  tmp_8: undefined,
-  tmp_9: undefined,
-  tmp_10: undefined,
-  tmp_11: undefined,
-  tmp_12: undefined,
-  tmp_13: undefined,
-  start___37703: undefined,
-  sign___37733: undefined,
-  output___37778: undefined,
-  hasDigit___37779: undefined,
-  i___37780: undefined,
-  code___37787: undefined,
-  val___37794: undefined,
-  arg0: undefined,
-  arg1: undefined,
-} }
-
-
-
-
-
-function helpers_isWhitespace__P17370(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.lambdaArgs = null;
-    }
-    s.tmp_0 = r0 = s.arg0;
-    r0 = pxsim_pxtcore.switch_eq(9, s.tmp_0);
-    if (r0) { step = 1; continue; }
-    r0 = pxsim_pxtcore.switch_eq(11, s.tmp_0);
-    if (r0) { step = 2; continue; }
-    r0 = pxsim_pxtcore.switch_eq(12, s.tmp_0);
-    if (r0) { step = 3; continue; }
-    r0 = pxsim_pxtcore.switch_eq(32, s.tmp_0);
-    if (r0) { step = 4; continue; }
-    r0 = pxsim_pxtcore.switch_eq(160, s.tmp_0);
-    if (r0) { step = 5; continue; }
-    r0 = pxsim_pxtcore.switch_eq(65279, s.tmp_0);
-    if (r0) { step = 6; continue; }
-    r0 = pxsim_pxtcore.switch_eq(10, s.tmp_0);
-    if (r0) { step = 7; continue; }
-    r0 = pxsim_pxtcore.switch_eq(13, s.tmp_0);
-    if (r0) { step = 8; continue; }
-    r0 = pxsim_pxtcore.switch_eq(8232, s.tmp_0);
-    if (r0) { step = 9; continue; }
-    r0 = pxsim_pxtcore.switch_eq(8233, s.tmp_0);
-    if (r0) { step = 10; continue; }
-    r0 = s.tmp_0;
-    { step = 11; continue; }
-  case 1:
-  case 2:
-  case 3:
-  case 4:
-  case 5:
-  case 6:
-  case 7:
-  case 8:
-  case 9:
-  case 10:
-    r0 = true;
-    { step = 12; continue; }
-  case 11:
-    r0 = false;
-    { step = 12; continue; }
-    r0 = undefined;
-  case 12:
-    return leave(s, r0)
-  default: oops()
-} } }
-helpers_isWhitespace__P17370.info = {"start":14864,"length":674,"line":503,"column":4,"endLine":520,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"isWhitespace","argumentNames":["c"]}
-
-function helpers_isWhitespace__P17370_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: helpers_isWhitespace__P17370, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  arg0: undefined,
-} }
-
-
-
-
-
-function music_MelodyPlayer_constructor__P18871(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.lambdaArgs = null;
-    }
-    r0 = s.arg0;
-    if (!checkSubtype(r0, music_MelodyPlayer__C18868_VT)) failedCast(r0);
-    r0 = (s.arg0).fields["melody"] = (s.arg1);
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-music_MelodyPlayer_constructor__P18871.info = {"start":11095,"length":62,"line":336,"column":8,"endLine":338,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"inline","argumentNames":["this","m"]}
-
-function music_MelodyPlayer_constructor__P18871_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: music_MelodyPlayer_constructor__P18871, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  arg0: undefined,
-  arg1: undefined,
-} }
-
-
-
-
-
-function music_Melody_stop__P18863(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.lambdaArgs = null;
-    }
-    r0 = s.arg0;
-    if (!checkSubtype(r0, music_Melody__C18858_VT)) failedCast(r0);
-    r0 = s.arg0.fields["_player"];
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    s.tmp_1 = music_MelodyPlayer_stop__P18872_mk(s);
-    r0 = s.arg0.fields["_player"];
-    s.tmp_1.arg0 = r0;
-    s.callLocIdx = 2; s.pc = 3; return s.tmp_1;
-  case 3:
-    r0 = s.retval;
-    r0 = (s.arg0).fields["_player"] = (null);
-  case 1:
-  case 2:
-    s.tmp_0 = music_Melody_unregisterMelody__P21307_mk(s);
-    s.tmp_0.arg0 = s.arg0;
-    s.callLocIdx = 3; s.pc = 4; return s.tmp_0;
-  case 4:
-    r0 = s.retval;
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-music_Melody_stop__P18863.info = {"start":6706,"length":173,"line":215,"column":8,"endLine":221,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"stop","argumentNames":["this"]}
-
-function music_Melody_stop__P18863_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: music_Melody_stop__P18863, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  arg0: undefined,
-} }
-
-
-
-
-
-function music_MelodyPlayer_stop__P18872(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.lambdaArgs = null;
-    }
-    r0 = s.arg0;
-    if (!checkSubtype(r0, music_MelodyPlayer__C18868_VT)) failedCast(r0);
-    r0 = (s.arg0).fields["melody"] = (null);
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-music_MelodyPlayer_stop__P18872.info = {"start":11167,"length":49,"line":340,"column":8,"endLine":342,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"stop","argumentNames":["this"]}
-
-function music_MelodyPlayer_stop__P18872_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: music_MelodyPlayer_stop__P18872, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  arg0: undefined,
 } }
 
 
@@ -47206,40 +47616,6 @@ function game_BaseDialog_update__P19889_mk(s) {
 
 
 
-function music_Melody_toString__P18867(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.lambdaArgs = null;
-    }
-    r0 = s.arg0;
-    if (!checkSubtype(r0, music_Melody__C18858_VT)) failedCast(r0);
-    r0 = s.arg0.fields["_text"];
-    return leave(s, r0)
-  default: oops()
-} } }
-music_Melody_toString__P18867.info = {"start":10021,"length":53,"line":310,"column":8,"endLine":312,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"toString","argumentNames":["this"]}
-
-function music_Melody_toString__P18867_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: music_Melody_toString__P18867, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  arg0: undefined,
-} }
-
-
-
-
-
 function particles_ParticleSource_factory__P20096(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
@@ -48218,6 +48594,40 @@ function animation_ImageAnimation_update__P20307_mk(s) {
   runningTime___38196: undefined,
   frameIndex___38202: undefined,
   newImage___38226: undefined,
+  arg0: undefined,
+} }
+
+
+
+
+
+function music_Melody_toString__P18867(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, music_Melody__C18858_VT)) failedCast(r0);
+    r0 = s.arg0.fields["_text"];
+    return leave(s, r0)
+  default: oops()
+} } }
+music_Melody_toString__P18867.info = {"start":10021,"length":53,"line":310,"column":8,"endLine":312,"endColumn":9,"fileName":"pxt_modules/mixer/melody.ts","functionName":"toString","argumentNames":["this"]}
+
+function music_Melody_toString__P18867_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: music_Melody_toString__P18867, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
 
@@ -51434,7 +51844,7 @@ function PhysicsEngine__C19536_v2_4_mk(s) {
 } }
 
 
-function if_handler_1_mk(s) {
+function lambda_1_mk(s) {
     checkStack(s.depth);
     return {
         parent: s, fn: null, depth: s.depth + 1,
@@ -51445,6 +51855,38 @@ function if_handler_1_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   arg0: undefined,
+} }
+
+
+function if_onPlayFinished_1_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: null, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  tmp_4: undefined,
+  arg0: undefined,
+} }
+
+
+function lambda_5_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: null, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  tmp_4: undefined,
+  arg0: undefined,
+  arg1: undefined,
+  arg2: undefined,
+  arg3: undefined,
+  arg4: undefined,
 } }
 
 
@@ -51461,6 +51903,20 @@ function lambda_3_mk(s) {
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
+} }
+
+
+function if_handler_1_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: null, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  tmp_4: undefined,
+  arg0: undefined,
 } }
 
 
@@ -51523,20 +51979,6 @@ function if_animations_1_mk(s) {
 
 
 function animation_SpriteAnimation__C20301_v0_1_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: null, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  arg0: undefined,
-} }
-
-
-function lambda_1_mk(s) {
     checkStack(s.depth);
     return {
         parent: s, fn: null, depth: s.depth + 1,
@@ -52053,38 +52495,6 @@ function game_GameOverDialog__C19915_v1_1_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   arg0: undefined,
-} }
-
-
-function if_onPlayFinished_1_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: null, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  arg0: undefined,
-} }
-
-
-function lambda_5_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: null, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  arg0: undefined,
-  arg1: undefined,
-  arg2: undefined,
-  arg3: undefined,
-  arg4: undefined,
 } }
 
 
@@ -52910,11 +53320,52 @@ const scene_Camera__C19758_VT = mkVTable({
     "update": scene_Camera_update__P19774,
   },
 });
-const scene_GameForeverHandler__C19796_VT = mkVTable({
-  name: "GameForeverHandler",
+const music_Melody__C18858_VT = mkVTable({
+  name: "Melody",
   numFields: 2,
   classNo: 27,
   lastSubtypeNo: 27,
+  maxBgInstances: null,
+  methods: {
+  },
+  iface: {
+    "_text": null,
+    "set/_text": null,
+    "_player": null,
+    "set/_player": null,
+    "stop": music_Melody_stop__P18863,
+    "registerMelody": music_Melody_registerMelody__P21306,
+    "unregisterMelody": music_Melody_unregisterMelody__P21307,
+    "playCore": music_Melody_playCore__P21308,
+    "play": music_Melody_play__P18865,
+    "playUntilDone": music_Melody_playUntilDone__P18866,
+    "toString": music_Melody_toString__P18867,
+  },
+  toStringMethod: music_Melody_toString__P18867,
+});
+const music_MelodyPlayer__C18868_VT = mkVTable({
+  name: "MelodyPlayer",
+  numFields: 2,
+  classNo: 28,
+  lastSubtypeNo: 28,
+  maxBgInstances: null,
+  methods: {
+  },
+  iface: {
+    "melody": null,
+    "set/melody": null,
+    "onPlayFinished": null,
+    "set/onPlayFinished": null,
+    "stop": music_MelodyPlayer_stop__P18872,
+    "queuePlayInstructions": music_MelodyPlayer_queuePlayInstructions__P21311,
+    "play": music_MelodyPlayer_play__P18873,
+  },
+});
+const scene_GameForeverHandler__C19796_VT = mkVTable({
+  name: "GameForeverHandler",
+  numFields: 2,
+  classNo: 29,
+  lastSubtypeNo: 29,
   maxBgInstances: null,
   methods: {
   },
@@ -52928,8 +53379,8 @@ const scene_GameForeverHandler__C19796_VT = mkVTable({
 const animation_SpriteAnimation__C20301_VT = mkVTable({
   name: "SpriteAnimation",
   numFields: 3,
-  classNo: 28,
-  lastSubtypeNo: 30,
+  classNo: 30,
+  lastSubtypeNo: 32,
   maxBgInstances: null,
   methods: {
     "update": animation_SpriteAnimation_update__P20304,
@@ -52948,8 +53399,8 @@ const animation_SpriteAnimation__C20301_VT = mkVTable({
 const animation_ImageAnimation__C20305_VT = mkVTable({
   name: "ImageAnimation",
   numFields: 6,
-  classNo: 29,
-  lastSubtypeNo: 29,
+  classNo: 31,
+  lastSubtypeNo: 31,
   maxBgInstances: null,
   methods: {
     "update": animation_ImageAnimation_update__P20307,
@@ -52974,8 +53425,8 @@ const animation_ImageAnimation__C20305_VT = mkVTable({
 const control_EventContext__C17641_VT = mkVTable({
   name: "EventContext",
   numFields: 9,
-  classNo: 31,
-  lastSubtypeNo: 31,
+  classNo: 33,
+  lastSubtypeNo: 33,
   maxBgInstances: null,
   methods: {
   },
@@ -53010,8 +53461,8 @@ const control_EventContext__C17641_VT = mkVTable({
 const scene_Scene__C19817_VT = mkVTable({
   name: "Scene",
   numFields: 24,
-  classNo: 32,
-  lastSubtypeNo: 32,
+  classNo: 34,
+  lastSubtypeNo: 34,
   maxBgInstances: null,
   methods: {
   },
@@ -53075,8 +53526,8 @@ const scene_Scene__C19817_VT = mkVTable({
 const animation_MovementAnimation__C20308_VT = mkVTable({
   name: "MovementAnimation",
   numFields: 5,
-  classNo: 30,
-  lastSubtypeNo: 30,
+  classNo: 32,
+  lastSubtypeNo: 32,
   maxBgInstances: null,
   methods: {
     "update": animation_MovementAnimation_update__P20310,
@@ -53099,8 +53550,8 @@ const animation_MovementAnimation__C20308_VT = mkVTable({
 const control_FrameCallback__C17638_VT = mkVTable({
   name: "FrameCallback",
   numFields: 2,
-  classNo: 33,
-  lastSubtypeNo: 33,
+  classNo: 35,
+  lastSubtypeNo: 35,
   maxBgInstances: null,
   methods: {
   },
@@ -53114,8 +53565,8 @@ const control_FrameCallback__C17638_VT = mkVTable({
 const control_PollEvent__C21238_VT = mkVTable({
   name: "PollEvent",
   numFields: 6,
-  classNo: 34,
-  lastSubtypeNo: 34,
+  classNo: 36,
+  lastSubtypeNo: 36,
   maxBgInstances: null,
   methods: {
   },
@@ -53137,8 +53588,8 @@ const control_PollEvent__C21238_VT = mkVTable({
 const control_EventHandler__C21259_VT = mkVTable({
   name: "EventHandler",
   numFields: 4,
-  classNo: 35,
-  lastSubtypeNo: 35,
+  classNo: 37,
+  lastSubtypeNo: 37,
   maxBgInstances: null,
   methods: {
   },
@@ -53158,8 +53609,8 @@ const control_EventHandler__C21259_VT = mkVTable({
 const info_PlayerInfo__C19607_VT = mkVTable({
   name: "PlayerInfo",
   numFields: 12,
-  classNo: 36,
-  lastSubtypeNo: 36,
+  classNo: 38,
+  lastSubtypeNo: 38,
   maxBgInstances: null,
   methods: {
   },
@@ -53208,8 +53659,8 @@ const info_PlayerInfo__C19607_VT = mkVTable({
 const info_InfoState__C21497_VT = mkVTable({
   name: "InfoState",
   numFields: 10,
-  classNo: 37,
-  lastSubtypeNo: 37,
+  classNo: 39,
+  lastSubtypeNo: 39,
   maxBgInstances: null,
   methods: {
   },
@@ -53268,8 +53719,8 @@ const scene_Renderable__C19776_VT = mkVTable({
 const info_PlayerState__C19578_VT = mkVTable({
   name: "PlayerState",
   numFields: 3,
-  classNo: 38,
-  lastSubtypeNo: 38,
+  classNo: 40,
+  lastSubtypeNo: 40,
   maxBgInstances: null,
   methods: {
   },
@@ -53285,8 +53736,8 @@ const info_PlayerState__C19578_VT = mkVTable({
 const scroller_ScrollerState__C23637_VT = mkVTable({
   name: "ScrollerState",
   numFields: 11,
-  classNo: 39,
-  lastSubtypeNo: 39,
+  classNo: 41,
+  lastSubtypeNo: 41,
   maxBgInstances: null,
   methods: {
   },
@@ -53319,8 +53770,8 @@ const scroller_ScrollerState__C23637_VT = mkVTable({
 const scene_Background__C19646_VT = mkVTable({
   name: "Background",
   numFields: 4,
-  classNo: 40,
-  lastSubtypeNo: 40,
+  classNo: 42,
+  lastSubtypeNo: 42,
   maxBgInstances: null,
   methods: {
   },
@@ -53342,8 +53793,8 @@ const scene_Background__C19646_VT = mkVTable({
 const controller_Controller__C19174_VT = mkVTable({
   name: "Controller",
   numFields: 5,
-  classNo: 41,
-  lastSubtypeNo: 41,
+  classNo: 43,
+  lastSubtypeNo: 43,
   maxBgInstances: null,
   methods: {
   },
@@ -53376,8 +53827,8 @@ const controller_Controller__C19174_VT = mkVTable({
 const controller_ControlledSprite__C19170_VT = mkVTable({
   name: "ControlledSprite",
   numFields: 4,
-  classNo: 42,
-  lastSubtypeNo: 42,
+  classNo: 44,
+  lastSubtypeNo: 44,
   maxBgInstances: null,
   methods: {
   },
@@ -53395,8 +53846,8 @@ const controller_ControlledSprite__C19170_VT = mkVTable({
 const game_Hitbox__C19244_VT = mkVTable({
   name: "Hitbox",
   numFields: 6,
-  classNo: 43,
-  lastSubtypeNo: 43,
+  classNo: 45,
+  lastSubtypeNo: 45,
   maxBgInstances: null,
   methods: {
   },
@@ -53425,8 +53876,8 @@ const game_Hitbox__C19244_VT = mkVTable({
 const effects_ParticleEffect__C20189_VT = mkVTable({
   name: "ParticleEffect",
   numFields: 3,
-  classNo: 44,
-  lastSubtypeNo: 45,
+  classNo: 46,
+  lastSubtypeNo: 47,
   maxBgInstances: null,
   methods: {
   },
@@ -53444,8 +53895,8 @@ const effects_ParticleEffect__C20189_VT = mkVTable({
 const effects_ImageEffect__C20216_VT = mkVTable({
   name: "ImageEffect",
   numFields: 4,
-  classNo: 46,
-  lastSubtypeNo: 46,
+  classNo: 48,
+  lastSubtypeNo: 48,
   maxBgInstances: null,
   methods: {
   },
@@ -53528,8 +53979,8 @@ const particles_ParticleSource__C20078_VT = mkVTable({
 const scene_OverlapHandler__C19790_VT = mkVTable({
   name: "OverlapHandler",
   numFields: 3,
-  classNo: 47,
-  lastSubtypeNo: 47,
+  classNo: 49,
+  lastSubtypeNo: 49,
   maxBgInstances: null,
   methods: {
   },
@@ -53542,33 +53993,11 @@ const scene_OverlapHandler__C19790_VT = mkVTable({
     "set/handler": null,
   },
 });
-const music_Melody__C18858_VT = mkVTable({
-  name: "Melody",
-  numFields: 2,
-  classNo: 48,
-  lastSubtypeNo: 48,
-  maxBgInstances: null,
-  methods: {
-  },
-  iface: {
-    "_text": null,
-    "set/_text": null,
-    "_player": null,
-    "set/_player": null,
-    "stop": music_Melody_stop__P18863,
-    "registerMelody": music_Melody_registerMelody__P21306,
-    "unregisterMelody": music_Melody_unregisterMelody__P21307,
-    "playCore": music_Melody_playCore__P21308,
-    "play": music_Melody_play__P18865,
-    "toString": music_Melody_toString__P18867,
-  },
-  toStringMethod: music_Melody_toString__P18867,
-});
 const game_BaseDialog__C19876_VT = mkVTable({
   name: "BaseDialog",
   numFields: 11,
-  classNo: 49,
-  lastSubtypeNo: 50,
+  classNo: 50,
+  lastSubtypeNo: 51,
   maxBgInstances: null,
   methods: {
     "update": game_BaseDialog_update__P19889,
@@ -53612,8 +54041,8 @@ const game_BaseDialog__C19876_VT = mkVTable({
 const game_GameOverDialog__C19915_VT = mkVTable({
   name: "GameOverDialog",
   numFields: 16,
-  classNo: 50,
-  lastSubtypeNo: 50,
+  classNo: 51,
+  lastSubtypeNo: 51,
   maxBgInstances: null,
   methods: {
     "update": game_GameOverDialog_update__P19918,
@@ -53668,8 +54097,8 @@ const game_GameOverDialog__C19915_VT = mkVTable({
 const effects_ScreenEffect__C20193_VT = mkVTable({
   name: "ScreenEffect",
   numFields: 5,
-  classNo: 45,
-  lastSubtypeNo: 45,
+  classNo: 47,
+  lastSubtypeNo: 47,
   maxBgInstances: null,
   methods: {
   },
@@ -53693,8 +54122,8 @@ const effects_ScreenEffect__C20193_VT = mkVTable({
 const particles_ParticleFactory__C20114_VT = mkVTable({
   name: "ParticleFactory",
   numFields: 0,
-  classNo: 51,
-  lastSubtypeNo: 55,
+  classNo: 52,
+  lastSubtypeNo: 56,
   maxBgInstances: null,
   methods: {
     "createParticle": particles_ParticleFactory_createParticle__P20116,
@@ -53708,8 +54137,8 @@ const particles_ParticleFactory__C20114_VT = mkVTable({
 const particles_SprayFactory__C20118_VT = mkVTable({
   name: "SprayFactory",
   numFields: 3,
-  classNo: 52,
-  lastSubtypeNo: 55,
+  classNo: 53,
+  lastSubtypeNo: 56,
   maxBgInstances: null,
   methods: {
     "createParticle": particles_SprayFactory_createParticle__P20120,
@@ -53731,8 +54160,8 @@ const particles_SprayFactory__C20118_VT = mkVTable({
 const particles_AreaFactory__C20124_VT = mkVTable({
   name: "AreaFactory",
   numFields: 8,
-  classNo: 53,
-  lastSubtypeNo: 55,
+  classNo: 54,
+  lastSubtypeNo: 56,
   maxBgInstances: null,
   methods: {
     "createParticle": particles_AreaFactory_createParticle__P20130,
@@ -53764,8 +54193,8 @@ const particles_AreaFactory__C20124_VT = mkVTable({
 const particles_ShapeFactory__C20140_VT = mkVTable({
   name: "ShapeFactory",
   numFields: 11,
-  classNo: 54,
-  lastSubtypeNo: 55,
+  classNo: 55,
+  lastSubtypeNo: 56,
   maxBgInstances: null,
   methods: {
     "createParticle": particles_ShapeFactory_createParticle__P20144,
@@ -53804,8 +54233,8 @@ const particles_ShapeFactory__C20140_VT = mkVTable({
 const particles_ConfettiFactory__C20145_VT = mkVTable({
   name: "ConfettiFactory",
   numFields: 11,
-  classNo: 55,
-  lastSubtypeNo: 55,
+  classNo: 56,
+  lastSubtypeNo: 56,
   maxBgInstances: null,
   methods: {
     "createParticle": particles_ShapeFactory_createParticle__P20144,
@@ -53844,8 +54273,8 @@ const particles_ConfettiFactory__C20145_VT = mkVTable({
 const particles_Particle__C20059_VT = mkVTable({
   name: "Particle",
   numFields: 8,
-  classNo: 56,
-  lastSubtypeNo: 56,
+  classNo: 57,
+  lastSubtypeNo: 57,
   maxBgInstances: 200,
   methods: {
   },
@@ -53871,8 +54300,8 @@ const particles_Particle__C20059_VT = mkVTable({
 const scene_BackgroundLayer__C19656_VT = mkVTable({
   name: "BackgroundLayer",
   numFields: 6,
-  classNo: 57,
-  lastSubtypeNo: 57,
+  classNo: 58,
+  lastSubtypeNo: 58,
   maxBgInstances: null,
   methods: {
   },
@@ -53895,8 +54324,8 @@ const scene_BackgroundLayer__C19656_VT = mkVTable({
 const tiles_TileMap__C19712_VT = mkVTable({
   name: "TileMap",
   numFields: 5,
-  classNo: 58,
-  lastSubtypeNo: 58,
+  classNo: 59,
+  lastSubtypeNo: 59,
   maxBgInstances: null,
   methods: {
   },
@@ -53932,8 +54361,8 @@ const tiles_TileMap__C19712_VT = mkVTable({
 const tiles_TileMapData__C19694_VT = mkVTable({
   name: "TileMapData",
   numFields: 7,
-  classNo: 59,
-  lastSubtypeNo: 59,
+  classNo: 60,
+  lastSubtypeNo: 60,
   maxBgInstances: null,
   methods: {
   },
@@ -54010,8 +54439,8 @@ const ArcadePhysicsEngine__C19552_VT = mkVTable({
 const sprites_SpriteMap__C19471_VT = mkVTable({
   name: "SpriteMap",
   numFields: 5,
-  classNo: 60,
-  lastSubtypeNo: 60,
+  classNo: 61,
+  lastSubtypeNo: 61,
   maxBgInstances: null,
   methods: {
   },
@@ -54038,24 +54467,6 @@ const sprites_SpriteMap__C19471_VT = mkVTable({
     "toString": sprites_SpriteMap_toString__P19479,
   },
   toStringMethod: sprites_SpriteMap_toString__P19479,
-});
-const music_MelodyPlayer__C18868_VT = mkVTable({
-  name: "MelodyPlayer",
-  numFields: 2,
-  classNo: 61,
-  lastSubtypeNo: 61,
-  maxBgInstances: null,
-  methods: {
-  },
-  iface: {
-    "melody": null,
-    "set/melody": null,
-    "onPlayFinished": null,
-    "set/onPlayFinished": null,
-    "stop": music_MelodyPlayer_stop__P18872,
-    "queuePlayInstructions": music_MelodyPlayer_queuePlayInstructions__P21311,
-    "play": music_MelodyPlayer_play__P18873,
-  },
 });
 const scene_systemMenu_PauseMenu__C20022_VT = mkVTable({
   name: "PauseMenu",
@@ -54299,7 +54710,7 @@ const sprites_BaseSpriteSayRenderer__C19294_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["projectile2___38614","projectile___38629","mySprite___38636"])
+const breakpoints = setupDebugger(1, ["projectile2___39093","projectile___39108","mySprite___39115"])
 
-return _main___P38598
+return _main___P39350
 })

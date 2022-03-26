@@ -24,6 +24,7 @@ assets.animation`Mama Moving`,
 true
 )
 forever(function () {
+    music.playMelody("C5 G B A F A C5 B ", 120)
     projectile = sprites.createProjectileFromSide(assets.image`Baby`, -90, 0)
     projectile.y = randint(15, 100)
     animation.runImageAnimation(
